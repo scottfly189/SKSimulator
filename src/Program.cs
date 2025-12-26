@@ -17,7 +17,6 @@ KMSimulatorService.Init(Config.KMDeiviceVID, Config.KMDeivicePID, Config.KMVerif
 HKMData = KMSimulatorService.DeviceData;
 
 
-
 //设置模式
 //OutputString函数输出Unicode字符串，默认输出Asni字符串
 SkmCore.HKMSetMode(HKMData, 4, 4);
