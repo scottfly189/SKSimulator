@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj": {}
+    "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\SKSimulator\\SKSimulator.csproj": {}
   },
   "projects": {
-    "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj": {
+    "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\SKSimulator\\SKSimulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj",
+        "projectUniqueName": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\SKSimulator\\SKSimulator.csproj",
         "projectName": "SKSimulator",
-        "projectPath": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj",
+        "projectPath": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\SKSimulator\\SKSimulator.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\obj\\",
+        "outputPath": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\SKSimulator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
