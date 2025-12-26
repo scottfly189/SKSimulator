@@ -29,7 +29,7 @@
 
 
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                        硬件键鼠模拟器方式                                │
+│                         硬件键鼠模拟器方式                               │
 └─────────────────────────────────────────────────────────────────────────┘
 
     应用程序
@@ -57,7 +57,7 @@
 │                            对比总结                                      │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
-│  传统软件模拟              │  硬件键鼠模拟器                            │
+│  传统软件模拟              │  硬件键鼠模拟器                              │
 │  ─────────────            │  ─────────────                              │
 │  ❌ 易被检测              │  ✅ 高隐蔽性                                │
 │  ❌ API 调用特征          │  ✅ 无 API 特征                             │
@@ -82,15 +82,15 @@
 ## 📋 系统要求
 
 - Windows 操作系统
-- 键鼠模拟器硬件设备,如果需要键鼠模拟器硬件设备,请联系我
+- 键鼠模拟器硬件设备,本SDK需要配合硬件使用，如果需要键鼠模拟器硬件设备,请联系我
 
 ## 🚀 快速开始
 
 ### 1. 克隆项目
 
 ```bash
-git clone <repository-url>
-cd SKSimulator
+git clone https://github.com/scottfly189/SKSimulator.git
+cd src
 ```
 
 ### 2. 配置设备参数
@@ -106,6 +106,22 @@ public static string KMVerifyUserData { get; set; } = "您的校验数据";
 ### 3. 准备 DLL 文件
 
 确保 `x64/skm.dll` 和 `x86/skm.dll` 文件存在于项目中。项目会自动根据运行环境复制对应的 DLL。
+
+如下所示将dll文件包含在项目中:
+
+```
+  <!-- 复制DLL到输出目录 -->
+  <ItemGroup>
+    <None Include="x64\skm.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       <TargetPath>x64\skm.dll</TargetPath>
+    </None>
+    <None Include="x86\skm.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>x86\skm.dll</TargetPath>
+    </None>
+  </ItemGroup>
+```
 
 ### 4. 编译运行
 
@@ -175,6 +191,9 @@ KMSimulatorService.CloseDevice();
 - `0`: 不设置 DPI 感知
 - `1`: `PROCESS_SYSTEM_DPI_AWARE` - 根据主显示器 DPI（默认）
 - `2`: `PROCESS_PER_MONITOR_DPI_AWARE` - 根据每个显示器 DPI
+
+**注意**:
+键鼠模拟器受DPI 感知影响，请正确设置DPI,本SDK中也提供了```DpiAwareness```类供设置DPI
 
 ## 📚 API 文档
 
@@ -251,7 +270,7 @@ KMSimulatorService.CloseDevice();
 
 ## 🔗 相关链接
 
-- [skm.dll 官方文档](如有)
+- [SKSimulator 官方文档](如有)
 
 ---
 
