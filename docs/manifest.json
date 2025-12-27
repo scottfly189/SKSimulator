@@ -1,0 +1,135 @@
+{
+  "source_base_path": "D:/repo/wxauto.net/WeChatAuto.SDK/skm_docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SKM.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SKM.Config.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SKM.Config",
+      "Summary": "<p sourcefile=\"api/SKM.Config.yml\" sourcestartlinenumber=\"1\">参数配置类</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SKM.DpiAwareness.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SKM.DpiAwareness.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SKM.DpiAwareness",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SKM.KMSimulatorService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SKM.KMSimulatorService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SKM.KMSimulatorService",
+      "Summary": "<p sourcefile=\"api/SKM.KMSimulatorService.yml\" sourcestartlinenumber=\"1\">键鼠模拟器服务\n封装skm.dll的函数，提供键鼠模拟器服务\nx64环境需要复制x64\\skm.dll，x86环境需要复制x86\\skm.dll到当前目录，意思是：x64环境需要使用x64\\skm.dll，x86环境需要使用x86\\skm.dll\n本服务类会自动根据当前环境复制DLL到当前目录，可以无感知使用</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SKM.SkmCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SKM.SkmCore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SKM.SkmCore",
+      "Summary": "<p sourcefile=\"api/SKM.SkmCore.yml\" sourcestartlinenumber=\"1\">skm.dll 的封装\n注意: x86 和 x64 的 dll 是不同的, 需要根据实际情况选择\nx86 的 dll 是 x86\\skm.dll, x64 的 dll 是 x64\\skm.dll\n使用KMSimulatorService服务类可以无感知使用，会自动根据当前环境复制DLL到当前目录\n具体KMSimulatorService类使用请参考<xref href=\"SKM.KMSimulatorService\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SKM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SKM.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SKM",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "device.md",
+      "output": {
+        ".html": {
+          "relative_path": "device.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
