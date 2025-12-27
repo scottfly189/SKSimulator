@@ -4,7 +4,7 @@
 
 ## 功能
 
-打开两个键鼠盒子（一个键盘模式、一个鼠标模式），以便对它们进行操作。
+打开两个键鼠模拟器（一个键盘模式、一个鼠标模式），以便对它们进行操作。
 
 ## 参数
 - 参数1  第一个设备ID：无符号32位整型数。使用[HKMSearchDevice](HKMSearchDevice.md)或者[HKMSearchDevice2](HKMSearchDevice2)可以获得它。
@@ -29,19 +29,19 @@ IntPtr lpDev;
 dwDevId1 = SkmCore.HKMSearchDevice(0x1234, 0xABCD, 2);
 if (dwDevId1 == 0xFFFFFFFF)
 {
-    Console.WriteLine("未找到键鼠盒子(键盘模式)");
+    Console.WriteLine("未找到键鼠模拟器(键盘模式)");
     return;
 }
 dwDevId2 = SkmCore.HKMSearchDevice(0x1234, 0xABCD, 3);
 if (dwDevId2 == 0xFFFFFFFF)
 {
-    Console.WriteLine("未找到键鼠盒子(鼠标模式)");
+    Console.WriteLine("未找到键鼠模拟器(鼠标模式)");
     return;
 }
 lpDev = SkmCore.HKMOpen2(dwDevId1, dwDevId2, 0);
 if (lpDev == IntPtr.Zero)
 {
-    Console.WriteLine("打开无涯键鼠盒子失败");
+    Console.WriteLine("打开无涯键鼠模拟器失败");
     return;
 }
 //执行操作
@@ -55,19 +55,19 @@ LPVOID lpDev;
 dwDevId1=HKMSearchDevice(0x1234,0xABCD,2);
 if(dwDevId1==0xFFFFFFFF)
 {
-    printf("未找到键鼠盒子(键盘模式)\n");
+    printf("未找到键鼠模拟器(键盘模式)\n");
     return 0;
 }
 dwDevId2=HKMSearchDevice(0x1234,0xABCD,3);
 if(dwDevId2==0xFFFFFFFF)
 {
-    printf("未找到键鼠盒子(鼠标模式)\n");
+    printf("未找到键鼠模拟器(鼠标模式)\n");
     return 0;
 } 
 lpDev=HKMOpen2(dwDevId1,dwDevId2,0);
 if(lpDev==NULL)
 {
-    printf("打开无涯键鼠盒子失败\n");
+    printf("打开无涯键鼠模拟器失败\n");
     return 0;
 }
 //执行操作
