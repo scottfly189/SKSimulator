@@ -143,24 +143,125 @@ namespace SKM
         /// 没找到或者失败返回0xFFFFFFFF。</returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMGetDevInfo(IntPtr HKMData, UInt32 Index, Boolean Mouse);//获得设备信息
+        /// <summary>
+        /// 获得设备字符串
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="Index">序号：无符号32位整型数。用于指定要获取的字符串序号，可取值如下：
+        /// <list type="bullet">
+        /// <item>1: 制造商</item>
+        /// <item>2: 产品名</item>
+        /// </list>
+        /// </param>
+        /// <param name="Mouse">是否鼠标：布尔值
+        /// <list type="bullet">
+        /// <item>True: 获得鼠标模式的设备字符串</item>
+        /// <item>False: 获得键盘模式的设备字符串</item>
+        /// </list>
+        /// </param>
+        /// <param name="Length">字符串长度：无符号32位整型数指针。用于接收返回值为非NULL时的字符串长度（字符串长度包含'\0'）。需要时可将取值设为NULL。</param>
+        /// <returns>字符串(Unicode/Ansi)。失败返回NULL。成功返回字符串指针，字符串默认为Unicode字符串，也可以通过<c>HKMSetMode</c>修改为Ansi字符串。字符串指针在设备关闭时会被释放，不需要单独释放，但需要注意数据可能会被后续调用此函数的数据覆盖。</returns>
         [DllImport("skm.dll")]
         public static extern IntPtr HKMGetDevString(IntPtr HKMData, UInt32 Index, Boolean Mouse, ref UInt32 Length);//获得设备字符串
+        /// <summary>
+        /// 获得序列号
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="Mouse">是否鼠标：布尔值
+        /// <list type="bullet">
+        /// <item>True: 获得鼠标模式的序列号</item>
+        /// <item>False: 获得键盘模式的序列号</item>
+        /// </list>
+        /// </param>
+        /// <returns>无符号32位整型数。失败返回0xFFFFFFFF。</returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMGetSerialNumber(IntPtr HKMData, Boolean Mouse);//获得序列号
+        /// <summary>
+        /// 获得键盘模式
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <returns>无符号32位整型数。成功返回键盘模式。失败返回0xFFFFFFFF
+        /// <list type="bullet">
+        /// <item>0: 无键盘</item>
+        /// <item>1: 普通键盘</item>
+        /// <item>5: 游戏键盘</item>
+        /// </list>
+        /// </returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMGetKeyboardMode(IntPtr HKMData);//获得键盘模式
+        /// <summary>
+        /// 获得鼠标模式
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <returns>无符号32位整型数。成功返回鼠标模式。失败返回0xFFFFFFFF
+        /// <list type="bullet">
+        /// <item>0: 无鼠标</item>
+        /// <item>1: 相对坐标鼠标</item>
+        /// <item>2: 绝对坐标鼠标</item>
+        /// <item>3: 相对坐标鼠标+绝对坐标鼠标</item>
+        /// <item>5: 相对坐标游戏鼠标</item>
+        /// <item>7: 相对坐标游戏鼠标+绝对坐标鼠标</item>
+        /// </list>
+        /// </returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMGetMouseMode(IntPtr HKMData);//获得鼠标模式
+        /// <summary>
+        /// 判断键盘是否繁忙
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <returns>布尔值。True: 键盘繁忙。False: 键盘不繁忙。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMIsKeyBusy(IntPtr HKMData);//判断键盘是否繁忙
+        /// <summary>
+        /// 判断鼠标是否繁忙
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <returns>布尔值。True: 鼠标繁忙。False: 鼠标不繁忙。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMIsMouseBusy(IntPtr HKMData);//判断鼠标是否繁忙
+        /// <summary>
+        /// 判断键盘是否按下
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="KeyName">键名：字符串(Unicode/Ansi)，或者无符号32/64位整数(32位模式使用32位整数，64位模式使用64位整数)。可以使用字符串(默认为Unicode字符串，也可以通过<c>HKMSetMode</c>修改为Ansi字符串)，也可以使用无符号32/64位整数。键名和整数对应关系可以查看<c>VirtualKeyTable</c>。</param>
+        /// <returns>布尔值。True: 键盘按下。False: 键盘没按下。</returns>
         [DllImport("skm.dll", CharSet = CharSet.Unicode)]
         public static extern Boolean HKMIsKeyDown(IntPtr HKMData, String KeyName);//判断键盘是否按下
+        /// <summary>
+        /// 判断鼠标键是否按下
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="Index">序号：无符号32位整型数。用于指定要获取的鼠标键序号，可取值如下：
+        /// <list type="bullet">
+        /// <item>0: 鼠标左键</item>
+        /// <item>1: 鼠标右键</item>
+        /// <item>2: 鼠标中键</item>
+        /// </list>
+        /// </param>
+        /// <returns>布尔值。True: 鼠标键按下。False: 鼠标键没按下。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMIsMouseButtonDown(IntPtr HKMData, UInt32 Index);//判断鼠标键是否按下
+        /// <summary>
+        /// 获得键盘LED灯状态
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="Index">序号：无符号32位整型数。用于指定要获取的LED灯状态序号，可取值如下：
+        /// <list type="bullet">
+        /// <item>0: Num Lock灯</item>
+        /// <item>1: Caps Lock灯</item>
+        /// <item>2: Scroll Lock灯</item>
+        /// </list>
+        /// </param>
+        /// <returns>布尔值。True: 键盘LED灯亮。False: 键盘LED灯灭。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMGetKeyboardLEDState(IntPtr HKMData, UInt32 Index);//获得键盘LED灯状态
+        /// <summary>
+        /// 获得鼠标坐标
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="X">X坐标：整型数指针。用于接收返回值为非NULL时的X坐标。需要时可将取值设为NULL。</param>
+        /// <param name="Y">Y坐标：整型数指针。用于接收返回值为非NULL时的Y坐标。需要时可将取值设为NULL。</param>
+        /// <returns>布尔值。True: 成功。False: 失败。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMGetCursorPos(IntPtr HKMData, ref Int32 X, ref Int32 Y);//获得鼠标坐标
         [DllImport("skm.dll")]

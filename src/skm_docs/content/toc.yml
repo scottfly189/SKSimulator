@@ -19,9 +19,31 @@
       href: standard_fun/HKMIsOpen.md
     - name: HKMClose-关闭设备
       href: standard_fun/HKMClose.md
-    - name: HKMGetDevInfo 获得设备信息
+    - name: HKMGetDevInfo-获得设备信息
       href: standard_fun/HKMGetDevInfo.md
+    - name: HKMGetDevString-获得设备字符串
+      href: standard_fun/HKMGetDevString.md
+    - name: HKMGetSerialNumber-获得序列号
+      href: standard_fun/HKMGetSerialNumber.md
+    - name: HKMGetKeyboardMode-获得键盘模式
+      href: standard_fun/HKMGetKeyboardMode.md
+    - name: HKMGetMouseMode-获得鼠标模式
+      href: standard_fun/HKMGetMouseMode.md
+    - name: HKMGetKeyboardLEDState-获得键盘LED灯状态
+      href: standard_fun/HKMGetKeyboardLEDState.md
+    - name: HKMIsKeyBusy 判断键盘是否繁忙
+      href: standard_fun/HKMIsKeyBusy.md
+    - name: HKMIsMouseBusy-判断鼠标是否繁忙
+      href: standard_fun/HKMIsMouseBusy.md
+    - name: HKMIsKeyDown-判断键盘是否按下
+      href: standard_fun/HKMIsKeyDown.md
+    - name: HKMIsMouseButtonDown-判断鼠标键是否按下
+      href: standard_fun/HKMIsMouseButtonDown.md
+    - name: HKMGetCursorPos-获得鼠标坐标
+      href: standard_fun/HKMGetCursorPos.md
+    - name: HKMGetCursorPos2-获得鼠标坐标
+      href: standard_fun/HKMGetCursorPos2.md
     - name: 🚩 虚拟码键表参考
-      href: virtual-code-table.md
+      href: standard_fun/VirtualKeyTable.md
 - name: 📚 API参考
   href: ../api/

@@ -145,10 +145,120 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetCursorPos.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetCursorPos.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetCursorPos2.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetCursorPos2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/HKMGetDevInfo.md",
       "output": {
         ".html": {
           "relative_path": "content/standard_fun/HKMGetDevInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetDevString.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetDevString.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetKeyboardLEDState.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetKeyboardLEDState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetKeyboardMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetKeyboardMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetMouseMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetMouseMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetSerialNumber.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetSerialNumber.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMIsKeyBusy.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMIsKeyBusy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMIsKeyDown.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMIsKeyDown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMIsMouseBusy.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMIsMouseBusy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMIsMouseButtonDown.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMIsMouseButtonDown.html"
         }
       },
       "version": ""
@@ -209,6 +319,16 @@
       "output": {
         ".html": {
           "relative_path": "content/standard_fun/HKMSearchDeviceAll.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/VirtualKeyTable.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/VirtualKeyTable.html"
         }
       },
       "version": ""
