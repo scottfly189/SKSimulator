@@ -87,6 +87,287 @@
         <article data-uid="">
 <h1 id="标准dll接口函数">标准DLL接口函数</h1>
 
+<hr>
+<blockquote>
+<p><strong>说明</strong><br>
+本文档汇总“标准DLL接口函数”,大部分情况下建议使用默认参数，注意鼠标坐标最大偏移、系统DPI缩放下鼠标精度等设置。
+<strong>查找设备时需使用真实PID/VID，不操作时应释放所有按键，否则会长按。</strong></p>
+</blockquote>
+<h2 id="查找设备">查找设备</h2>
+<table>
+<thead>
+<tr>
+<th>函数名(标准dll接口)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="standard_fun/HKMSearchDevice.html">HKMSearchDevice</a></td>
+<td>查找设备</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSearchDevice2.html">HKMSearchDevice2</a></td>
+<td>查找设备</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSearchDeviceAll.html">HKMSearchDeviceAll</a></td>
+<td>查找全部设备</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="访问设备">访问设备</h2>
+<table>
+<thead>
+<tr>
+<th>函数名(标准dll接口)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="standard_fun/HKMOpen.html">HKMOpen</a></td>
+<td>打开设备</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMOpen2.html">HKMOpen2</a></td>
+<td>打开设备</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMIsOpen.html">HKMIsOpen</a></td>
+<td>判断设备是否打开</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMClose.html">HKMClose</a></td>
+<td>关闭设备</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="获得设备信息">获得设备信息</h2>
+<table>
+<thead>
+<tr>
+<th>函数名(标准dll接口)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="standard_fun/HKMGetDevInfo.html">HKMGetDevInfo</a></td>
+<td>获得设备信息</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMGetDevString.html">HKMGetDevString</a></td>
+<td>获得设备字符串</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMGetSerialNumber.html">HKMGetSerialNumber</a></td>
+<td>获得序列号</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMGetKeyboardMode.html">HKMGetKeyboardMode</a></td>
+<td>获得键盘模式</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMGetMouseMode.html">HKMGetMouseMode</a></td>
+<td>获得鼠标模式</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMGetKeyboardLEDState.html">HKMGetKeyboardLEDState</a></td>
+<td>获得键盘LED灯状态</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMIsKeyBusy.html">HKMIsKeyBusy</a></td>
+<td>判断键盘是否繁忙</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMIsMouseBusy.html">HKMIsMouseBusy</a></td>
+<td>判断鼠标是否繁忙</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMIsKeyDown.html">HKMIsKeyDown</a></td>
+<td>判断键盘是否按下</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMIsMouseButtonDown.html">HKMIsMouseButtonDown</a></td>
+<td>判断鼠标键是否按下</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMGetCursorPos.html">HKMGetCursorPos</a></td>
+<td>获得鼠标坐标</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMGetCursorPos2.html">HKMGetCursorPos2</a></td>
+<td>获得鼠标坐标</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="设置属性">设置属性</h2>
+<table>
+<thead>
+<tr>
+<th>函数名(标准dll接口)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="standard_fun/HKMSetMode.html">HKMSetMode</a></td>
+<td>设置模式</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSetKeyInterval.html">HKMSetKeyInterval</a></td>
+<td>设置按键时间间隔</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSetMouseInterval.html">HKMSetMouseInterval</a></td>
+<td>设置鼠标时间间隔</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSetAbsMouseScrnRes.html">HKMSetAbsMouseScrnRes</a></td>
+<td>设置绝对鼠标屏幕分辨率</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSetMouseMoveTimeout.html">HKMSetMouseMoveTimeout</a></td>
+<td>设置鼠标移动超时时间</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSetMousePosMaxOffset.html">HKMSetMousePosMaxOffset</a></td>
+<td>设置鼠标坐标最大偏移</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSetMousePosPrecision.html">HKMSetMousePosPrecision</a></td>
+<td>设置鼠标坐标精度</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMSetMouseSpeed.html">HKMSetMouseSpeed</a></td>
+<td>设置鼠标速度</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="操作键盘和鼠标">操作键盘和鼠标</h2>
+<table>
+<thead>
+<tr>
+<th>函数名(标准dll接口)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="standard_fun/HKMKeyPress.html">HKMKeyPress</a></td>
+<td>键盘按键</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMKeyDown.html">HKMKeyDown</a></td>
+<td>键盘按下</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMKeyUp.html">HKMKeyUp</a></td>
+<td>键盘弹起</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMReleaseKeyboard.html">HKMReleaseKeyboard</a></td>
+<td>释放键盘按键</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMLeftClick.html">HKMLeftClick</a></td>
+<td>鼠标左键单击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMRightClick.html">HKMRightClick</a></td>
+<td>鼠标右键单击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMMiddleClick.html">HKMMiddleClick</a></td>
+<td>鼠标中键单击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMXBtn1Click.html">HKMXBtn1Click</a></td>
+<td>鼠标XButton1键单击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMXBtn2Click.html">HKMXBtn2Click</a></td>
+<td>鼠标XButton2键单击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMLeftDoubleClick.html">HKMLeftDoubleClick</a></td>
+<td>鼠标左键双击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMRightDoubleClick.html">HKMRightDoubleClick</a></td>
+<td>鼠标右键双击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMMiddleDoubleClick.html">HKMMiddleDoubleClick</a></td>
+<td>鼠标中键双击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMXBtn1DoubleClick.html">HKMXBtn1DoubleClick</a></td>
+<td>鼠标XButton1键双击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMXBtn2DoubleClick.html">HKMXBtn2DoubleClick</a></td>
+<td>鼠标XButton2键双击</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMLeftDown.html">HKMLeftDown</a></td>
+<td>鼠标左键按下</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMRightDown.html">HKMRightDown</a></td>
+<td>鼠标右键按下</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMMiddleDown.html">HKMMiddleDown</a></td>
+<td>鼠标中键按下</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMXBtn1Down.html">HKMXBtn1Down</a></td>
+<td>鼠标XButton1键按下</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMXBtn2Down.html">HKMXBtn2Down</a></td>
+<td>鼠标XButton2键按下</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMLeftUp.html">HKMLeftUp</a></td>
+<td>鼠标左键弹起</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMRightUp.html">HKMRightUp</a></td>
+<td>鼠标右键弹起</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMMiddleUp.html">HKMMiddleUp</a></td>
+<td>鼠标中键弹起</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMXBtn1Up.html">HKMXBtn1Up</a></td>
+<td>鼠标XButton1键弹起</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMXBtn2Up.html">HKMXBtn2Up</a></td>
+<td>鼠标XButton2键弹起</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMReleaseMouse.html">HKMReleaseMouse</a></td>
+<td>释放鼠标按键</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMMoveTo.html">HKMMoveTo</a></td>
+<td>鼠标移动</td>
+</tr>
+<tr>
+<td><a href="standard_fun/HKMMoveR.html">HKMMoveR</a></td>
+<td>鼠标相对移动</td>
+</tr>
+</tbody>
+</table>
 
 </article>
 

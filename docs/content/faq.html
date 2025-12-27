@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>FAQ | SKSimulator键鼠模拟器 </title>
+      <title>常见问题 | SKSimulator键鼠模拟器 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="FAQ | SKSimulator键鼠模拟器 ">
+      <meta name="title" content="常见问题 | SKSimulator键鼠模拟器 ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,9 +85,93 @@
         </div>
 
         <article data-uid="">
-<h1 id="faq">FAQ</h1>
+<h1 id="常见问题">常见问题</h1>
 
-<h2 id="你提我来回答">你提，我来回答😊</h2>
+<hr>
+<h2 id="使用方法注意">使用方法注意</h2>
+<p>SKSimulator 使用标准DLL接口调用方式，要保证<code>skm.dll</code>在本目录，SKSimulator本质是skm.dll的函数进行封装，提供键鼠模拟器服务</p>
+<p>注意：</p>
+<ul>
+<li>请根据系统的位数（x86 或 x64）选择对应的 skm.dll 文件，切勿混用。
+<ul>
+<li>64位系统请使用 x64\skm.dll。</li>
+<li>32位系统请使用 x86\skm.dll。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>使用<a href="../api/SKM.KMSimulatorService.html">KMSimulatorService类</a>类会自动根据当前环境复制DLL到当前目录，可以无感知使用</p>
+</blockquote>
+<h2 id="如何提高模拟度">如何提高模拟度</h2>
+<p>键鼠模拟器默认可模拟手动操作，但为了更好地还原真实的人工操作体验，建议针对如下参数进行优化设置：</p>
+<ol>
+<li><p>鼠标坐标最大偏移：默认通过 HKMSetMousePosMaxOffset 和 SetMousePosMaxOffset 函数设置为 0（即无偏移）。但实际人工操作时，鼠标移动不可能总是精准到达同一坐标点。因此，建议将最大偏移值设为一定范围，例如 3（具体数值可按实际效果调整），这样每次移动都将在目标点附近小范围随机生成坐标。偏移值过小无法体现真实性，过大又容易超出目标范围，建议视需求调整。</p>
+</li>
+<li><p>操作间隔延时：键盘、鼠标点击、移动、滚轮等各类操作之间应设置随机延时，相关函数为 HKMDelayRnd 和 DelayRnd。不同操作对应的随机最小延时不同。例如，连续点击相同按键时，最小延时建议设为 100 毫秒左右；连续点击不同按键可适当加大至约 130 毫秒。具体数值可根据设备及实际需要进行调整，仅供参考。</p>
+</li>
+<li><p>字符串输出模式：通过 HKMSetMode 和 SetMode 函数设定。默认模式为 0。模式 0 和 1 抗干扰能力较好，模式 2 和 3 在输入半角数字、字母和部分字符时可高度还原手动输入体验。根据实际输入场景选择合适模式即可。</p>
+</li>
+</ol>
+<h2 id="如何调整键盘鼠标操作速度">如何调整键盘鼠标操作速度？</h2>
+<p>影响键盘鼠标操作速度的主要因素如下：</p>
+<ol>
+<li><p>鼠标和键盘按键的延迟。可以通过 HKMSetKeyInterval、SetKeyInterval、HKMSetMouseInterval、SetMouseInterval 等函数进行调整。</p>
+</li>
+<li><p>鼠标移动速度。可使用 HKMSetMouseSpeed、SetMouseSpeed 等函数进行设置。</p>
+</li>
+<li><p>鼠标移动模式。可通过 HKMSetMode、SetMode 等函数进行切换和调整。</p>
+</li>
+<li><p>设备所在电脑的 CPU 使用率过高时，也会对速度产生影响。</p>
+</li>
+</ol>
+<h2 id="dpi对点击准确性的影响">DPI对点击准确性的影响</h2>
+<p>如果点击偏差太多，请检查DPI设置对键鼠模拟器的影响。</p>
+<h3 id="dpi-与点击准确性说明">DPI 与点击准确性说明</h3>
+<h4 id="1-什么是-dpi">1. 什么是 DPI？</h4>
+<p>DPI（Dots Per Inch，每英寸像素数）用于描述显示器单位长度上包含的像素数量。在本文档的讨论中，<strong>DPI均指显示器DPI</strong>，而非鼠标DPI，请勿混淆。调整显示器DPI会影响 Windows 系统下应用程序界面的缩放比例。你可以在“显示设置”或“屏幕分辨率”等菜单中调整 DPI，不同 Windows 版本设置项描述可能略有不同。例如：</p>
+<ul>
+<li>Windows 7：设置项通常叫“放大或缩小文本和其他项目”。</li>
+<li>Windows 10：通常为“更改文本、应用等项目的大小”，不同版本位置可能不同。</li>
+</ul>
+<h4 id="2-windows-dpi-感知模式简介">2. Windows DPI 感知模式简介</h4>
+<p>Windows 系统为了兼容各种程序，支持多种 DPI 感知（DPI Awareness）模式，不同模式下API获取的坐标含义不同，直接影响到模拟点击的准确性。常见的有三种：</p>
+<ul>
+<li><strong>无 DPI 感知（DPI Unaware）</strong><br>
+程序本身无法识别 DPI 缩放，由系统自动缩放界面。此时，API 相关的窗口坐标与实际像素不一致，界面在高DPI环境下会变模糊，点击坐标容易发生偏移。</li>
+<li><strong>系统 DPI 感知（System DPI Aware）</strong><br>
+程序在启动时根据主显示器 DPI 适配窗口。</li>
+<li><strong>每显示器 DPI 感知（Per Monitor DPI Aware）</strong><br>
+程序能够实时感知并适配不同显示器的 DPI 设置。此模式下，API 获取到的屏幕坐标与实际物理像素始终一一对应，<strong>推荐设置为此模式</strong>以获得最高的点击定位精度。</li>
+</ul>
+<h4 id="3-dpi-对键鼠模拟器点击的影响">3. DPI 对键鼠模拟器点击的影响</h4>
+<ul>
+<li><p><strong>DPI 配置与模拟坐标</strong></p>
+<ul>
+<li>如果应用程序未正确指定 DPI 感知（比如“无DPI感知”），Windows 的缩放机制会导致窗口、控件以及鼠标坐标和实际像素坐标不一致，从而产生点击偏移，导致模拟点击不准确。</li>
+<li>只有“每显示器 DPI 感知”模式下，键鼠模拟器按API传入的物理像素坐标进行点击，定位最准确。</li>
+</ul>
+</li>
+<li><p><strong>常见问题排查</strong></p>
+<ol>
+<li><strong>点击严重偏移或不生效</strong>：请检查程序进程的 DPI 感知设置，确保为“每显示器 DPI 感知”（Per Monitor DPI Aware）。</li>
+<li><strong>窗口或控件模糊</strong>：意味着程序未适配高 DPI，建议调整程序 DPI 感知或升级为支持高DPI的版本。</li>
+<li><strong>多显示器使用</strong>：在多显示器且各自 DPI 不同时，尤其要确保程序以“每显示器 DPI 感知”启动。</li>
+</ol>
+</li>
+</ul>
+<h4 id="4-总结与建议">4. 总结与建议</h4>
+<ul>
+<li>使用键鼠模拟器时，务必确保目标程序为“每显示器 DPI 感知”模式，保证屏幕坐标与像素一一对应，避免 DPI 缩放引发的点击偏移。</li>
+<li>遇到定位问题，优先排查 DPI 设置。必要时建议将显示器DPI设置为100%进行测试(<strong>重要</strong>)。</li>
+<li>鼠标DPI（鼠标本身的分辨率设置）不影响本模拟器的点击物理坐标，仅影响物理鼠标移动速度。</li>
+<li>系统提供<code>DpiAwareness</code>类（请参考<a href="../api/SKM.DpiAwareness.html">DpiAwareness类</a>）供设置DPI</li>
+</ul>
+<h2 id="找不到dll文件或函数">找不到dll文件或函数</h2>
+<ol>
+<li>检查dll文件是否与<code>SKMCore</code>同一个目录。</li>
+<li>检查dll文件是否正确。32位程序调用32位的dll文件，64位程序调用64位的dll文件。</li>
+<li>检查函数中的函数名是否正确。常见字母错误或者多了空格。</li>
+</ol>
 
 </article>
 
