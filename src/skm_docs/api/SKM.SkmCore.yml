@@ -1,0 +1,2896 @@
+### YamlMime:ManagedReference
+items:
+- uid: SKM.SkmCore
+  commentId: T:SKM.SkmCore
+  id: SkmCore
+  parent: SKM
+  children:
+  - SKM.SkmCore.HKMCheckPressedKeysCS(System.UInt32)
+  - SKM.SkmCore.HKMClose(System.IntPtr)
+  - SKM.SkmCore.HKMDelayRnd(System.IntPtr,System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMEnableOSMouseAccelerate(System.Boolean,System.Boolean)
+  - SKM.SkmCore.HKMGetCursorPos(System.IntPtr,System.Int32@,System.Int32@)
+  - SKM.SkmCore.HKMGetCursorPos2(System.IntPtr)
+  - SKM.SkmCore.HKMGetDevInfo(System.IntPtr,System.UInt32,System.Boolean)
+  - SKM.SkmCore.HKMGetDevString(System.IntPtr,System.UInt32,System.Boolean,System.UInt32@)
+  - SKM.SkmCore.HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)
+  - SKM.SkmCore.HKMGetKeyboardLEDState(System.IntPtr,System.UInt32)
+  - SKM.SkmCore.HKMGetKeyboardMode(System.IntPtr)
+  - SKM.SkmCore.HKMGetMouseMode(System.IntPtr)
+  - SKM.SkmCore.HKMGetOSMouseSpeed
+  - SKM.SkmCore.HKMGetSerialNumber(System.IntPtr,System.Boolean)
+  - SKM.SkmCore.HKMIsKeyBusy(System.IntPtr)
+  - SKM.SkmCore.HKMIsKeyDown(System.IntPtr,System.String)
+  - SKM.SkmCore.HKMIsMouseBusy(System.IntPtr)
+  - SKM.SkmCore.HKMIsMouseButtonDown(System.IntPtr,System.UInt32)
+  - SKM.SkmCore.HKMIsOSMouseAccelerateEnabled
+  - SKM.SkmCore.HKMIsOpen(System.IntPtr,System.UInt32)
+  - SKM.SkmCore.HKMKeyDown(System.IntPtr,System.String)
+  - SKM.SkmCore.HKMKeyPress(System.IntPtr,System.String)
+  - SKM.SkmCore.HKMKeyUp(System.IntPtr,System.String)
+  - SKM.SkmCore.HKMLeftClick(System.IntPtr)
+  - SKM.SkmCore.HKMLeftDoubleClick(System.IntPtr)
+  - SKM.SkmCore.HKMLeftDown(System.IntPtr)
+  - SKM.SkmCore.HKMLeftUp(System.IntPtr)
+  - SKM.SkmCore.HKMMiddleClick(System.IntPtr)
+  - SKM.SkmCore.HKMMiddleDoubleClick(System.IntPtr)
+  - SKM.SkmCore.HKMMiddleDown(System.IntPtr)
+  - SKM.SkmCore.HKMMiddleUp(System.IntPtr)
+  - SKM.SkmCore.HKMMouseWheel(System.IntPtr,System.Int32)
+  - SKM.SkmCore.HKMMouseWheelP(System.IntPtr,System.Int32)
+  - SKM.SkmCore.HKMMoveR(System.IntPtr,System.Int32,System.Int32)
+  - SKM.SkmCore.HKMMoveR2(System.IntPtr,System.Int32,System.Int32)
+  - SKM.SkmCore.HKMMoveRP(System.IntPtr,System.Int32,System.Int32)
+  - SKM.SkmCore.HKMMoveTo(System.IntPtr,System.Int32,System.Int32)
+  - SKM.SkmCore.HKMOpen(System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMOpen2(System.UInt32,System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMOutputString(System.IntPtr,System.String)
+  - SKM.SkmCore.HKMReleaseKeyboard(System.IntPtr)
+  - SKM.SkmCore.HKMReleaseMouse(System.IntPtr)
+  - SKM.SkmCore.HKMRightClick(System.IntPtr)
+  - SKM.SkmCore.HKMRightDoubleClick(System.IntPtr)
+  - SKM.SkmCore.HKMRightDown(System.IntPtr)
+  - SKM.SkmCore.HKMRightUp(System.IntPtr)
+  - SKM.SkmCore.HKMSearchDevice(System.UInt32,System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMSearchDevice2(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMSearchDeviceAll(System.UInt32,System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMSetAbsMouseScrnRes(System.IntPtr,System.Int32,System.Int32)
+  - SKM.SkmCore.HKMSetKeyInterval(System.IntPtr,System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMSetLightMode(System.IntPtr,System.UInt32,System.Boolean)
+  - SKM.SkmCore.HKMSetMode(System.IntPtr,System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMSetMouseInterval(System.IntPtr,System.UInt32,System.UInt32)
+  - SKM.SkmCore.HKMSetMouseMoveTimeout(System.IntPtr,System.UInt32)
+  - SKM.SkmCore.HKMSetMousePosMaxOffset(System.IntPtr,System.UInt32)
+  - SKM.SkmCore.HKMSetMousePosPrecision(System.IntPtr,System.UInt32)
+  - SKM.SkmCore.HKMSetMouseSpeed(System.IntPtr,System.UInt32)
+  - SKM.SkmCore.HKMSetOSMouseSpeed(System.Int32,System.Boolean)
+  - SKM.SkmCore.HKMSetResetMode(System.IntPtr,System.UInt32,System.Boolean)
+  - SKM.SkmCore.HKMSetResetTime(System.IntPtr,System.UInt32,System.Boolean)
+  - SKM.SkmCore.HKMVerifyUserData(System.IntPtr,System.String,System.Boolean)
+  - SKM.SkmCore.HKMVerifyUserData2(System.IntPtr,System.String,System.Boolean)
+  - SKM.SkmCore.HKMXBtn1Click(System.IntPtr)
+  - SKM.SkmCore.HKMXBtn1DoubleClick(System.IntPtr)
+  - SKM.SkmCore.HKMXBtn1Down(System.IntPtr)
+  - SKM.SkmCore.HKMXBtn1Up(System.IntPtr)
+  - SKM.SkmCore.HKMXBtn2Click(System.IntPtr)
+  - SKM.SkmCore.HKMXBtn2DoubleClick(System.IntPtr)
+  - SKM.SkmCore.HKMXBtn2Down(System.IntPtr)
+  - SKM.SkmCore.HKMXBtn2Up(System.IntPtr)
+  langs:
+  - csharp
+  - vb
+  name: SkmCore
+  nameWithType: SkmCore
+  fullName: SKM.SkmCore
+  type: Class
+  source:
+    remote:
+      path: src/SKMCore.cs
+      branch: main
+      repo: git@github.com:scottfly189/SKSimulator.git
+    id: SkmCore
+    path: ../SKSimulator/src/SKMCore.cs
+    startLine: 11
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  summary: >-
+    注意: x86 和 x64 的 dll 是不同的，需要根据实际情况选择  
+
+    x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll  
+
+    使用 <code>KMSimulatorService</code> 服务类可以无感知使用，会自动根据当前环境复制 DLL 到当前目录  
+
+    具体 <code>KMSimulatorService</code> 类使用请参考 <xref href="SKM.KMSimulatorService" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public class SkmCore
+    content.vb: Public Class SkmCore
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SKM.SkmCore.HKMSearchDevice(System.UInt32,System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSearchDevice(System.UInt32,System.UInt32,System.UInt32)
+  id: HKMSearchDevice(System.UInt32,System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSearchDevice(uint, uint, uint)
+  nameWithType: SkmCore.HKMSearchDevice(uint, uint, uint)
+  fullName: SKM.SkmCore.HKMSearchDevice(uint, uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern uint HKMSearchDevice(uint Vid, uint Pid, uint DeviceType)
+    parameters:
+    - id: Vid
+      type: System.UInt32
+    - id: Pid
+      type: System.UInt32
+    - id: DeviceType
+      type: System.UInt32
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function HKMSearchDevice(Vid As UInteger, Pid As UInteger, DeviceType As UInteger) As UInteger
+  overload: SKM.SkmCore.HKMSearchDevice*
+  nameWithType.vb: SkmCore.HKMSearchDevice(UInteger, UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSearchDevice(UInteger, UInteger, UInteger)
+  name.vb: HKMSearchDevice(UInteger, UInteger, UInteger)
+- uid: SKM.SkmCore.HKMSearchDevice2(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSearchDevice2(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  id: HKMSearchDevice2(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSearchDevice2(uint, uint, uint, uint)
+  nameWithType: SkmCore.HKMSearchDevice2(uint, uint, uint, uint)
+  fullName: SKM.SkmCore.HKMSearchDevice2(uint, uint, uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern uint HKMSearchDevice2(uint Vid, uint Pid, uint SN, uint DeviceType)
+    parameters:
+    - id: Vid
+      type: System.UInt32
+    - id: Pid
+      type: System.UInt32
+    - id: SN
+      type: System.UInt32
+    - id: DeviceType
+      type: System.UInt32
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function HKMSearchDevice2(Vid As UInteger, Pid As UInteger, SN As UInteger, DeviceType As UInteger) As UInteger
+  overload: SKM.SkmCore.HKMSearchDevice2*
+  nameWithType.vb: SkmCore.HKMSearchDevice2(UInteger, UInteger, UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSearchDevice2(UInteger, UInteger, UInteger, UInteger)
+  name.vb: HKMSearchDevice2(UInteger, UInteger, UInteger, UInteger)
+- uid: SKM.SkmCore.HKMSearchDeviceAll(System.UInt32,System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSearchDeviceAll(System.UInt32,System.UInt32,System.UInt32)
+  id: HKMSearchDeviceAll(System.UInt32,System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSearchDeviceAll(uint, uint, uint)
+  nameWithType: SkmCore.HKMSearchDeviceAll(uint, uint, uint)
+  fullName: SKM.SkmCore.HKMSearchDeviceAll(uint, uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern nint HKMSearchDeviceAll(uint Vid, uint Pid, uint DeviceType)
+    parameters:
+    - id: Vid
+      type: System.UInt32
+    - id: Pid
+      type: System.UInt32
+    - id: DeviceType
+      type: System.UInt32
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function HKMSearchDeviceAll(Vid As UInteger, Pid As UInteger, DeviceType As UInteger) As IntPtr
+  overload: SKM.SkmCore.HKMSearchDeviceAll*
+  nameWithType.vb: SkmCore.HKMSearchDeviceAll(UInteger, UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSearchDeviceAll(UInteger, UInteger, UInteger)
+  name.vb: HKMSearchDeviceAll(UInteger, UInteger, UInteger)
+- uid: SKM.SkmCore.HKMOpen(System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMOpen(System.UInt32,System.UInt32)
+  id: HKMOpen(System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMOpen(uint, uint)
+  nameWithType: SkmCore.HKMOpen(uint, uint)
+  fullName: SKM.SkmCore.HKMOpen(uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern nint HKMOpen(uint DeviceId, uint DpiMode)
+    parameters:
+    - id: DeviceId
+      type: System.UInt32
+    - id: DpiMode
+      type: System.UInt32
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function HKMOpen(DeviceId As UInteger, DpiMode As UInteger) As IntPtr
+  overload: SKM.SkmCore.HKMOpen*
+  nameWithType.vb: SkmCore.HKMOpen(UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMOpen(UInteger, UInteger)
+  name.vb: HKMOpen(UInteger, UInteger)
+- uid: SKM.SkmCore.HKMOpen2(System.UInt32,System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMOpen2(System.UInt32,System.UInt32,System.UInt32)
+  id: HKMOpen2(System.UInt32,System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMOpen2(uint, uint, uint)
+  nameWithType: SkmCore.HKMOpen2(uint, uint, uint)
+  fullName: SKM.SkmCore.HKMOpen2(uint, uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern nint HKMOpen2(uint DeviceId1, uint DeviceId2, uint DpiMode)
+    parameters:
+    - id: DeviceId1
+      type: System.UInt32
+    - id: DeviceId2
+      type: System.UInt32
+    - id: DpiMode
+      type: System.UInt32
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function HKMOpen2(DeviceId1 As UInteger, DeviceId2 As UInteger, DpiMode As UInteger) As IntPtr
+  overload: SKM.SkmCore.HKMOpen2*
+  nameWithType.vb: SkmCore.HKMOpen2(UInteger, UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMOpen2(UInteger, UInteger, UInteger)
+  name.vb: HKMOpen2(UInteger, UInteger, UInteger)
+- uid: SKM.SkmCore.HKMIsOpen(System.IntPtr,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMIsOpen(System.IntPtr,System.UInt32)
+  id: HKMIsOpen(System.IntPtr,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMIsOpen(nint, uint)
+  nameWithType: SkmCore.HKMIsOpen(nint, uint)
+  fullName: SKM.SkmCore.HKMIsOpen(nint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMIsOpen(nint HKMData, uint Flags)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Flags
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMIsOpen(HKMData As IntPtr, Flags As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMIsOpen*
+  nameWithType.vb: SkmCore.HKMIsOpen(IntPtr, UInteger)
+  fullName.vb: SKM.SkmCore.HKMIsOpen(System.IntPtr, UInteger)
+  name.vb: HKMIsOpen(IntPtr, UInteger)
+- uid: SKM.SkmCore.HKMClose(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMClose(System.IntPtr)
+  id: HKMClose(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMClose(nint)
+  nameWithType: SkmCore.HKMClose(nint)
+  fullName: SKM.SkmCore.HKMClose(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMClose(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMClose(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMClose*
+  nameWithType.vb: SkmCore.HKMClose(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMClose(System.IntPtr)
+  name.vb: HKMClose(IntPtr)
+- uid: SKM.SkmCore.HKMGetDevInfo(System.IntPtr,System.UInt32,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMGetDevInfo(System.IntPtr,System.UInt32,System.Boolean)
+  id: HKMGetDevInfo(System.IntPtr,System.UInt32,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetDevInfo(nint, uint, bool)
+  nameWithType: SkmCore.HKMGetDevInfo(nint, uint, bool)
+  fullName: SKM.SkmCore.HKMGetDevInfo(nint, uint, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern uint HKMGetDevInfo(nint HKMData, uint Index, bool Mouse)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Index
+      type: System.UInt32
+    - id: Mouse
+      type: System.Boolean
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function HKMGetDevInfo(HKMData As IntPtr, Index As UInteger, Mouse As Boolean) As UInteger
+  overload: SKM.SkmCore.HKMGetDevInfo*
+  nameWithType.vb: SkmCore.HKMGetDevInfo(IntPtr, UInteger, Boolean)
+  fullName.vb: SKM.SkmCore.HKMGetDevInfo(System.IntPtr, UInteger, Boolean)
+  name.vb: HKMGetDevInfo(IntPtr, UInteger, Boolean)
+- uid: SKM.SkmCore.HKMGetDevString(System.IntPtr,System.UInt32,System.Boolean,System.UInt32@)
+  commentId: M:SKM.SkmCore.HKMGetDevString(System.IntPtr,System.UInt32,System.Boolean,System.UInt32@)
+  id: HKMGetDevString(System.IntPtr,System.UInt32,System.Boolean,System.UInt32@)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetDevString(nint, uint, bool, ref uint)
+  nameWithType: SkmCore.HKMGetDevString(nint, uint, bool, ref uint)
+  fullName: SKM.SkmCore.HKMGetDevString(nint, uint, bool, ref uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern nint HKMGetDevString(nint HKMData, uint Index, bool Mouse, ref uint Length)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Index
+      type: System.UInt32
+    - id: Mouse
+      type: System.Boolean
+    - id: Length
+      type: System.UInt32
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function HKMGetDevString(HKMData As IntPtr, Index As UInteger, Mouse As Boolean, Length As UInteger) As IntPtr
+  overload: SKM.SkmCore.HKMGetDevString*
+  nameWithType.vb: SkmCore.HKMGetDevString(IntPtr, UInteger, Boolean, UInteger)
+  fullName.vb: SKM.SkmCore.HKMGetDevString(System.IntPtr, UInteger, Boolean, UInteger)
+  name.vb: HKMGetDevString(IntPtr, UInteger, Boolean, UInteger)
+- uid: SKM.SkmCore.HKMGetSerialNumber(System.IntPtr,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMGetSerialNumber(System.IntPtr,System.Boolean)
+  id: HKMGetSerialNumber(System.IntPtr,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetSerialNumber(nint, bool)
+  nameWithType: SkmCore.HKMGetSerialNumber(nint, bool)
+  fullName: SKM.SkmCore.HKMGetSerialNumber(nint, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern uint HKMGetSerialNumber(nint HKMData, bool Mouse)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Mouse
+      type: System.Boolean
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function HKMGetSerialNumber(HKMData As IntPtr, Mouse As Boolean) As UInteger
+  overload: SKM.SkmCore.HKMGetSerialNumber*
+  nameWithType.vb: SkmCore.HKMGetSerialNumber(IntPtr, Boolean)
+  fullName.vb: SKM.SkmCore.HKMGetSerialNumber(System.IntPtr, Boolean)
+  name.vb: HKMGetSerialNumber(IntPtr, Boolean)
+- uid: SKM.SkmCore.HKMGetKeyboardMode(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMGetKeyboardMode(System.IntPtr)
+  id: HKMGetKeyboardMode(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetKeyboardMode(nint)
+  nameWithType: SkmCore.HKMGetKeyboardMode(nint)
+  fullName: SKM.SkmCore.HKMGetKeyboardMode(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern uint HKMGetKeyboardMode(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function HKMGetKeyboardMode(HKMData As IntPtr) As UInteger
+  overload: SKM.SkmCore.HKMGetKeyboardMode*
+  nameWithType.vb: SkmCore.HKMGetKeyboardMode(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMGetKeyboardMode(System.IntPtr)
+  name.vb: HKMGetKeyboardMode(IntPtr)
+- uid: SKM.SkmCore.HKMGetMouseMode(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMGetMouseMode(System.IntPtr)
+  id: HKMGetMouseMode(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetMouseMode(nint)
+  nameWithType: SkmCore.HKMGetMouseMode(nint)
+  fullName: SKM.SkmCore.HKMGetMouseMode(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern uint HKMGetMouseMode(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function HKMGetMouseMode(HKMData As IntPtr) As UInteger
+  overload: SKM.SkmCore.HKMGetMouseMode*
+  nameWithType.vb: SkmCore.HKMGetMouseMode(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMGetMouseMode(System.IntPtr)
+  name.vb: HKMGetMouseMode(IntPtr)
+- uid: SKM.SkmCore.HKMIsKeyBusy(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMIsKeyBusy(System.IntPtr)
+  id: HKMIsKeyBusy(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMIsKeyBusy(nint)
+  nameWithType: SkmCore.HKMIsKeyBusy(nint)
+  fullName: SKM.SkmCore.HKMIsKeyBusy(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMIsKeyBusy(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMIsKeyBusy(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMIsKeyBusy*
+  nameWithType.vb: SkmCore.HKMIsKeyBusy(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMIsKeyBusy(System.IntPtr)
+  name.vb: HKMIsKeyBusy(IntPtr)
+- uid: SKM.SkmCore.HKMIsMouseBusy(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMIsMouseBusy(System.IntPtr)
+  id: HKMIsMouseBusy(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMIsMouseBusy(nint)
+  nameWithType: SkmCore.HKMIsMouseBusy(nint)
+  fullName: SKM.SkmCore.HKMIsMouseBusy(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMIsMouseBusy(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMIsMouseBusy(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMIsMouseBusy*
+  nameWithType.vb: SkmCore.HKMIsMouseBusy(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMIsMouseBusy(System.IntPtr)
+  name.vb: HKMIsMouseBusy(IntPtr)
+- uid: SKM.SkmCore.HKMIsKeyDown(System.IntPtr,System.String)
+  commentId: M:SKM.SkmCore.HKMIsKeyDown(System.IntPtr,System.String)
+  id: HKMIsKeyDown(System.IntPtr,System.String)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMIsKeyDown(nint, string)
+  nameWithType: SkmCore.HKMIsKeyDown(nint, string)
+  fullName: SKM.SkmCore.HKMIsKeyDown(nint, string)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMIsKeyDown(nint HKMData, string KeyName)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: KeyName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMIsKeyDown(HKMData As IntPtr, KeyName As String) As Boolean
+  overload: SKM.SkmCore.HKMIsKeyDown*
+  nameWithType.vb: SkmCore.HKMIsKeyDown(IntPtr, String)
+  fullName.vb: SKM.SkmCore.HKMIsKeyDown(System.IntPtr, String)
+  name.vb: HKMIsKeyDown(IntPtr, String)
+- uid: SKM.SkmCore.HKMIsMouseButtonDown(System.IntPtr,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMIsMouseButtonDown(System.IntPtr,System.UInt32)
+  id: HKMIsMouseButtonDown(System.IntPtr,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMIsMouseButtonDown(nint, uint)
+  nameWithType: SkmCore.HKMIsMouseButtonDown(nint, uint)
+  fullName: SKM.SkmCore.HKMIsMouseButtonDown(nint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMIsMouseButtonDown(nint HKMData, uint Index)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Index
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMIsMouseButtonDown(HKMData As IntPtr, Index As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMIsMouseButtonDown*
+  nameWithType.vb: SkmCore.HKMIsMouseButtonDown(IntPtr, UInteger)
+  fullName.vb: SKM.SkmCore.HKMIsMouseButtonDown(System.IntPtr, UInteger)
+  name.vb: HKMIsMouseButtonDown(IntPtr, UInteger)
+- uid: SKM.SkmCore.HKMGetKeyboardLEDState(System.IntPtr,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMGetKeyboardLEDState(System.IntPtr,System.UInt32)
+  id: HKMGetKeyboardLEDState(System.IntPtr,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetKeyboardLEDState(nint, uint)
+  nameWithType: SkmCore.HKMGetKeyboardLEDState(nint, uint)
+  fullName: SKM.SkmCore.HKMGetKeyboardLEDState(nint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMGetKeyboardLEDState(nint HKMData, uint Index)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Index
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMGetKeyboardLEDState(HKMData As IntPtr, Index As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMGetKeyboardLEDState*
+  nameWithType.vb: SkmCore.HKMGetKeyboardLEDState(IntPtr, UInteger)
+  fullName.vb: SKM.SkmCore.HKMGetKeyboardLEDState(System.IntPtr, UInteger)
+  name.vb: HKMGetKeyboardLEDState(IntPtr, UInteger)
+- uid: SKM.SkmCore.HKMGetCursorPos(System.IntPtr,System.Int32@,System.Int32@)
+  commentId: M:SKM.SkmCore.HKMGetCursorPos(System.IntPtr,System.Int32@,System.Int32@)
+  id: HKMGetCursorPos(System.IntPtr,System.Int32@,System.Int32@)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetCursorPos(nint, ref int, ref int)
+  nameWithType: SkmCore.HKMGetCursorPos(nint, ref int, ref int)
+  fullName: SKM.SkmCore.HKMGetCursorPos(nint, ref int, ref int)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMGetCursorPos(nint HKMData, ref int X, ref int Y)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: X
+      type: System.Int32
+    - id: Y
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMGetCursorPos(HKMData As IntPtr, X As Integer, Y As Integer) As Boolean
+  overload: SKM.SkmCore.HKMGetCursorPos*
+  nameWithType.vb: SkmCore.HKMGetCursorPos(IntPtr, Integer, Integer)
+  fullName.vb: SKM.SkmCore.HKMGetCursorPos(System.IntPtr, Integer, Integer)
+  name.vb: HKMGetCursorPos(IntPtr, Integer, Integer)
+- uid: SKM.SkmCore.HKMGetCursorPos2(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMGetCursorPos2(System.IntPtr)
+  id: HKMGetCursorPos2(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetCursorPos2(nint)
+  nameWithType: SkmCore.HKMGetCursorPos2(nint)
+  fullName: SKM.SkmCore.HKMGetCursorPos2(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern uint HKMGetCursorPos2(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function HKMGetCursorPos2(HKMData As IntPtr) As UInteger
+  overload: SKM.SkmCore.HKMGetCursorPos2*
+  nameWithType.vb: SkmCore.HKMGetCursorPos2(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMGetCursorPos2(System.IntPtr)
+  name.vb: HKMGetCursorPos2(IntPtr)
+- uid: SKM.SkmCore.HKMSetMode(System.IntPtr,System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSetMode(System.IntPtr,System.UInt32,System.UInt32)
+  id: HKMSetMode(System.IntPtr,System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetMode(nint, uint, uint)
+  nameWithType: SkmCore.HKMSetMode(nint, uint, uint)
+  fullName: SKM.SkmCore.HKMSetMode(nint, uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetMode(nint HKMData, uint Index, uint Mode)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Index
+      type: System.UInt32
+    - id: Mode
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetMode(HKMData As IntPtr, Index As UInteger, Mode As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMSetMode*
+  nameWithType.vb: SkmCore.HKMSetMode(IntPtr, UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSetMode(System.IntPtr, UInteger, UInteger)
+  name.vb: HKMSetMode(IntPtr, UInteger, UInteger)
+- uid: SKM.SkmCore.HKMSetKeyInterval(System.IntPtr,System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSetKeyInterval(System.IntPtr,System.UInt32,System.UInt32)
+  id: HKMSetKeyInterval(System.IntPtr,System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetKeyInterval(nint, uint, uint)
+  nameWithType: SkmCore.HKMSetKeyInterval(nint, uint, uint)
+  fullName: SKM.SkmCore.HKMSetKeyInterval(nint, uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetKeyInterval(nint HKMData, uint MinTime, uint MaxTime)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: MinTime
+      type: System.UInt32
+    - id: MaxTime
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetKeyInterval(HKMData As IntPtr, MinTime As UInteger, MaxTime As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMSetKeyInterval*
+  nameWithType.vb: SkmCore.HKMSetKeyInterval(IntPtr, UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSetKeyInterval(System.IntPtr, UInteger, UInteger)
+  name.vb: HKMSetKeyInterval(IntPtr, UInteger, UInteger)
+- uid: SKM.SkmCore.HKMSetMouseInterval(System.IntPtr,System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSetMouseInterval(System.IntPtr,System.UInt32,System.UInt32)
+  id: HKMSetMouseInterval(System.IntPtr,System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetMouseInterval(nint, uint, uint)
+  nameWithType: SkmCore.HKMSetMouseInterval(nint, uint, uint)
+  fullName: SKM.SkmCore.HKMSetMouseInterval(nint, uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetMouseInterval(nint HKMData, uint MinTime, uint MaxTime)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: MinTime
+      type: System.UInt32
+    - id: MaxTime
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetMouseInterval(HKMData As IntPtr, MinTime As UInteger, MaxTime As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMSetMouseInterval*
+  nameWithType.vb: SkmCore.HKMSetMouseInterval(IntPtr, UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSetMouseInterval(System.IntPtr, UInteger, UInteger)
+  name.vb: HKMSetMouseInterval(IntPtr, UInteger, UInteger)
+- uid: SKM.SkmCore.HKMSetAbsMouseScrnRes(System.IntPtr,System.Int32,System.Int32)
+  commentId: M:SKM.SkmCore.HKMSetAbsMouseScrnRes(System.IntPtr,System.Int32,System.Int32)
+  id: HKMSetAbsMouseScrnRes(System.IntPtr,System.Int32,System.Int32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetAbsMouseScrnRes(nint, int, int)
+  nameWithType: SkmCore.HKMSetAbsMouseScrnRes(nint, int, int)
+  fullName: SKM.SkmCore.HKMSetAbsMouseScrnRes(nint, int, int)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetAbsMouseScrnRes(nint HKMData, int Width, int Height)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Width
+      type: System.Int32
+    - id: Height
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetAbsMouseScrnRes(HKMData As IntPtr, Width As Integer, Height As Integer) As Boolean
+  overload: SKM.SkmCore.HKMSetAbsMouseScrnRes*
+  nameWithType.vb: SkmCore.HKMSetAbsMouseScrnRes(IntPtr, Integer, Integer)
+  fullName.vb: SKM.SkmCore.HKMSetAbsMouseScrnRes(System.IntPtr, Integer, Integer)
+  name.vb: HKMSetAbsMouseScrnRes(IntPtr, Integer, Integer)
+- uid: SKM.SkmCore.HKMSetMousePosPrecision(System.IntPtr,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSetMousePosPrecision(System.IntPtr,System.UInt32)
+  id: HKMSetMousePosPrecision(System.IntPtr,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetMousePosPrecision(nint, uint)
+  nameWithType: SkmCore.HKMSetMousePosPrecision(nint, uint)
+  fullName: SKM.SkmCore.HKMSetMousePosPrecision(nint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetMousePosPrecision(nint HKMData, uint Precision)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Precision
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetMousePosPrecision(HKMData As IntPtr, Precision As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMSetMousePosPrecision*
+  nameWithType.vb: SkmCore.HKMSetMousePosPrecision(IntPtr, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSetMousePosPrecision(System.IntPtr, UInteger)
+  name.vb: HKMSetMousePosPrecision(IntPtr, UInteger)
+- uid: SKM.SkmCore.HKMSetMouseSpeed(System.IntPtr,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSetMouseSpeed(System.IntPtr,System.UInt32)
+  id: HKMSetMouseSpeed(System.IntPtr,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetMouseSpeed(nint, uint)
+  nameWithType: SkmCore.HKMSetMouseSpeed(nint, uint)
+  fullName: SKM.SkmCore.HKMSetMouseSpeed(nint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetMouseSpeed(nint HKMData, uint MouseSpeed)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: MouseSpeed
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetMouseSpeed(HKMData As IntPtr, MouseSpeed As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMSetMouseSpeed*
+  nameWithType.vb: SkmCore.HKMSetMouseSpeed(IntPtr, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSetMouseSpeed(System.IntPtr, UInteger)
+  name.vb: HKMSetMouseSpeed(IntPtr, UInteger)
+- uid: SKM.SkmCore.HKMSetMouseMoveTimeout(System.IntPtr,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSetMouseMoveTimeout(System.IntPtr,System.UInt32)
+  id: HKMSetMouseMoveTimeout(System.IntPtr,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetMouseMoveTimeout(nint, uint)
+  nameWithType: SkmCore.HKMSetMouseMoveTimeout(nint, uint)
+  fullName: SKM.SkmCore.HKMSetMouseMoveTimeout(nint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetMouseMoveTimeout(nint HKMData, uint Timeout)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Timeout
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetMouseMoveTimeout(HKMData As IntPtr, Timeout As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMSetMouseMoveTimeout*
+  nameWithType.vb: SkmCore.HKMSetMouseMoveTimeout(IntPtr, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSetMouseMoveTimeout(System.IntPtr, UInteger)
+  name.vb: HKMSetMouseMoveTimeout(IntPtr, UInteger)
+- uid: SKM.SkmCore.HKMSetMousePosMaxOffset(System.IntPtr,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMSetMousePosMaxOffset(System.IntPtr,System.UInt32)
+  id: HKMSetMousePosMaxOffset(System.IntPtr,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetMousePosMaxOffset(nint, uint)
+  nameWithType: SkmCore.HKMSetMousePosMaxOffset(nint, uint)
+  fullName: SKM.SkmCore.HKMSetMousePosMaxOffset(nint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetMousePosMaxOffset(nint HKMData, uint dwOffset)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: dwOffset
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetMousePosMaxOffset(HKMData As IntPtr, dwOffset As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMSetMousePosMaxOffset*
+  nameWithType.vb: SkmCore.HKMSetMousePosMaxOffset(IntPtr, UInteger)
+  fullName.vb: SKM.SkmCore.HKMSetMousePosMaxOffset(System.IntPtr, UInteger)
+  name.vb: HKMSetMousePosMaxOffset(IntPtr, UInteger)
+- uid: SKM.SkmCore.HKMKeyPress(System.IntPtr,System.String)
+  commentId: M:SKM.SkmCore.HKMKeyPress(System.IntPtr,System.String)
+  id: HKMKeyPress(System.IntPtr,System.String)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMKeyPress(nint, string)
+  nameWithType: SkmCore.HKMKeyPress(nint, string)
+  fullName: SKM.SkmCore.HKMKeyPress(nint, string)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMKeyPress(nint HKMData, string KeyName)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: KeyName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMKeyPress(HKMData As IntPtr, KeyName As String) As Boolean
+  overload: SKM.SkmCore.HKMKeyPress*
+  nameWithType.vb: SkmCore.HKMKeyPress(IntPtr, String)
+  fullName.vb: SKM.SkmCore.HKMKeyPress(System.IntPtr, String)
+  name.vb: HKMKeyPress(IntPtr, String)
+- uid: SKM.SkmCore.HKMKeyDown(System.IntPtr,System.String)
+  commentId: M:SKM.SkmCore.HKMKeyDown(System.IntPtr,System.String)
+  id: HKMKeyDown(System.IntPtr,System.String)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMKeyDown(nint, string)
+  nameWithType: SkmCore.HKMKeyDown(nint, string)
+  fullName: SKM.SkmCore.HKMKeyDown(nint, string)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMKeyDown(nint HKMData, string KeyName)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: KeyName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMKeyDown(HKMData As IntPtr, KeyName As String) As Boolean
+  overload: SKM.SkmCore.HKMKeyDown*
+  nameWithType.vb: SkmCore.HKMKeyDown(IntPtr, String)
+  fullName.vb: SKM.SkmCore.HKMKeyDown(System.IntPtr, String)
+  name.vb: HKMKeyDown(IntPtr, String)
+- uid: SKM.SkmCore.HKMKeyUp(System.IntPtr,System.String)
+  commentId: M:SKM.SkmCore.HKMKeyUp(System.IntPtr,System.String)
+  id: HKMKeyUp(System.IntPtr,System.String)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMKeyUp(nint, string)
+  nameWithType: SkmCore.HKMKeyUp(nint, string)
+  fullName: SKM.SkmCore.HKMKeyUp(nint, string)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMKeyUp(nint HKMData, string KeyName)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: KeyName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMKeyUp(HKMData As IntPtr, KeyName As String) As Boolean
+  overload: SKM.SkmCore.HKMKeyUp*
+  nameWithType.vb: SkmCore.HKMKeyUp(IntPtr, String)
+  fullName.vb: SKM.SkmCore.HKMKeyUp(System.IntPtr, String)
+  name.vb: HKMKeyUp(IntPtr, String)
+- uid: SKM.SkmCore.HKMMoveTo(System.IntPtr,System.Int32,System.Int32)
+  commentId: M:SKM.SkmCore.HKMMoveTo(System.IntPtr,System.Int32,System.Int32)
+  id: HKMMoveTo(System.IntPtr,System.Int32,System.Int32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMoveTo(nint, int, int)
+  nameWithType: SkmCore.HKMMoveTo(nint, int, int)
+  fullName: SKM.SkmCore.HKMMoveTo(nint, int, int)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMoveTo(nint HKMData, int X, int Y)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: X
+      type: System.Int32
+    - id: Y
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMoveTo(HKMData As IntPtr, X As Integer, Y As Integer) As Boolean
+  overload: SKM.SkmCore.HKMMoveTo*
+  nameWithType.vb: SkmCore.HKMMoveTo(IntPtr, Integer, Integer)
+  fullName.vb: SKM.SkmCore.HKMMoveTo(System.IntPtr, Integer, Integer)
+  name.vb: HKMMoveTo(IntPtr, Integer, Integer)
+- uid: SKM.SkmCore.HKMMoveR(System.IntPtr,System.Int32,System.Int32)
+  commentId: M:SKM.SkmCore.HKMMoveR(System.IntPtr,System.Int32,System.Int32)
+  id: HKMMoveR(System.IntPtr,System.Int32,System.Int32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMoveR(nint, int, int)
+  nameWithType: SkmCore.HKMMoveR(nint, int, int)
+  fullName: SKM.SkmCore.HKMMoveR(nint, int, int)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMoveR(nint HKMData, int X, int Y)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: X
+      type: System.Int32
+    - id: Y
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMoveR(HKMData As IntPtr, X As Integer, Y As Integer) As Boolean
+  overload: SKM.SkmCore.HKMMoveR*
+  nameWithType.vb: SkmCore.HKMMoveR(IntPtr, Integer, Integer)
+  fullName.vb: SKM.SkmCore.HKMMoveR(System.IntPtr, Integer, Integer)
+  name.vb: HKMMoveR(IntPtr, Integer, Integer)
+- uid: SKM.SkmCore.HKMMoveR2(System.IntPtr,System.Int32,System.Int32)
+  commentId: M:SKM.SkmCore.HKMMoveR2(System.IntPtr,System.Int32,System.Int32)
+  id: HKMMoveR2(System.IntPtr,System.Int32,System.Int32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMoveR2(nint, int, int)
+  nameWithType: SkmCore.HKMMoveR2(nint, int, int)
+  fullName: SKM.SkmCore.HKMMoveR2(nint, int, int)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMoveR2(nint HKMData, int X, int Y)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: X
+      type: System.Int32
+    - id: Y
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMoveR2(HKMData As IntPtr, X As Integer, Y As Integer) As Boolean
+  overload: SKM.SkmCore.HKMMoveR2*
+  nameWithType.vb: SkmCore.HKMMoveR2(IntPtr, Integer, Integer)
+  fullName.vb: SKM.SkmCore.HKMMoveR2(System.IntPtr, Integer, Integer)
+  name.vb: HKMMoveR2(IntPtr, Integer, Integer)
+- uid: SKM.SkmCore.HKMMoveRP(System.IntPtr,System.Int32,System.Int32)
+  commentId: M:SKM.SkmCore.HKMMoveRP(System.IntPtr,System.Int32,System.Int32)
+  id: HKMMoveRP(System.IntPtr,System.Int32,System.Int32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMoveRP(nint, int, int)
+  nameWithType: SkmCore.HKMMoveRP(nint, int, int)
+  fullName: SKM.SkmCore.HKMMoveRP(nint, int, int)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMoveRP(nint HKMData, int X, int Y)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: X
+      type: System.Int32
+    - id: Y
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMoveRP(HKMData As IntPtr, X As Integer, Y As Integer) As Boolean
+  overload: SKM.SkmCore.HKMMoveRP*
+  nameWithType.vb: SkmCore.HKMMoveRP(IntPtr, Integer, Integer)
+  fullName.vb: SKM.SkmCore.HKMMoveRP(System.IntPtr, Integer, Integer)
+  name.vb: HKMMoveRP(IntPtr, Integer, Integer)
+- uid: SKM.SkmCore.HKMLeftClick(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMLeftClick(System.IntPtr)
+  id: HKMLeftClick(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMLeftClick(nint)
+  nameWithType: SkmCore.HKMLeftClick(nint)
+  fullName: SKM.SkmCore.HKMLeftClick(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMLeftClick(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMLeftClick(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMLeftClick*
+  nameWithType.vb: SkmCore.HKMLeftClick(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMLeftClick(System.IntPtr)
+  name.vb: HKMLeftClick(IntPtr)
+- uid: SKM.SkmCore.HKMRightClick(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMRightClick(System.IntPtr)
+  id: HKMRightClick(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMRightClick(nint)
+  nameWithType: SkmCore.HKMRightClick(nint)
+  fullName: SKM.SkmCore.HKMRightClick(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMRightClick(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMRightClick(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMRightClick*
+  nameWithType.vb: SkmCore.HKMRightClick(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMRightClick(System.IntPtr)
+  name.vb: HKMRightClick(IntPtr)
+- uid: SKM.SkmCore.HKMMiddleClick(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMMiddleClick(System.IntPtr)
+  id: HKMMiddleClick(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMiddleClick(nint)
+  nameWithType: SkmCore.HKMMiddleClick(nint)
+  fullName: SKM.SkmCore.HKMMiddleClick(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMiddleClick(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMiddleClick(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMMiddleClick*
+  nameWithType.vb: SkmCore.HKMMiddleClick(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMMiddleClick(System.IntPtr)
+  name.vb: HKMMiddleClick(IntPtr)
+- uid: SKM.SkmCore.HKMXBtn1Click(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMXBtn1Click(System.IntPtr)
+  id: HKMXBtn1Click(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMXBtn1Click(nint)
+  nameWithType: SkmCore.HKMXBtn1Click(nint)
+  fullName: SKM.SkmCore.HKMXBtn1Click(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMXBtn1Click(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMXBtn1Click(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMXBtn1Click*
+  nameWithType.vb: SkmCore.HKMXBtn1Click(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMXBtn1Click(System.IntPtr)
+  name.vb: HKMXBtn1Click(IntPtr)
+- uid: SKM.SkmCore.HKMXBtn2Click(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMXBtn2Click(System.IntPtr)
+  id: HKMXBtn2Click(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMXBtn2Click(nint)
+  nameWithType: SkmCore.HKMXBtn2Click(nint)
+  fullName: SKM.SkmCore.HKMXBtn2Click(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMXBtn2Click(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMXBtn2Click(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMXBtn2Click*
+  nameWithType.vb: SkmCore.HKMXBtn2Click(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMXBtn2Click(System.IntPtr)
+  name.vb: HKMXBtn2Click(IntPtr)
+- uid: SKM.SkmCore.HKMLeftDoubleClick(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMLeftDoubleClick(System.IntPtr)
+  id: HKMLeftDoubleClick(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMLeftDoubleClick(nint)
+  nameWithType: SkmCore.HKMLeftDoubleClick(nint)
+  fullName: SKM.SkmCore.HKMLeftDoubleClick(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMLeftDoubleClick(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMLeftDoubleClick(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMLeftDoubleClick*
+  nameWithType.vb: SkmCore.HKMLeftDoubleClick(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMLeftDoubleClick(System.IntPtr)
+  name.vb: HKMLeftDoubleClick(IntPtr)
+- uid: SKM.SkmCore.HKMRightDoubleClick(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMRightDoubleClick(System.IntPtr)
+  id: HKMRightDoubleClick(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMRightDoubleClick(nint)
+  nameWithType: SkmCore.HKMRightDoubleClick(nint)
+  fullName: SKM.SkmCore.HKMRightDoubleClick(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMRightDoubleClick(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMRightDoubleClick(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMRightDoubleClick*
+  nameWithType.vb: SkmCore.HKMRightDoubleClick(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMRightDoubleClick(System.IntPtr)
+  name.vb: HKMRightDoubleClick(IntPtr)
+- uid: SKM.SkmCore.HKMMiddleDoubleClick(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMMiddleDoubleClick(System.IntPtr)
+  id: HKMMiddleDoubleClick(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMiddleDoubleClick(nint)
+  nameWithType: SkmCore.HKMMiddleDoubleClick(nint)
+  fullName: SKM.SkmCore.HKMMiddleDoubleClick(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMiddleDoubleClick(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMiddleDoubleClick(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMMiddleDoubleClick*
+  nameWithType.vb: SkmCore.HKMMiddleDoubleClick(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMMiddleDoubleClick(System.IntPtr)
+  name.vb: HKMMiddleDoubleClick(IntPtr)
+- uid: SKM.SkmCore.HKMXBtn1DoubleClick(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMXBtn1DoubleClick(System.IntPtr)
+  id: HKMXBtn1DoubleClick(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMXBtn1DoubleClick(nint)
+  nameWithType: SkmCore.HKMXBtn1DoubleClick(nint)
+  fullName: SKM.SkmCore.HKMXBtn1DoubleClick(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMXBtn1DoubleClick(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMXBtn1DoubleClick(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMXBtn1DoubleClick*
+  nameWithType.vb: SkmCore.HKMXBtn1DoubleClick(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMXBtn1DoubleClick(System.IntPtr)
+  name.vb: HKMXBtn1DoubleClick(IntPtr)
+- uid: SKM.SkmCore.HKMXBtn2DoubleClick(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMXBtn2DoubleClick(System.IntPtr)
+  id: HKMXBtn2DoubleClick(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMXBtn2DoubleClick(nint)
+  nameWithType: SkmCore.HKMXBtn2DoubleClick(nint)
+  fullName: SKM.SkmCore.HKMXBtn2DoubleClick(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMXBtn2DoubleClick(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMXBtn2DoubleClick(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMXBtn2DoubleClick*
+  nameWithType.vb: SkmCore.HKMXBtn2DoubleClick(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMXBtn2DoubleClick(System.IntPtr)
+  name.vb: HKMXBtn2DoubleClick(IntPtr)
+- uid: SKM.SkmCore.HKMLeftDown(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMLeftDown(System.IntPtr)
+  id: HKMLeftDown(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMLeftDown(nint)
+  nameWithType: SkmCore.HKMLeftDown(nint)
+  fullName: SKM.SkmCore.HKMLeftDown(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMLeftDown(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMLeftDown(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMLeftDown*
+  nameWithType.vb: SkmCore.HKMLeftDown(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMLeftDown(System.IntPtr)
+  name.vb: HKMLeftDown(IntPtr)
+- uid: SKM.SkmCore.HKMRightDown(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMRightDown(System.IntPtr)
+  id: HKMRightDown(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMRightDown(nint)
+  nameWithType: SkmCore.HKMRightDown(nint)
+  fullName: SKM.SkmCore.HKMRightDown(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMRightDown(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMRightDown(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMRightDown*
+  nameWithType.vb: SkmCore.HKMRightDown(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMRightDown(System.IntPtr)
+  name.vb: HKMRightDown(IntPtr)
+- uid: SKM.SkmCore.HKMMiddleDown(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMMiddleDown(System.IntPtr)
+  id: HKMMiddleDown(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMiddleDown(nint)
+  nameWithType: SkmCore.HKMMiddleDown(nint)
+  fullName: SKM.SkmCore.HKMMiddleDown(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMiddleDown(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMiddleDown(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMMiddleDown*
+  nameWithType.vb: SkmCore.HKMMiddleDown(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMMiddleDown(System.IntPtr)
+  name.vb: HKMMiddleDown(IntPtr)
+- uid: SKM.SkmCore.HKMXBtn1Down(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMXBtn1Down(System.IntPtr)
+  id: HKMXBtn1Down(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMXBtn1Down(nint)
+  nameWithType: SkmCore.HKMXBtn1Down(nint)
+  fullName: SKM.SkmCore.HKMXBtn1Down(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMXBtn1Down(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMXBtn1Down(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMXBtn1Down*
+  nameWithType.vb: SkmCore.HKMXBtn1Down(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMXBtn1Down(System.IntPtr)
+  name.vb: HKMXBtn1Down(IntPtr)
+- uid: SKM.SkmCore.HKMXBtn2Down(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMXBtn2Down(System.IntPtr)
+  id: HKMXBtn2Down(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMXBtn2Down(nint)
+  nameWithType: SkmCore.HKMXBtn2Down(nint)
+  fullName: SKM.SkmCore.HKMXBtn2Down(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMXBtn2Down(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMXBtn2Down(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMXBtn2Down*
+  nameWithType.vb: SkmCore.HKMXBtn2Down(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMXBtn2Down(System.IntPtr)
+  name.vb: HKMXBtn2Down(IntPtr)
+- uid: SKM.SkmCore.HKMLeftUp(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMLeftUp(System.IntPtr)
+  id: HKMLeftUp(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMLeftUp(nint)
+  nameWithType: SkmCore.HKMLeftUp(nint)
+  fullName: SKM.SkmCore.HKMLeftUp(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMLeftUp(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMLeftUp(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMLeftUp*
+  nameWithType.vb: SkmCore.HKMLeftUp(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMLeftUp(System.IntPtr)
+  name.vb: HKMLeftUp(IntPtr)
+- uid: SKM.SkmCore.HKMRightUp(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMRightUp(System.IntPtr)
+  id: HKMRightUp(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMRightUp(nint)
+  nameWithType: SkmCore.HKMRightUp(nint)
+  fullName: SKM.SkmCore.HKMRightUp(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMRightUp(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMRightUp(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMRightUp*
+  nameWithType.vb: SkmCore.HKMRightUp(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMRightUp(System.IntPtr)
+  name.vb: HKMRightUp(IntPtr)
+- uid: SKM.SkmCore.HKMMiddleUp(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMMiddleUp(System.IntPtr)
+  id: HKMMiddleUp(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMiddleUp(nint)
+  nameWithType: SkmCore.HKMMiddleUp(nint)
+  fullName: SKM.SkmCore.HKMMiddleUp(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMiddleUp(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMiddleUp(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMMiddleUp*
+  nameWithType.vb: SkmCore.HKMMiddleUp(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMMiddleUp(System.IntPtr)
+  name.vb: HKMMiddleUp(IntPtr)
+- uid: SKM.SkmCore.HKMXBtn1Up(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMXBtn1Up(System.IntPtr)
+  id: HKMXBtn1Up(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMXBtn1Up(nint)
+  nameWithType: SkmCore.HKMXBtn1Up(nint)
+  fullName: SKM.SkmCore.HKMXBtn1Up(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMXBtn1Up(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMXBtn1Up(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMXBtn1Up*
+  nameWithType.vb: SkmCore.HKMXBtn1Up(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMXBtn1Up(System.IntPtr)
+  name.vb: HKMXBtn1Up(IntPtr)
+- uid: SKM.SkmCore.HKMXBtn2Up(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMXBtn2Up(System.IntPtr)
+  id: HKMXBtn2Up(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMXBtn2Up(nint)
+  nameWithType: SkmCore.HKMXBtn2Up(nint)
+  fullName: SKM.SkmCore.HKMXBtn2Up(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMXBtn2Up(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMXBtn2Up(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMXBtn2Up*
+  nameWithType.vb: SkmCore.HKMXBtn2Up(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMXBtn2Up(System.IntPtr)
+  name.vb: HKMXBtn2Up(IntPtr)
+- uid: SKM.SkmCore.HKMMouseWheel(System.IntPtr,System.Int32)
+  commentId: M:SKM.SkmCore.HKMMouseWheel(System.IntPtr,System.Int32)
+  id: HKMMouseWheel(System.IntPtr,System.Int32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMouseWheel(nint, int)
+  nameWithType: SkmCore.HKMMouseWheel(nint, int)
+  fullName: SKM.SkmCore.HKMMouseWheel(nint, int)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMouseWheel(nint HKMData, int Count)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Count
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMouseWheel(HKMData As IntPtr, Count As Integer) As Boolean
+  overload: SKM.SkmCore.HKMMouseWheel*
+  nameWithType.vb: SkmCore.HKMMouseWheel(IntPtr, Integer)
+  fullName.vb: SKM.SkmCore.HKMMouseWheel(System.IntPtr, Integer)
+  name.vb: HKMMouseWheel(IntPtr, Integer)
+- uid: SKM.SkmCore.HKMMouseWheelP(System.IntPtr,System.Int32)
+  commentId: M:SKM.SkmCore.HKMMouseWheelP(System.IntPtr,System.Int32)
+  id: HKMMouseWheelP(System.IntPtr,System.Int32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMMouseWheelP(nint, int)
+  nameWithType: SkmCore.HKMMouseWheelP(nint, int)
+  fullName: SKM.SkmCore.HKMMouseWheelP(nint, int)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMMouseWheelP(nint HKMData, int Count)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Count
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMMouseWheelP(HKMData As IntPtr, Count As Integer) As Boolean
+  overload: SKM.SkmCore.HKMMouseWheelP*
+  nameWithType.vb: SkmCore.HKMMouseWheelP(IntPtr, Integer)
+  fullName.vb: SKM.SkmCore.HKMMouseWheelP(System.IntPtr, Integer)
+  name.vb: HKMMouseWheelP(IntPtr, Integer)
+- uid: SKM.SkmCore.HKMReleaseKeyboard(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMReleaseKeyboard(System.IntPtr)
+  id: HKMReleaseKeyboard(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMReleaseKeyboard(nint)
+  nameWithType: SkmCore.HKMReleaseKeyboard(nint)
+  fullName: SKM.SkmCore.HKMReleaseKeyboard(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMReleaseKeyboard(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMReleaseKeyboard(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMReleaseKeyboard*
+  nameWithType.vb: SkmCore.HKMReleaseKeyboard(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMReleaseKeyboard(System.IntPtr)
+  name.vb: HKMReleaseKeyboard(IntPtr)
+- uid: SKM.SkmCore.HKMReleaseMouse(System.IntPtr)
+  commentId: M:SKM.SkmCore.HKMReleaseMouse(System.IntPtr)
+  id: HKMReleaseMouse(System.IntPtr)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMReleaseMouse(nint)
+  nameWithType: SkmCore.HKMReleaseMouse(nint)
+  fullName: SKM.SkmCore.HKMReleaseMouse(nint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMReleaseMouse(nint HKMData)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMReleaseMouse(HKMData As IntPtr) As Boolean
+  overload: SKM.SkmCore.HKMReleaseMouse*
+  nameWithType.vb: SkmCore.HKMReleaseMouse(IntPtr)
+  fullName.vb: SKM.SkmCore.HKMReleaseMouse(System.IntPtr)
+  name.vb: HKMReleaseMouse(IntPtr)
+- uid: SKM.SkmCore.HKMOutputString(System.IntPtr,System.String)
+  commentId: M:SKM.SkmCore.HKMOutputString(System.IntPtr,System.String)
+  id: HKMOutputString(System.IntPtr,System.String)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMOutputString(nint, string)
+  nameWithType: SkmCore.HKMOutputString(nint, string)
+  fullName: SKM.SkmCore.HKMOutputString(nint, string)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMOutputString(nint HKMData, string Str)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Str
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMOutputString(HKMData As IntPtr, Str As String) As Boolean
+  overload: SKM.SkmCore.HKMOutputString*
+  nameWithType.vb: SkmCore.HKMOutputString(IntPtr, String)
+  fullName.vb: SKM.SkmCore.HKMOutputString(System.IntPtr, String)
+  name.vb: HKMOutputString(IntPtr, String)
+- uid: SKM.SkmCore.HKMDelayRnd(System.IntPtr,System.UInt32,System.UInt32)
+  commentId: M:SKM.SkmCore.HKMDelayRnd(System.IntPtr,System.UInt32,System.UInt32)
+  id: HKMDelayRnd(System.IntPtr,System.UInt32,System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMDelayRnd(nint, uint, uint)
+  nameWithType: SkmCore.HKMDelayRnd(nint, uint, uint)
+  fullName: SKM.SkmCore.HKMDelayRnd(nint, uint, uint)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMDelayRnd(nint HKMData, uint MinTime, uint MaxTime)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: MinTime
+      type: System.UInt32
+    - id: MaxTime
+      type: System.UInt32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMDelayRnd(HKMData As IntPtr, MinTime As UInteger, MaxTime As UInteger) As Boolean
+  overload: SKM.SkmCore.HKMDelayRnd*
+  nameWithType.vb: SkmCore.HKMDelayRnd(IntPtr, UInteger, UInteger)
+  fullName.vb: SKM.SkmCore.HKMDelayRnd(System.IntPtr, UInteger, UInteger)
+  name.vb: HKMDelayRnd(IntPtr, UInteger, UInteger)
+- uid: SKM.SkmCore.HKMVerifyUserData(System.IntPtr,System.String,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMVerifyUserData(System.IntPtr,System.String,System.Boolean)
+  id: HKMVerifyUserData(System.IntPtr,System.String,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMVerifyUserData(nint, string, bool)
+  nameWithType: SkmCore.HKMVerifyUserData(nint, string, bool)
+  fullName: SKM.SkmCore.HKMVerifyUserData(nint, string, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMVerifyUserData(nint HKMData, string Str, bool Mouse)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Str
+      type: System.String
+    - id: Mouse
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMVerifyUserData(HKMData As IntPtr, Str As String, Mouse As Boolean) As Boolean
+  overload: SKM.SkmCore.HKMVerifyUserData*
+  nameWithType.vb: SkmCore.HKMVerifyUserData(IntPtr, String, Boolean)
+  fullName.vb: SKM.SkmCore.HKMVerifyUserData(System.IntPtr, String, Boolean)
+  name.vb: HKMVerifyUserData(IntPtr, String, Boolean)
+- uid: SKM.SkmCore.HKMVerifyUserData2(System.IntPtr,System.String,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMVerifyUserData2(System.IntPtr,System.String,System.Boolean)
+  id: HKMVerifyUserData2(System.IntPtr,System.String,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMVerifyUserData2(nint, string, bool)
+  nameWithType: SkmCore.HKMVerifyUserData2(nint, string, bool)
+  fullName: SKM.SkmCore.HKMVerifyUserData2(nint, string, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern uint HKMVerifyUserData2(nint HKMData, string Str, bool Mouse)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Str
+      type: System.String
+    - id: Mouse
+      type: System.Boolean
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function HKMVerifyUserData2(HKMData As IntPtr, Str As String, Mouse As Boolean) As UInteger
+  overload: SKM.SkmCore.HKMVerifyUserData2*
+  nameWithType.vb: SkmCore.HKMVerifyUserData2(IntPtr, String, Boolean)
+  fullName.vb: SKM.SkmCore.HKMVerifyUserData2(System.IntPtr, String, Boolean)
+  name.vb: HKMVerifyUserData2(IntPtr, String, Boolean)
+- uid: SKM.SkmCore.HKMSetResetMode(System.IntPtr,System.UInt32,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMSetResetMode(System.IntPtr,System.UInt32,System.Boolean)
+  id: HKMSetResetMode(System.IntPtr,System.UInt32,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetResetMode(nint, uint, bool)
+  nameWithType: SkmCore.HKMSetResetMode(nint, uint, bool)
+  fullName: SKM.SkmCore.HKMSetResetMode(nint, uint, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetResetMode(nint HKMData, uint Mode, bool Mouse)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Mode
+      type: System.UInt32
+    - id: Mouse
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetResetMode(HKMData As IntPtr, Mode As UInteger, Mouse As Boolean) As Boolean
+  overload: SKM.SkmCore.HKMSetResetMode*
+  nameWithType.vb: SkmCore.HKMSetResetMode(IntPtr, UInteger, Boolean)
+  fullName.vb: SKM.SkmCore.HKMSetResetMode(System.IntPtr, UInteger, Boolean)
+  name.vb: HKMSetResetMode(IntPtr, UInteger, Boolean)
+- uid: SKM.SkmCore.HKMSetResetTime(System.IntPtr,System.UInt32,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMSetResetTime(System.IntPtr,System.UInt32,System.Boolean)
+  id: HKMSetResetTime(System.IntPtr,System.UInt32,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetResetTime(nint, uint, bool)
+  nameWithType: SkmCore.HKMSetResetTime(nint, uint, bool)
+  fullName: SKM.SkmCore.HKMSetResetTime(nint, uint, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetResetTime(nint HKMData, uint Time, bool Mouse)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Time
+      type: System.UInt32
+    - id: Mouse
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetResetTime(HKMData As IntPtr, Time As UInteger, Mouse As Boolean) As Boolean
+  overload: SKM.SkmCore.HKMSetResetTime*
+  nameWithType.vb: SkmCore.HKMSetResetTime(IntPtr, UInteger, Boolean)
+  fullName.vb: SKM.SkmCore.HKMSetResetTime(System.IntPtr, UInteger, Boolean)
+  name.vb: HKMSetResetTime(IntPtr, UInteger, Boolean)
+- uid: SKM.SkmCore.HKMSetLightMode(System.IntPtr,System.UInt32,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMSetLightMode(System.IntPtr,System.UInt32,System.Boolean)
+  id: HKMSetLightMode(System.IntPtr,System.UInt32,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetLightMode(nint, uint, bool)
+  nameWithType: SkmCore.HKMSetLightMode(nint, uint, bool)
+  fullName: SKM.SkmCore.HKMSetLightMode(nint, uint, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetLightMode(nint HKMData, uint Mode, bool Mouse)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Mode
+      type: System.UInt32
+    - id: Mouse
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetLightMode(HKMData As IntPtr, Mode As UInteger, Mouse As Boolean) As Boolean
+  overload: SKM.SkmCore.HKMSetLightMode*
+  nameWithType.vb: SkmCore.HKMSetLightMode(IntPtr, UInteger, Boolean)
+  fullName.vb: SKM.SkmCore.HKMSetLightMode(System.IntPtr, UInteger, Boolean)
+  name.vb: HKMSetLightMode(IntPtr, UInteger, Boolean)
+- uid: SKM.SkmCore.HKMIsOSMouseAccelerateEnabled
+  commentId: M:SKM.SkmCore.HKMIsOSMouseAccelerateEnabled
+  id: HKMIsOSMouseAccelerateEnabled
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMIsOSMouseAccelerateEnabled()
+  nameWithType: SkmCore.HKMIsOSMouseAccelerateEnabled()
+  fullName: SKM.SkmCore.HKMIsOSMouseAccelerateEnabled()
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMIsOSMouseAccelerateEnabled()
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMIsOSMouseAccelerateEnabled() As Boolean
+  overload: SKM.SkmCore.HKMIsOSMouseAccelerateEnabled*
+- uid: SKM.SkmCore.HKMEnableOSMouseAccelerate(System.Boolean,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMEnableOSMouseAccelerate(System.Boolean,System.Boolean)
+  id: HKMEnableOSMouseAccelerate(System.Boolean,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMEnableOSMouseAccelerate(bool, bool)
+  nameWithType: SkmCore.HKMEnableOSMouseAccelerate(bool, bool)
+  fullName: SKM.SkmCore.HKMEnableOSMouseAccelerate(bool, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMEnableOSMouseAccelerate(bool Enable, bool Save)
+    parameters:
+    - id: Enable
+      type: System.Boolean
+    - id: Save
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMEnableOSMouseAccelerate(Enable As Boolean, Save As Boolean) As Boolean
+  overload: SKM.SkmCore.HKMEnableOSMouseAccelerate*
+  nameWithType.vb: SkmCore.HKMEnableOSMouseAccelerate(Boolean, Boolean)
+  fullName.vb: SKM.SkmCore.HKMEnableOSMouseAccelerate(Boolean, Boolean)
+  name.vb: HKMEnableOSMouseAccelerate(Boolean, Boolean)
+- uid: SKM.SkmCore.HKMGetOSMouseSpeed
+  commentId: M:SKM.SkmCore.HKMGetOSMouseSpeed
+  id: HKMGetOSMouseSpeed
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetOSMouseSpeed()
+  nameWithType: SkmCore.HKMGetOSMouseSpeed()
+  fullName: SKM.SkmCore.HKMGetOSMouseSpeed()
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern int HKMGetOSMouseSpeed()
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function HKMGetOSMouseSpeed() As Integer
+  overload: SKM.SkmCore.HKMGetOSMouseSpeed*
+- uid: SKM.SkmCore.HKMSetOSMouseSpeed(System.Int32,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMSetOSMouseSpeed(System.Int32,System.Boolean)
+  id: HKMSetOSMouseSpeed(System.Int32,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMSetOSMouseSpeed(int, bool)
+  nameWithType: SkmCore.HKMSetOSMouseSpeed(int, bool)
+  fullName: SKM.SkmCore.HKMSetOSMouseSpeed(int, bool)
+  type: Method
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static extern bool HKMSetOSMouseSpeed(int Speed, bool Save)
+    parameters:
+    - id: Speed
+      type: System.Int32
+    - id: Save
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HKMSetOSMouseSpeed(Speed As Integer, Save As Boolean) As Boolean
+  overload: SKM.SkmCore.HKMSetOSMouseSpeed*
+  nameWithType.vb: SkmCore.HKMSetOSMouseSpeed(Integer, Boolean)
+  fullName.vb: SKM.SkmCore.HKMSetOSMouseSpeed(Integer, Boolean)
+  name.vb: HKMSetOSMouseSpeed(Integer, Boolean)
+- uid: SKM.SkmCore.HKMCheckPressedKeysCS(System.UInt32)
+  commentId: M:SKM.SkmCore.HKMCheckPressedKeysCS(System.UInt32)
+  id: HKMCheckPressedKeysCS(System.UInt32)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMCheckPressedKeysCS(uint)
+  nameWithType: SkmCore.HKMCheckPressedKeysCS(uint)
+  fullName: SKM.SkmCore.HKMCheckPressedKeysCS(uint)
+  type: Method
+  source:
+    remote:
+      path: src/SKMCore.cs
+      branch: main
+      repo: git@github.com:scottfly189/SKSimulator.git
+    id: HKMCheckPressedKeysCS
+    path: ../SKSimulator/src/SKMCore.cs
+    startLine: 160
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static string HKMCheckPressedKeysCS(uint Flags)
+    parameters:
+    - id: Flags
+      type: System.UInt32
+    return:
+      type: System.String
+    content.vb: Public Shared Function HKMCheckPressedKeysCS(Flags As UInteger) As String
+  overload: SKM.SkmCore.HKMCheckPressedKeysCS*
+  nameWithType.vb: SkmCore.HKMCheckPressedKeysCS(UInteger)
+  fullName.vb: SKM.SkmCore.HKMCheckPressedKeysCS(UInteger)
+  name.vb: HKMCheckPressedKeysCS(UInteger)
+- uid: SKM.SkmCore.HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)
+  commentId: M:SKM.SkmCore.HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)
+  id: HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)
+  parent: SKM.SkmCore
+  langs:
+  - csharp
+  - vb
+  name: HKMGetDevStringCS(nint, uint, bool)
+  nameWithType: SkmCore.HKMGetDevStringCS(nint, uint, bool)
+  fullName: SKM.SkmCore.HKMGetDevStringCS(nint, uint, bool)
+  type: Method
+  source:
+    remote:
+      path: src/SKMCore.cs
+      branch: main
+      repo: git@github.com:scottfly189/SKSimulator.git
+    id: HKMGetDevStringCS
+    path: ../SKSimulator/src/SKMCore.cs
+    startLine: 174
+  assemblies:
+  - SKSimulator
+  namespace: SKM
+  syntax:
+    content: public static string HKMGetDevStringCS(nint HKMData, uint Index, bool Mouse)
+    parameters:
+    - id: HKMData
+      type: System.IntPtr
+    - id: Index
+      type: System.UInt32
+    - id: Mouse
+      type: System.Boolean
+    return:
+      type: System.String
+    content.vb: Public Shared Function HKMGetDevStringCS(HKMData As IntPtr, Index As UInteger, Mouse As Boolean) As String
+  overload: SKM.SkmCore.HKMGetDevStringCS*
+  nameWithType.vb: SkmCore.HKMGetDevStringCS(IntPtr, UInteger, Boolean)
+  fullName.vb: SKM.SkmCore.HKMGetDevStringCS(System.IntPtr, UInteger, Boolean)
+  name.vb: HKMGetDevStringCS(IntPtr, UInteger, Boolean)
+references:
+- uid: SKM.KMSimulatorService
+  commentId: T:SKM.KMSimulatorService
+  href: SKM.KMSimulatorService.html
+  name: KMSimulatorService
+  nameWithType: KMSimulatorService
+  fullName: SKM.KMSimulatorService
+- uid: SKM
+  commentId: N:SKM
+  href: SKM.html
+  name: SKM
+  nameWithType: SKM
+  fullName: SKM
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SKM.SkmCore.HKMSearchDevice*
+  commentId: Overload:SKM.SkmCore.HKMSearchDevice
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSearchDevice_System_UInt32_System_UInt32_System_UInt32_
+  name: HKMSearchDevice
+  nameWithType: SkmCore.HKMSearchDevice
+  fullName: SKM.SkmCore.HKMSearchDevice
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: SKM.SkmCore.HKMSearchDevice2*
+  commentId: Overload:SKM.SkmCore.HKMSearchDevice2
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSearchDevice2_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
+  name: HKMSearchDevice2
+  nameWithType: SkmCore.HKMSearchDevice2
+  fullName: SKM.SkmCore.HKMSearchDevice2
+- uid: SKM.SkmCore.HKMSearchDeviceAll*
+  commentId: Overload:SKM.SkmCore.HKMSearchDeviceAll
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSearchDeviceAll_System_UInt32_System_UInt32_System_UInt32_
+  name: HKMSearchDeviceAll
+  nameWithType: SkmCore.HKMSearchDeviceAll
+  fullName: SKM.SkmCore.HKMSearchDeviceAll
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: SKM.SkmCore.HKMOpen*
+  commentId: Overload:SKM.SkmCore.HKMOpen
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMOpen_System_UInt32_System_UInt32_
+  name: HKMOpen
+  nameWithType: SkmCore.HKMOpen
+  fullName: SKM.SkmCore.HKMOpen
+- uid: SKM.SkmCore.HKMOpen2*
+  commentId: Overload:SKM.SkmCore.HKMOpen2
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMOpen2_System_UInt32_System_UInt32_System_UInt32_
+  name: HKMOpen2
+  nameWithType: SkmCore.HKMOpen2
+  fullName: SKM.SkmCore.HKMOpen2
+- uid: SKM.SkmCore.HKMIsOpen*
+  commentId: Overload:SKM.SkmCore.HKMIsOpen
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMIsOpen_System_IntPtr_System_UInt32_
+  name: HKMIsOpen
+  nameWithType: SkmCore.HKMIsOpen
+  fullName: SKM.SkmCore.HKMIsOpen
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SKM.SkmCore.HKMClose*
+  commentId: Overload:SKM.SkmCore.HKMClose
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMClose_System_IntPtr_
+  name: HKMClose
+  nameWithType: SkmCore.HKMClose
+  fullName: SKM.SkmCore.HKMClose
+- uid: SKM.SkmCore.HKMGetDevInfo*
+  commentId: Overload:SKM.SkmCore.HKMGetDevInfo
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetDevInfo_System_IntPtr_System_UInt32_System_Boolean_
+  name: HKMGetDevInfo
+  nameWithType: SkmCore.HKMGetDevInfo
+  fullName: SKM.SkmCore.HKMGetDevInfo
+- uid: SKM.SkmCore.HKMGetDevString*
+  commentId: Overload:SKM.SkmCore.HKMGetDevString
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetDevString_System_IntPtr_System_UInt32_System_Boolean_System_UInt32__
+  name: HKMGetDevString
+  nameWithType: SkmCore.HKMGetDevString
+  fullName: SKM.SkmCore.HKMGetDevString
+- uid: SKM.SkmCore.HKMGetSerialNumber*
+  commentId: Overload:SKM.SkmCore.HKMGetSerialNumber
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetSerialNumber_System_IntPtr_System_Boolean_
+  name: HKMGetSerialNumber
+  nameWithType: SkmCore.HKMGetSerialNumber
+  fullName: SKM.SkmCore.HKMGetSerialNumber
+- uid: SKM.SkmCore.HKMGetKeyboardMode*
+  commentId: Overload:SKM.SkmCore.HKMGetKeyboardMode
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetKeyboardMode_System_IntPtr_
+  name: HKMGetKeyboardMode
+  nameWithType: SkmCore.HKMGetKeyboardMode
+  fullName: SKM.SkmCore.HKMGetKeyboardMode
+- uid: SKM.SkmCore.HKMGetMouseMode*
+  commentId: Overload:SKM.SkmCore.HKMGetMouseMode
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetMouseMode_System_IntPtr_
+  name: HKMGetMouseMode
+  nameWithType: SkmCore.HKMGetMouseMode
+  fullName: SKM.SkmCore.HKMGetMouseMode
+- uid: SKM.SkmCore.HKMIsKeyBusy*
+  commentId: Overload:SKM.SkmCore.HKMIsKeyBusy
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMIsKeyBusy_System_IntPtr_
+  name: HKMIsKeyBusy
+  nameWithType: SkmCore.HKMIsKeyBusy
+  fullName: SKM.SkmCore.HKMIsKeyBusy
+- uid: SKM.SkmCore.HKMIsMouseBusy*
+  commentId: Overload:SKM.SkmCore.HKMIsMouseBusy
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMIsMouseBusy_System_IntPtr_
+  name: HKMIsMouseBusy
+  nameWithType: SkmCore.HKMIsMouseBusy
+  fullName: SKM.SkmCore.HKMIsMouseBusy
+- uid: SKM.SkmCore.HKMIsKeyDown*
+  commentId: Overload:SKM.SkmCore.HKMIsKeyDown
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMIsKeyDown_System_IntPtr_System_String_
+  name: HKMIsKeyDown
+  nameWithType: SkmCore.HKMIsKeyDown
+  fullName: SKM.SkmCore.HKMIsKeyDown
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SKM.SkmCore.HKMIsMouseButtonDown*
+  commentId: Overload:SKM.SkmCore.HKMIsMouseButtonDown
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMIsMouseButtonDown_System_IntPtr_System_UInt32_
+  name: HKMIsMouseButtonDown
+  nameWithType: SkmCore.HKMIsMouseButtonDown
+  fullName: SKM.SkmCore.HKMIsMouseButtonDown
+- uid: SKM.SkmCore.HKMGetKeyboardLEDState*
+  commentId: Overload:SKM.SkmCore.HKMGetKeyboardLEDState
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetKeyboardLEDState_System_IntPtr_System_UInt32_
+  name: HKMGetKeyboardLEDState
+  nameWithType: SkmCore.HKMGetKeyboardLEDState
+  fullName: SKM.SkmCore.HKMGetKeyboardLEDState
+- uid: SKM.SkmCore.HKMGetCursorPos*
+  commentId: Overload:SKM.SkmCore.HKMGetCursorPos
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetCursorPos_System_IntPtr_System_Int32__System_Int32__
+  name: HKMGetCursorPos
+  nameWithType: SkmCore.HKMGetCursorPos
+  fullName: SKM.SkmCore.HKMGetCursorPos
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SKM.SkmCore.HKMGetCursorPos2*
+  commentId: Overload:SKM.SkmCore.HKMGetCursorPos2
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetCursorPos2_System_IntPtr_
+  name: HKMGetCursorPos2
+  nameWithType: SkmCore.HKMGetCursorPos2
+  fullName: SKM.SkmCore.HKMGetCursorPos2
+- uid: SKM.SkmCore.HKMSetMode*
+  commentId: Overload:SKM.SkmCore.HKMSetMode
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetMode_System_IntPtr_System_UInt32_System_UInt32_
+  name: HKMSetMode
+  nameWithType: SkmCore.HKMSetMode
+  fullName: SKM.SkmCore.HKMSetMode
+- uid: SKM.SkmCore.HKMSetKeyInterval*
+  commentId: Overload:SKM.SkmCore.HKMSetKeyInterval
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetKeyInterval_System_IntPtr_System_UInt32_System_UInt32_
+  name: HKMSetKeyInterval
+  nameWithType: SkmCore.HKMSetKeyInterval
+  fullName: SKM.SkmCore.HKMSetKeyInterval
+- uid: SKM.SkmCore.HKMSetMouseInterval*
+  commentId: Overload:SKM.SkmCore.HKMSetMouseInterval
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetMouseInterval_System_IntPtr_System_UInt32_System_UInt32_
+  name: HKMSetMouseInterval
+  nameWithType: SkmCore.HKMSetMouseInterval
+  fullName: SKM.SkmCore.HKMSetMouseInterval
+- uid: SKM.SkmCore.HKMSetAbsMouseScrnRes*
+  commentId: Overload:SKM.SkmCore.HKMSetAbsMouseScrnRes
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetAbsMouseScrnRes_System_IntPtr_System_Int32_System_Int32_
+  name: HKMSetAbsMouseScrnRes
+  nameWithType: SkmCore.HKMSetAbsMouseScrnRes
+  fullName: SKM.SkmCore.HKMSetAbsMouseScrnRes
+- uid: SKM.SkmCore.HKMSetMousePosPrecision*
+  commentId: Overload:SKM.SkmCore.HKMSetMousePosPrecision
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetMousePosPrecision_System_IntPtr_System_UInt32_
+  name: HKMSetMousePosPrecision
+  nameWithType: SkmCore.HKMSetMousePosPrecision
+  fullName: SKM.SkmCore.HKMSetMousePosPrecision
+- uid: SKM.SkmCore.HKMSetMouseSpeed*
+  commentId: Overload:SKM.SkmCore.HKMSetMouseSpeed
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetMouseSpeed_System_IntPtr_System_UInt32_
+  name: HKMSetMouseSpeed
+  nameWithType: SkmCore.HKMSetMouseSpeed
+  fullName: SKM.SkmCore.HKMSetMouseSpeed
+- uid: SKM.SkmCore.HKMSetMouseMoveTimeout*
+  commentId: Overload:SKM.SkmCore.HKMSetMouseMoveTimeout
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetMouseMoveTimeout_System_IntPtr_System_UInt32_
+  name: HKMSetMouseMoveTimeout
+  nameWithType: SkmCore.HKMSetMouseMoveTimeout
+  fullName: SKM.SkmCore.HKMSetMouseMoveTimeout
+- uid: SKM.SkmCore.HKMSetMousePosMaxOffset*
+  commentId: Overload:SKM.SkmCore.HKMSetMousePosMaxOffset
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetMousePosMaxOffset_System_IntPtr_System_UInt32_
+  name: HKMSetMousePosMaxOffset
+  nameWithType: SkmCore.HKMSetMousePosMaxOffset
+  fullName: SKM.SkmCore.HKMSetMousePosMaxOffset
+- uid: SKM.SkmCore.HKMKeyPress*
+  commentId: Overload:SKM.SkmCore.HKMKeyPress
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMKeyPress_System_IntPtr_System_String_
+  name: HKMKeyPress
+  nameWithType: SkmCore.HKMKeyPress
+  fullName: SKM.SkmCore.HKMKeyPress
+- uid: SKM.SkmCore.HKMKeyDown*
+  commentId: Overload:SKM.SkmCore.HKMKeyDown
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMKeyDown_System_IntPtr_System_String_
+  name: HKMKeyDown
+  nameWithType: SkmCore.HKMKeyDown
+  fullName: SKM.SkmCore.HKMKeyDown
+- uid: SKM.SkmCore.HKMKeyUp*
+  commentId: Overload:SKM.SkmCore.HKMKeyUp
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMKeyUp_System_IntPtr_System_String_
+  name: HKMKeyUp
+  nameWithType: SkmCore.HKMKeyUp
+  fullName: SKM.SkmCore.HKMKeyUp
+- uid: SKM.SkmCore.HKMMoveTo*
+  commentId: Overload:SKM.SkmCore.HKMMoveTo
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMoveTo_System_IntPtr_System_Int32_System_Int32_
+  name: HKMMoveTo
+  nameWithType: SkmCore.HKMMoveTo
+  fullName: SKM.SkmCore.HKMMoveTo
+- uid: SKM.SkmCore.HKMMoveR*
+  commentId: Overload:SKM.SkmCore.HKMMoveR
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMoveR_System_IntPtr_System_Int32_System_Int32_
+  name: HKMMoveR
+  nameWithType: SkmCore.HKMMoveR
+  fullName: SKM.SkmCore.HKMMoveR
+- uid: SKM.SkmCore.HKMMoveR2*
+  commentId: Overload:SKM.SkmCore.HKMMoveR2
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMoveR2_System_IntPtr_System_Int32_System_Int32_
+  name: HKMMoveR2
+  nameWithType: SkmCore.HKMMoveR2
+  fullName: SKM.SkmCore.HKMMoveR2
+- uid: SKM.SkmCore.HKMMoveRP*
+  commentId: Overload:SKM.SkmCore.HKMMoveRP
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMoveRP_System_IntPtr_System_Int32_System_Int32_
+  name: HKMMoveRP
+  nameWithType: SkmCore.HKMMoveRP
+  fullName: SKM.SkmCore.HKMMoveRP
+- uid: SKM.SkmCore.HKMLeftClick*
+  commentId: Overload:SKM.SkmCore.HKMLeftClick
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMLeftClick_System_IntPtr_
+  name: HKMLeftClick
+  nameWithType: SkmCore.HKMLeftClick
+  fullName: SKM.SkmCore.HKMLeftClick
+- uid: SKM.SkmCore.HKMRightClick*
+  commentId: Overload:SKM.SkmCore.HKMRightClick
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMRightClick_System_IntPtr_
+  name: HKMRightClick
+  nameWithType: SkmCore.HKMRightClick
+  fullName: SKM.SkmCore.HKMRightClick
+- uid: SKM.SkmCore.HKMMiddleClick*
+  commentId: Overload:SKM.SkmCore.HKMMiddleClick
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMiddleClick_System_IntPtr_
+  name: HKMMiddleClick
+  nameWithType: SkmCore.HKMMiddleClick
+  fullName: SKM.SkmCore.HKMMiddleClick
+- uid: SKM.SkmCore.HKMXBtn1Click*
+  commentId: Overload:SKM.SkmCore.HKMXBtn1Click
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMXBtn1Click_System_IntPtr_
+  name: HKMXBtn1Click
+  nameWithType: SkmCore.HKMXBtn1Click
+  fullName: SKM.SkmCore.HKMXBtn1Click
+- uid: SKM.SkmCore.HKMXBtn2Click*
+  commentId: Overload:SKM.SkmCore.HKMXBtn2Click
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMXBtn2Click_System_IntPtr_
+  name: HKMXBtn2Click
+  nameWithType: SkmCore.HKMXBtn2Click
+  fullName: SKM.SkmCore.HKMXBtn2Click
+- uid: SKM.SkmCore.HKMLeftDoubleClick*
+  commentId: Overload:SKM.SkmCore.HKMLeftDoubleClick
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMLeftDoubleClick_System_IntPtr_
+  name: HKMLeftDoubleClick
+  nameWithType: SkmCore.HKMLeftDoubleClick
+  fullName: SKM.SkmCore.HKMLeftDoubleClick
+- uid: SKM.SkmCore.HKMRightDoubleClick*
+  commentId: Overload:SKM.SkmCore.HKMRightDoubleClick
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMRightDoubleClick_System_IntPtr_
+  name: HKMRightDoubleClick
+  nameWithType: SkmCore.HKMRightDoubleClick
+  fullName: SKM.SkmCore.HKMRightDoubleClick
+- uid: SKM.SkmCore.HKMMiddleDoubleClick*
+  commentId: Overload:SKM.SkmCore.HKMMiddleDoubleClick
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMiddleDoubleClick_System_IntPtr_
+  name: HKMMiddleDoubleClick
+  nameWithType: SkmCore.HKMMiddleDoubleClick
+  fullName: SKM.SkmCore.HKMMiddleDoubleClick
+- uid: SKM.SkmCore.HKMXBtn1DoubleClick*
+  commentId: Overload:SKM.SkmCore.HKMXBtn1DoubleClick
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMXBtn1DoubleClick_System_IntPtr_
+  name: HKMXBtn1DoubleClick
+  nameWithType: SkmCore.HKMXBtn1DoubleClick
+  fullName: SKM.SkmCore.HKMXBtn1DoubleClick
+- uid: SKM.SkmCore.HKMXBtn2DoubleClick*
+  commentId: Overload:SKM.SkmCore.HKMXBtn2DoubleClick
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMXBtn2DoubleClick_System_IntPtr_
+  name: HKMXBtn2DoubleClick
+  nameWithType: SkmCore.HKMXBtn2DoubleClick
+  fullName: SKM.SkmCore.HKMXBtn2DoubleClick
+- uid: SKM.SkmCore.HKMLeftDown*
+  commentId: Overload:SKM.SkmCore.HKMLeftDown
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMLeftDown_System_IntPtr_
+  name: HKMLeftDown
+  nameWithType: SkmCore.HKMLeftDown
+  fullName: SKM.SkmCore.HKMLeftDown
+- uid: SKM.SkmCore.HKMRightDown*
+  commentId: Overload:SKM.SkmCore.HKMRightDown
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMRightDown_System_IntPtr_
+  name: HKMRightDown
+  nameWithType: SkmCore.HKMRightDown
+  fullName: SKM.SkmCore.HKMRightDown
+- uid: SKM.SkmCore.HKMMiddleDown*
+  commentId: Overload:SKM.SkmCore.HKMMiddleDown
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMiddleDown_System_IntPtr_
+  name: HKMMiddleDown
+  nameWithType: SkmCore.HKMMiddleDown
+  fullName: SKM.SkmCore.HKMMiddleDown
+- uid: SKM.SkmCore.HKMXBtn1Down*
+  commentId: Overload:SKM.SkmCore.HKMXBtn1Down
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMXBtn1Down_System_IntPtr_
+  name: HKMXBtn1Down
+  nameWithType: SkmCore.HKMXBtn1Down
+  fullName: SKM.SkmCore.HKMXBtn1Down
+- uid: SKM.SkmCore.HKMXBtn2Down*
+  commentId: Overload:SKM.SkmCore.HKMXBtn2Down
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMXBtn2Down_System_IntPtr_
+  name: HKMXBtn2Down
+  nameWithType: SkmCore.HKMXBtn2Down
+  fullName: SKM.SkmCore.HKMXBtn2Down
+- uid: SKM.SkmCore.HKMLeftUp*
+  commentId: Overload:SKM.SkmCore.HKMLeftUp
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMLeftUp_System_IntPtr_
+  name: HKMLeftUp
+  nameWithType: SkmCore.HKMLeftUp
+  fullName: SKM.SkmCore.HKMLeftUp
+- uid: SKM.SkmCore.HKMRightUp*
+  commentId: Overload:SKM.SkmCore.HKMRightUp
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMRightUp_System_IntPtr_
+  name: HKMRightUp
+  nameWithType: SkmCore.HKMRightUp
+  fullName: SKM.SkmCore.HKMRightUp
+- uid: SKM.SkmCore.HKMMiddleUp*
+  commentId: Overload:SKM.SkmCore.HKMMiddleUp
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMiddleUp_System_IntPtr_
+  name: HKMMiddleUp
+  nameWithType: SkmCore.HKMMiddleUp
+  fullName: SKM.SkmCore.HKMMiddleUp
+- uid: SKM.SkmCore.HKMXBtn1Up*
+  commentId: Overload:SKM.SkmCore.HKMXBtn1Up
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMXBtn1Up_System_IntPtr_
+  name: HKMXBtn1Up
+  nameWithType: SkmCore.HKMXBtn1Up
+  fullName: SKM.SkmCore.HKMXBtn1Up
+- uid: SKM.SkmCore.HKMXBtn2Up*
+  commentId: Overload:SKM.SkmCore.HKMXBtn2Up
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMXBtn2Up_System_IntPtr_
+  name: HKMXBtn2Up
+  nameWithType: SkmCore.HKMXBtn2Up
+  fullName: SKM.SkmCore.HKMXBtn2Up
+- uid: SKM.SkmCore.HKMMouseWheel*
+  commentId: Overload:SKM.SkmCore.HKMMouseWheel
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMouseWheel_System_IntPtr_System_Int32_
+  name: HKMMouseWheel
+  nameWithType: SkmCore.HKMMouseWheel
+  fullName: SKM.SkmCore.HKMMouseWheel
+- uid: SKM.SkmCore.HKMMouseWheelP*
+  commentId: Overload:SKM.SkmCore.HKMMouseWheelP
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMMouseWheelP_System_IntPtr_System_Int32_
+  name: HKMMouseWheelP
+  nameWithType: SkmCore.HKMMouseWheelP
+  fullName: SKM.SkmCore.HKMMouseWheelP
+- uid: SKM.SkmCore.HKMReleaseKeyboard*
+  commentId: Overload:SKM.SkmCore.HKMReleaseKeyboard
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMReleaseKeyboard_System_IntPtr_
+  name: HKMReleaseKeyboard
+  nameWithType: SkmCore.HKMReleaseKeyboard
+  fullName: SKM.SkmCore.HKMReleaseKeyboard
+- uid: SKM.SkmCore.HKMReleaseMouse*
+  commentId: Overload:SKM.SkmCore.HKMReleaseMouse
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMReleaseMouse_System_IntPtr_
+  name: HKMReleaseMouse
+  nameWithType: SkmCore.HKMReleaseMouse
+  fullName: SKM.SkmCore.HKMReleaseMouse
+- uid: SKM.SkmCore.HKMOutputString*
+  commentId: Overload:SKM.SkmCore.HKMOutputString
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMOutputString_System_IntPtr_System_String_
+  name: HKMOutputString
+  nameWithType: SkmCore.HKMOutputString
+  fullName: SKM.SkmCore.HKMOutputString
+- uid: SKM.SkmCore.HKMDelayRnd*
+  commentId: Overload:SKM.SkmCore.HKMDelayRnd
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMDelayRnd_System_IntPtr_System_UInt32_System_UInt32_
+  name: HKMDelayRnd
+  nameWithType: SkmCore.HKMDelayRnd
+  fullName: SKM.SkmCore.HKMDelayRnd
+- uid: SKM.SkmCore.HKMVerifyUserData*
+  commentId: Overload:SKM.SkmCore.HKMVerifyUserData
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMVerifyUserData_System_IntPtr_System_String_System_Boolean_
+  name: HKMVerifyUserData
+  nameWithType: SkmCore.HKMVerifyUserData
+  fullName: SKM.SkmCore.HKMVerifyUserData
+- uid: SKM.SkmCore.HKMVerifyUserData2*
+  commentId: Overload:SKM.SkmCore.HKMVerifyUserData2
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMVerifyUserData2_System_IntPtr_System_String_System_Boolean_
+  name: HKMVerifyUserData2
+  nameWithType: SkmCore.HKMVerifyUserData2
+  fullName: SKM.SkmCore.HKMVerifyUserData2
+- uid: SKM.SkmCore.HKMSetResetMode*
+  commentId: Overload:SKM.SkmCore.HKMSetResetMode
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetResetMode_System_IntPtr_System_UInt32_System_Boolean_
+  name: HKMSetResetMode
+  nameWithType: SkmCore.HKMSetResetMode
+  fullName: SKM.SkmCore.HKMSetResetMode
+- uid: SKM.SkmCore.HKMSetResetTime*
+  commentId: Overload:SKM.SkmCore.HKMSetResetTime
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetResetTime_System_IntPtr_System_UInt32_System_Boolean_
+  name: HKMSetResetTime
+  nameWithType: SkmCore.HKMSetResetTime
+  fullName: SKM.SkmCore.HKMSetResetTime
+- uid: SKM.SkmCore.HKMSetLightMode*
+  commentId: Overload:SKM.SkmCore.HKMSetLightMode
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetLightMode_System_IntPtr_System_UInt32_System_Boolean_
+  name: HKMSetLightMode
+  nameWithType: SkmCore.HKMSetLightMode
+  fullName: SKM.SkmCore.HKMSetLightMode
+- uid: SKM.SkmCore.HKMIsOSMouseAccelerateEnabled*
+  commentId: Overload:SKM.SkmCore.HKMIsOSMouseAccelerateEnabled
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMIsOSMouseAccelerateEnabled
+  name: HKMIsOSMouseAccelerateEnabled
+  nameWithType: SkmCore.HKMIsOSMouseAccelerateEnabled
+  fullName: SKM.SkmCore.HKMIsOSMouseAccelerateEnabled
+- uid: SKM.SkmCore.HKMEnableOSMouseAccelerate*
+  commentId: Overload:SKM.SkmCore.HKMEnableOSMouseAccelerate
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMEnableOSMouseAccelerate_System_Boolean_System_Boolean_
+  name: HKMEnableOSMouseAccelerate
+  nameWithType: SkmCore.HKMEnableOSMouseAccelerate
+  fullName: SKM.SkmCore.HKMEnableOSMouseAccelerate
+- uid: SKM.SkmCore.HKMGetOSMouseSpeed*
+  commentId: Overload:SKM.SkmCore.HKMGetOSMouseSpeed
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetOSMouseSpeed
+  name: HKMGetOSMouseSpeed
+  nameWithType: SkmCore.HKMGetOSMouseSpeed
+  fullName: SKM.SkmCore.HKMGetOSMouseSpeed
+- uid: SKM.SkmCore.HKMSetOSMouseSpeed*
+  commentId: Overload:SKM.SkmCore.HKMSetOSMouseSpeed
+  isExternal: true
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMSetOSMouseSpeed_System_Int32_System_Boolean_
+  name: HKMSetOSMouseSpeed
+  nameWithType: SkmCore.HKMSetOSMouseSpeed
+  fullName: SKM.SkmCore.HKMSetOSMouseSpeed
+- uid: SKM.SkmCore.HKMCheckPressedKeysCS*
+  commentId: Overload:SKM.SkmCore.HKMCheckPressedKeysCS
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMCheckPressedKeysCS_System_UInt32_
+  name: HKMCheckPressedKeysCS
+  nameWithType: SkmCore.HKMCheckPressedKeysCS
+  fullName: SKM.SkmCore.HKMCheckPressedKeysCS
+- uid: SKM.SkmCore.HKMGetDevStringCS*
+  commentId: Overload:SKM.SkmCore.HKMGetDevStringCS
+  href: SKM.SkmCore.html#SKM_SkmCore_HKMGetDevStringCS_System_IntPtr_System_UInt32_System_Boolean_
+  name: HKMGetDevStringCS
+  nameWithType: SkmCore.HKMGetDevStringCS
+  fullName: SKM.SkmCore.HKMGetDevStringCS

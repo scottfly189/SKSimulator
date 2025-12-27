@@ -1,0 +1,2858 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SkmCore | SKSimulator键鼠模拟器 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SkmCore | SKSimulator键鼠模拟器 ">
+      
+      <meta name="description" content="注意: x86 和 x64 的 dll 是不同的，需要根据实际情况选择 x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll 使用 KMSimulatorService 服务类可以无感知使用，会自动根据当前环境复制 DLL 到当前目录 具体 KMSimulatorService 类使用请参考">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/scottfly189/SKSimulator/new/main/apiSpec/new?filename=SKM_SkmCore.md&amp;value=---%0Auid%3A%20SKM.SkmCore%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="SKSimulator键鼠模拟器">
+            SKSimulator键鼠模拟器
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SKM.SkmCore">
+
+
+
+  <h1 id="SKM_SkmCore" data-uid="SKM.SkmCore" class="text-break">
+Class SkmCore  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SKM.html">SKM</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SKSimulator.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>注意: x86 和 x64 的 dll 是不同的，需要根据实际情况选择<br>
+x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
+使用 <code>KMSimulatorService</code> 服务类可以无感知使用，会自动根据当前环境复制 DLL 到当前目录<br>
+具体 <code>KMSimulatorService</code> 类使用请参考 <a class="xref" href="SKM.KMSimulatorService.html">KMSimulatorService</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SkmCore</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SkmCore</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SKM_SkmCore_HKMCheckPressedKeysCS_" data-uid="SKM.SkmCore.HKMCheckPressedKeysCS*"></a>
+
+  <h3 id="SKM_SkmCore_HKMCheckPressedKeysCS_System_UInt32_" data-uid="SKM.SkmCore.HKMCheckPressedKeysCS(System.UInt32)">
+  HKMCheckPressedKeysCS(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string HKMCheckPressedKeysCS(uint Flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Flags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMClose_" data-uid="SKM.SkmCore.HKMClose*"></a>
+
+  <h3 id="SKM_SkmCore_HKMClose_System_IntPtr_" data-uid="SKM.SkmCore.HKMClose(System.IntPtr)">
+  HKMClose(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMClose(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMDelayRnd_" data-uid="SKM.SkmCore.HKMDelayRnd*"></a>
+
+  <h3 id="SKM_SkmCore_HKMDelayRnd_System_IntPtr_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMDelayRnd(System.IntPtr,System.UInt32,System.UInt32)">
+  HKMDelayRnd(nint, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMDelayRnd(nint HKMData, uint MinTime, uint MaxTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>MinTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>MaxTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMEnableOSMouseAccelerate_" data-uid="SKM.SkmCore.HKMEnableOSMouseAccelerate*"></a>
+
+  <h3 id="SKM_SkmCore_HKMEnableOSMouseAccelerate_System_Boolean_System_Boolean_" data-uid="SKM.SkmCore.HKMEnableOSMouseAccelerate(System.Boolean,System.Boolean)">
+  HKMEnableOSMouseAccelerate(bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMEnableOSMouseAccelerate(bool Enable, bool Save)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Enable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>Save</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetCursorPos_" data-uid="SKM.SkmCore.HKMGetCursorPos*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetCursorPos_System_IntPtr_System_Int32__System_Int32__" data-uid="SKM.SkmCore.HKMGetCursorPos(System.IntPtr,System.Int32@,System.Int32@)">
+  HKMGetCursorPos(nint, ref int, ref int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMGetCursorPos(nint HKMData, ref int X, ref int Y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>X</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>Y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetCursorPos2_" data-uid="SKM.SkmCore.HKMGetCursorPos2*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetCursorPos2_System_IntPtr_" data-uid="SKM.SkmCore.HKMGetCursorPos2(System.IntPtr)">
+  HKMGetCursorPos2(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint HKMGetCursorPos2(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetDevInfo_" data-uid="SKM.SkmCore.HKMGetDevInfo*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetDevInfo_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMGetDevInfo(System.IntPtr,System.UInt32,System.Boolean)">
+  HKMGetDevInfo(nint, uint, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint HKMGetDevInfo(nint HKMData, uint Index, bool Mouse)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetDevString_" data-uid="SKM.SkmCore.HKMGetDevString*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetDevString_System_IntPtr_System_UInt32_System_Boolean_System_UInt32__" data-uid="SKM.SkmCore.HKMGetDevString(System.IntPtr,System.UInt32,System.Boolean,System.UInt32@)">
+  HKMGetDevString(nint, uint, bool, ref uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint HKMGetDevString(nint HKMData, uint Index, bool Mouse, ref uint Length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>Length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetDevStringCS_" data-uid="SKM.SkmCore.HKMGetDevStringCS*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetDevStringCS_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)">
+  HKMGetDevStringCS(nint, uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string HKMGetDevStringCS(nint HKMData, uint Index, bool Mouse)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetKeyboardLEDState_" data-uid="SKM.SkmCore.HKMGetKeyboardLEDState*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetKeyboardLEDState_System_IntPtr_System_UInt32_" data-uid="SKM.SkmCore.HKMGetKeyboardLEDState(System.IntPtr,System.UInt32)">
+  HKMGetKeyboardLEDState(nint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMGetKeyboardLEDState(nint HKMData, uint Index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetKeyboardMode_" data-uid="SKM.SkmCore.HKMGetKeyboardMode*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetKeyboardMode_System_IntPtr_" data-uid="SKM.SkmCore.HKMGetKeyboardMode(System.IntPtr)">
+  HKMGetKeyboardMode(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint HKMGetKeyboardMode(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetMouseMode_" data-uid="SKM.SkmCore.HKMGetMouseMode*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetMouseMode_System_IntPtr_" data-uid="SKM.SkmCore.HKMGetMouseMode(System.IntPtr)">
+  HKMGetMouseMode(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint HKMGetMouseMode(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetOSMouseSpeed_" data-uid="SKM.SkmCore.HKMGetOSMouseSpeed*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetOSMouseSpeed" data-uid="SKM.SkmCore.HKMGetOSMouseSpeed">
+  HKMGetOSMouseSpeed()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int HKMGetOSMouseSpeed()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMGetSerialNumber_" data-uid="SKM.SkmCore.HKMGetSerialNumber*"></a>
+
+  <h3 id="SKM_SkmCore_HKMGetSerialNumber_System_IntPtr_System_Boolean_" data-uid="SKM.SkmCore.HKMGetSerialNumber(System.IntPtr,System.Boolean)">
+  HKMGetSerialNumber(nint, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint HKMGetSerialNumber(nint HKMData, bool Mouse)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMIsKeyBusy_" data-uid="SKM.SkmCore.HKMIsKeyBusy*"></a>
+
+  <h3 id="SKM_SkmCore_HKMIsKeyBusy_System_IntPtr_" data-uid="SKM.SkmCore.HKMIsKeyBusy(System.IntPtr)">
+  HKMIsKeyBusy(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMIsKeyBusy(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMIsKeyDown_" data-uid="SKM.SkmCore.HKMIsKeyDown*"></a>
+
+  <h3 id="SKM_SkmCore_HKMIsKeyDown_System_IntPtr_System_String_" data-uid="SKM.SkmCore.HKMIsKeyDown(System.IntPtr,System.String)">
+  HKMIsKeyDown(nint, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMIsKeyDown(nint HKMData, string KeyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>KeyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMIsMouseBusy_" data-uid="SKM.SkmCore.HKMIsMouseBusy*"></a>
+
+  <h3 id="SKM_SkmCore_HKMIsMouseBusy_System_IntPtr_" data-uid="SKM.SkmCore.HKMIsMouseBusy(System.IntPtr)">
+  HKMIsMouseBusy(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMIsMouseBusy(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMIsMouseButtonDown_" data-uid="SKM.SkmCore.HKMIsMouseButtonDown*"></a>
+
+  <h3 id="SKM_SkmCore_HKMIsMouseButtonDown_System_IntPtr_System_UInt32_" data-uid="SKM.SkmCore.HKMIsMouseButtonDown(System.IntPtr,System.UInt32)">
+  HKMIsMouseButtonDown(nint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMIsMouseButtonDown(nint HKMData, uint Index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMIsOSMouseAccelerateEnabled_" data-uid="SKM.SkmCore.HKMIsOSMouseAccelerateEnabled*"></a>
+
+  <h3 id="SKM_SkmCore_HKMIsOSMouseAccelerateEnabled" data-uid="SKM.SkmCore.HKMIsOSMouseAccelerateEnabled">
+  HKMIsOSMouseAccelerateEnabled()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMIsOSMouseAccelerateEnabled()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMIsOpen_" data-uid="SKM.SkmCore.HKMIsOpen*"></a>
+
+  <h3 id="SKM_SkmCore_HKMIsOpen_System_IntPtr_System_UInt32_" data-uid="SKM.SkmCore.HKMIsOpen(System.IntPtr,System.UInt32)">
+  HKMIsOpen(nint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMIsOpen(nint HKMData, uint Flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Flags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMKeyDown_" data-uid="SKM.SkmCore.HKMKeyDown*"></a>
+
+  <h3 id="SKM_SkmCore_HKMKeyDown_System_IntPtr_System_String_" data-uid="SKM.SkmCore.HKMKeyDown(System.IntPtr,System.String)">
+  HKMKeyDown(nint, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMKeyDown(nint HKMData, string KeyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>KeyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMKeyPress_" data-uid="SKM.SkmCore.HKMKeyPress*"></a>
+
+  <h3 id="SKM_SkmCore_HKMKeyPress_System_IntPtr_System_String_" data-uid="SKM.SkmCore.HKMKeyPress(System.IntPtr,System.String)">
+  HKMKeyPress(nint, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMKeyPress(nint HKMData, string KeyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>KeyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMKeyUp_" data-uid="SKM.SkmCore.HKMKeyUp*"></a>
+
+  <h3 id="SKM_SkmCore_HKMKeyUp_System_IntPtr_System_String_" data-uid="SKM.SkmCore.HKMKeyUp(System.IntPtr,System.String)">
+  HKMKeyUp(nint, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMKeyUp(nint HKMData, string KeyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>KeyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMLeftClick_" data-uid="SKM.SkmCore.HKMLeftClick*"></a>
+
+  <h3 id="SKM_SkmCore_HKMLeftClick_System_IntPtr_" data-uid="SKM.SkmCore.HKMLeftClick(System.IntPtr)">
+  HKMLeftClick(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMLeftClick(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMLeftDoubleClick_" data-uid="SKM.SkmCore.HKMLeftDoubleClick*"></a>
+
+  <h3 id="SKM_SkmCore_HKMLeftDoubleClick_System_IntPtr_" data-uid="SKM.SkmCore.HKMLeftDoubleClick(System.IntPtr)">
+  HKMLeftDoubleClick(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMLeftDoubleClick(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMLeftDown_" data-uid="SKM.SkmCore.HKMLeftDown*"></a>
+
+  <h3 id="SKM_SkmCore_HKMLeftDown_System_IntPtr_" data-uid="SKM.SkmCore.HKMLeftDown(System.IntPtr)">
+  HKMLeftDown(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMLeftDown(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMLeftUp_" data-uid="SKM.SkmCore.HKMLeftUp*"></a>
+
+  <h3 id="SKM_SkmCore_HKMLeftUp_System_IntPtr_" data-uid="SKM.SkmCore.HKMLeftUp(System.IntPtr)">
+  HKMLeftUp(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMLeftUp(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMiddleClick_" data-uid="SKM.SkmCore.HKMMiddleClick*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMiddleClick_System_IntPtr_" data-uid="SKM.SkmCore.HKMMiddleClick(System.IntPtr)">
+  HKMMiddleClick(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMiddleClick(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMiddleDoubleClick_" data-uid="SKM.SkmCore.HKMMiddleDoubleClick*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMiddleDoubleClick_System_IntPtr_" data-uid="SKM.SkmCore.HKMMiddleDoubleClick(System.IntPtr)">
+  HKMMiddleDoubleClick(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMiddleDoubleClick(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMiddleDown_" data-uid="SKM.SkmCore.HKMMiddleDown*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMiddleDown_System_IntPtr_" data-uid="SKM.SkmCore.HKMMiddleDown(System.IntPtr)">
+  HKMMiddleDown(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMiddleDown(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMiddleUp_" data-uid="SKM.SkmCore.HKMMiddleUp*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMiddleUp_System_IntPtr_" data-uid="SKM.SkmCore.HKMMiddleUp(System.IntPtr)">
+  HKMMiddleUp(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMiddleUp(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMouseWheel_" data-uid="SKM.SkmCore.HKMMouseWheel*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMouseWheel_System_IntPtr_System_Int32_" data-uid="SKM.SkmCore.HKMMouseWheel(System.IntPtr,System.Int32)">
+  HKMMouseWheel(nint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMouseWheel(nint HKMData, int Count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMouseWheelP_" data-uid="SKM.SkmCore.HKMMouseWheelP*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMouseWheelP_System_IntPtr_System_Int32_" data-uid="SKM.SkmCore.HKMMouseWheelP(System.IntPtr,System.Int32)">
+  HKMMouseWheelP(nint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMouseWheelP(nint HKMData, int Count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMoveR_" data-uid="SKM.SkmCore.HKMMoveR*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMoveR_System_IntPtr_System_Int32_System_Int32_" data-uid="SKM.SkmCore.HKMMoveR(System.IntPtr,System.Int32,System.Int32)">
+  HKMMoveR(nint, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMoveR(nint HKMData, int X, int Y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>X</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>Y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMoveR2_" data-uid="SKM.SkmCore.HKMMoveR2*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMoveR2_System_IntPtr_System_Int32_System_Int32_" data-uid="SKM.SkmCore.HKMMoveR2(System.IntPtr,System.Int32,System.Int32)">
+  HKMMoveR2(nint, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMoveR2(nint HKMData, int X, int Y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>X</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>Y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMoveRP_" data-uid="SKM.SkmCore.HKMMoveRP*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMoveRP_System_IntPtr_System_Int32_System_Int32_" data-uid="SKM.SkmCore.HKMMoveRP(System.IntPtr,System.Int32,System.Int32)">
+  HKMMoveRP(nint, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMoveRP(nint HKMData, int X, int Y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>X</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>Y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMMoveTo_" data-uid="SKM.SkmCore.HKMMoveTo*"></a>
+
+  <h3 id="SKM_SkmCore_HKMMoveTo_System_IntPtr_System_Int32_System_Int32_" data-uid="SKM.SkmCore.HKMMoveTo(System.IntPtr,System.Int32,System.Int32)">
+  HKMMoveTo(nint, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMMoveTo(nint HKMData, int X, int Y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>X</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>Y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMOpen_" data-uid="SKM.SkmCore.HKMOpen*"></a>
+
+  <h3 id="SKM_SkmCore_HKMOpen_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMOpen(System.UInt32,System.UInt32)">
+  HKMOpen(uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint HKMOpen(uint DeviceId, uint DpiMode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>DeviceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>DpiMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMOpen2_" data-uid="SKM.SkmCore.HKMOpen2*"></a>
+
+  <h3 id="SKM_SkmCore_HKMOpen2_System_UInt32_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMOpen2(System.UInt32,System.UInt32,System.UInt32)">
+  HKMOpen2(uint, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint HKMOpen2(uint DeviceId1, uint DeviceId2, uint DpiMode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>DeviceId1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>DeviceId2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>DpiMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMOutputString_" data-uid="SKM.SkmCore.HKMOutputString*"></a>
+
+  <h3 id="SKM_SkmCore_HKMOutputString_System_IntPtr_System_String_" data-uid="SKM.SkmCore.HKMOutputString(System.IntPtr,System.String)">
+  HKMOutputString(nint, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMOutputString(nint HKMData, string Str)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMReleaseKeyboard_" data-uid="SKM.SkmCore.HKMReleaseKeyboard*"></a>
+
+  <h3 id="SKM_SkmCore_HKMReleaseKeyboard_System_IntPtr_" data-uid="SKM.SkmCore.HKMReleaseKeyboard(System.IntPtr)">
+  HKMReleaseKeyboard(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMReleaseKeyboard(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMReleaseMouse_" data-uid="SKM.SkmCore.HKMReleaseMouse*"></a>
+
+  <h3 id="SKM_SkmCore_HKMReleaseMouse_System_IntPtr_" data-uid="SKM.SkmCore.HKMReleaseMouse(System.IntPtr)">
+  HKMReleaseMouse(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMReleaseMouse(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMRightClick_" data-uid="SKM.SkmCore.HKMRightClick*"></a>
+
+  <h3 id="SKM_SkmCore_HKMRightClick_System_IntPtr_" data-uid="SKM.SkmCore.HKMRightClick(System.IntPtr)">
+  HKMRightClick(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMRightClick(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMRightDoubleClick_" data-uid="SKM.SkmCore.HKMRightDoubleClick*"></a>
+
+  <h3 id="SKM_SkmCore_HKMRightDoubleClick_System_IntPtr_" data-uid="SKM.SkmCore.HKMRightDoubleClick(System.IntPtr)">
+  HKMRightDoubleClick(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMRightDoubleClick(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMRightDown_" data-uid="SKM.SkmCore.HKMRightDown*"></a>
+
+  <h3 id="SKM_SkmCore_HKMRightDown_System_IntPtr_" data-uid="SKM.SkmCore.HKMRightDown(System.IntPtr)">
+  HKMRightDown(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMRightDown(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMRightUp_" data-uid="SKM.SkmCore.HKMRightUp*"></a>
+
+  <h3 id="SKM_SkmCore_HKMRightUp_System_IntPtr_" data-uid="SKM.SkmCore.HKMRightUp(System.IntPtr)">
+  HKMRightUp(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMRightUp(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSearchDevice_" data-uid="SKM.SkmCore.HKMSearchDevice*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSearchDevice_System_UInt32_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMSearchDevice(System.UInt32,System.UInt32,System.UInt32)">
+  HKMSearchDevice(uint, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint HKMSearchDevice(uint Vid, uint Pid, uint DeviceType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Vid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Pid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>DeviceType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSearchDevice2_" data-uid="SKM.SkmCore.HKMSearchDevice2*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSearchDevice2_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMSearchDevice2(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+  HKMSearchDevice2(uint, uint, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint HKMSearchDevice2(uint Vid, uint Pid, uint SN, uint DeviceType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Vid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Pid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>SN</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>DeviceType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSearchDeviceAll_" data-uid="SKM.SkmCore.HKMSearchDeviceAll*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSearchDeviceAll_System_UInt32_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMSearchDeviceAll(System.UInt32,System.UInt32,System.UInt32)">
+  HKMSearchDeviceAll(uint, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint HKMSearchDeviceAll(uint Vid, uint Pid, uint DeviceType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Vid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Pid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>DeviceType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetAbsMouseScrnRes_" data-uid="SKM.SkmCore.HKMSetAbsMouseScrnRes*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetAbsMouseScrnRes_System_IntPtr_System_Int32_System_Int32_" data-uid="SKM.SkmCore.HKMSetAbsMouseScrnRes(System.IntPtr,System.Int32,System.Int32)">
+  HKMSetAbsMouseScrnRes(nint, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetAbsMouseScrnRes(nint HKMData, int Width, int Height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>Height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetKeyInterval_" data-uid="SKM.SkmCore.HKMSetKeyInterval*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetKeyInterval_System_IntPtr_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMSetKeyInterval(System.IntPtr,System.UInt32,System.UInt32)">
+  HKMSetKeyInterval(nint, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetKeyInterval(nint HKMData, uint MinTime, uint MaxTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>MinTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>MaxTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetLightMode_" data-uid="SKM.SkmCore.HKMSetLightMode*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetLightMode_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMSetLightMode(System.IntPtr,System.UInt32,System.Boolean)">
+  HKMSetLightMode(nint, uint, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetLightMode(nint HKMData, uint Mode, bool Mouse)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Mode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetMode_" data-uid="SKM.SkmCore.HKMSetMode*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetMode_System_IntPtr_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMSetMode(System.IntPtr,System.UInt32,System.UInt32)">
+  HKMSetMode(nint, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetMode(nint HKMData, uint Index, uint Mode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Mode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetMouseInterval_" data-uid="SKM.SkmCore.HKMSetMouseInterval*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetMouseInterval_System_IntPtr_System_UInt32_System_UInt32_" data-uid="SKM.SkmCore.HKMSetMouseInterval(System.IntPtr,System.UInt32,System.UInt32)">
+  HKMSetMouseInterval(nint, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetMouseInterval(nint HKMData, uint MinTime, uint MaxTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>MinTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>MaxTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetMouseMoveTimeout_" data-uid="SKM.SkmCore.HKMSetMouseMoveTimeout*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetMouseMoveTimeout_System_IntPtr_System_UInt32_" data-uid="SKM.SkmCore.HKMSetMouseMoveTimeout(System.IntPtr,System.UInt32)">
+  HKMSetMouseMoveTimeout(nint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetMouseMoveTimeout(nint HKMData, uint Timeout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetMousePosMaxOffset_" data-uid="SKM.SkmCore.HKMSetMousePosMaxOffset*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetMousePosMaxOffset_System_IntPtr_System_UInt32_" data-uid="SKM.SkmCore.HKMSetMousePosMaxOffset(System.IntPtr,System.UInt32)">
+  HKMSetMousePosMaxOffset(nint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetMousePosMaxOffset(nint HKMData, uint dwOffset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>dwOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetMousePosPrecision_" data-uid="SKM.SkmCore.HKMSetMousePosPrecision*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetMousePosPrecision_System_IntPtr_System_UInt32_" data-uid="SKM.SkmCore.HKMSetMousePosPrecision(System.IntPtr,System.UInt32)">
+  HKMSetMousePosPrecision(nint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetMousePosPrecision(nint HKMData, uint Precision)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Precision</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetMouseSpeed_" data-uid="SKM.SkmCore.HKMSetMouseSpeed*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetMouseSpeed_System_IntPtr_System_UInt32_" data-uid="SKM.SkmCore.HKMSetMouseSpeed(System.IntPtr,System.UInt32)">
+  HKMSetMouseSpeed(nint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetMouseSpeed(nint HKMData, uint MouseSpeed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>MouseSpeed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetOSMouseSpeed_" data-uid="SKM.SkmCore.HKMSetOSMouseSpeed*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetOSMouseSpeed_System_Int32_System_Boolean_" data-uid="SKM.SkmCore.HKMSetOSMouseSpeed(System.Int32,System.Boolean)">
+  HKMSetOSMouseSpeed(int, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetOSMouseSpeed(int Speed, bool Save)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Speed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>Save</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetResetMode_" data-uid="SKM.SkmCore.HKMSetResetMode*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetResetMode_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMSetResetMode(System.IntPtr,System.UInt32,System.Boolean)">
+  HKMSetResetMode(nint, uint, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetResetMode(nint HKMData, uint Mode, bool Mouse)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Mode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMSetResetTime_" data-uid="SKM.SkmCore.HKMSetResetTime*"></a>
+
+  <h3 id="SKM_SkmCore_HKMSetResetTime_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMSetResetTime(System.IntPtr,System.UInt32,System.Boolean)">
+  HKMSetResetTime(nint, uint, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMSetResetTime(nint HKMData, uint Time, bool Mouse)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMVerifyUserData_" data-uid="SKM.SkmCore.HKMVerifyUserData*"></a>
+
+  <h3 id="SKM_SkmCore_HKMVerifyUserData_System_IntPtr_System_String_System_Boolean_" data-uid="SKM.SkmCore.HKMVerifyUserData(System.IntPtr,System.String,System.Boolean)">
+  HKMVerifyUserData(nint, string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMVerifyUserData(nint HKMData, string Str, bool Mouse)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMVerifyUserData2_" data-uid="SKM.SkmCore.HKMVerifyUserData2*"></a>
+
+  <h3 id="SKM_SkmCore_HKMVerifyUserData2_System_IntPtr_System_String_System_Boolean_" data-uid="SKM.SkmCore.HKMVerifyUserData2(System.IntPtr,System.String,System.Boolean)">
+  HKMVerifyUserData2(nint, string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint HKMVerifyUserData2(nint HKMData, string Str, bool Mouse)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>Str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMXBtn1Click_" data-uid="SKM.SkmCore.HKMXBtn1Click*"></a>
+
+  <h3 id="SKM_SkmCore_HKMXBtn1Click_System_IntPtr_" data-uid="SKM.SkmCore.HKMXBtn1Click(System.IntPtr)">
+  HKMXBtn1Click(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMXBtn1Click(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMXBtn1DoubleClick_" data-uid="SKM.SkmCore.HKMXBtn1DoubleClick*"></a>
+
+  <h3 id="SKM_SkmCore_HKMXBtn1DoubleClick_System_IntPtr_" data-uid="SKM.SkmCore.HKMXBtn1DoubleClick(System.IntPtr)">
+  HKMXBtn1DoubleClick(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMXBtn1DoubleClick(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMXBtn1Down_" data-uid="SKM.SkmCore.HKMXBtn1Down*"></a>
+
+  <h3 id="SKM_SkmCore_HKMXBtn1Down_System_IntPtr_" data-uid="SKM.SkmCore.HKMXBtn1Down(System.IntPtr)">
+  HKMXBtn1Down(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMXBtn1Down(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMXBtn1Up_" data-uid="SKM.SkmCore.HKMXBtn1Up*"></a>
+
+  <h3 id="SKM_SkmCore_HKMXBtn1Up_System_IntPtr_" data-uid="SKM.SkmCore.HKMXBtn1Up(System.IntPtr)">
+  HKMXBtn1Up(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMXBtn1Up(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMXBtn2Click_" data-uid="SKM.SkmCore.HKMXBtn2Click*"></a>
+
+  <h3 id="SKM_SkmCore_HKMXBtn2Click_System_IntPtr_" data-uid="SKM.SkmCore.HKMXBtn2Click(System.IntPtr)">
+  HKMXBtn2Click(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMXBtn2Click(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMXBtn2DoubleClick_" data-uid="SKM.SkmCore.HKMXBtn2DoubleClick*"></a>
+
+  <h3 id="SKM_SkmCore_HKMXBtn2DoubleClick_System_IntPtr_" data-uid="SKM.SkmCore.HKMXBtn2DoubleClick(System.IntPtr)">
+  HKMXBtn2DoubleClick(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMXBtn2DoubleClick(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMXBtn2Down_" data-uid="SKM.SkmCore.HKMXBtn2Down*"></a>
+
+  <h3 id="SKM_SkmCore_HKMXBtn2Down_System_IntPtr_" data-uid="SKM.SkmCore.HKMXBtn2Down(System.IntPtr)">
+  HKMXBtn2Down(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMXBtn2Down(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SKM_SkmCore_HKMXBtn2Up_" data-uid="SKM.SkmCore.HKMXBtn2Up*"></a>
+
+  <h3 id="SKM_SkmCore_HKMXBtn2Up_System_IntPtr_" data-uid="SKM.SkmCore.HKMXBtn2Up(System.IntPtr)">
+  HKMXBtn2Up(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern bool HKMXBtn2Up(nint HKMData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://github.com/scottfly189/SKSimulator.git">SKSimulator</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

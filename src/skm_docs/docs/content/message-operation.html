@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>消息管理 | SKSimulator键鼠模拟器 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="消息管理 | SKSimulator键鼠模拟器 ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="SKSimulator键鼠模拟器">
+            SKSimulator键鼠模拟器
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="消息管理">消息管理</h1>
+
+<hr>
+<blockquote>
+<p>注：教程中&quot;好友昵称&quot;与&quot;好友昵称&quot;具有同样的语义</p>
+</blockquote>
+<h2 id="-消息发送模型">🚀 消息发送模型</h2>
+<p>WeChatAuto.SDK支持两种消息发送模型:</p>
+<ul>
+<li><p><strong>单独发送消息</strong></p>
+<p>适用于单发、群发、转发等简单聊天场景。</p>
+</li>
+<li><p><strong>聊天过程消息回复</strong></p>
+<p>适用于在聊天过程中进行消息回复，特别适合接入大模型实现自动回复的场景。</p>
+</li>
+</ul>
+<h2 id="-单独发送消息">😊 单独发送消息</h2>
+<blockquote>
+<p>具体请参考源码: <code>项目根目录\Examples\demo03</code></p>
+</blockquote>
+<h3 id="1-发送文本消息">1. 发送文本消息</h3>
+<ul>
+<li>可以通过<code>WeChatClient</code>类或者<code>WeChatMainWindow</code>类发送消息,或者通过窗口类<code>WeChatMainWindow</code>获得<code>Sender</code>对象来发送消息</li>
+<li>方法定义</li>
+</ul>
+<pre><code>public async Task SendWho(string who, string message, OneOf&lt;string, string[]&gt; atUser = default, bool isOpenChat = true)
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>who: 好友昵称，可以是好友或者群昵称</li>
+<li>message: 消息内容</li>
+<li>atUser: 被@的好友昵称，可以单个好友，也可以是一个好友数组，适用群聊中@好友</li>
+<li>isOpenChat: 是否打开子聊天窗口,默认是True:打开,False:不打开</li>
+<li>示例代码:</li>
+</ul>
+<pre><code>/***
+* 示例三 - 消息管理演示
+*/
+
+using WeChatAuto.Services;
+using WeChatAuto.Components;
+using Microsoft.Extensions.DependencyInjection;
+
+var serviceProvider = WeAutomation.Initialize(options =&gt;
+{
+   options.DebugMode = true;
+});
+
+using var clientFactory = serviceProvider.GetRequiredService&lt;WeChatClientFactory&gt;();
+var client = clientFactory.GetWeChatClient(&quot;Alex&quot;);
+//发送消息给AI.Net好友昵称，请修改成自己的好友昵称
+await client.SendWho(&quot;AI.Net&quot;, &quot;你好，世界！&quot;);
+//发送消息给群聊&quot;测试11&quot;，并@好友:123321
+await client.SendWho(&quot;测试11&quot;, &quot;你好，世界！&quot;, &quot;123321&quot;);
+//发送消息给群聊&quot;测试11&quot;，并@好友:123321,Alex
+await client.SendWho(&quot;测试11&quot;,&quot;你好，世界！&quot;,new string[]{&quot;123321&quot;,&quot;Alex&quot;});
+</code></pre>
+<h3 id="2-发送emoji表情">2. 发送Emoji表情</h3>
+<blockquote>
+<p>注：Emoji 表情可以单独发送，也可以包含在文字消息中，其他用法同上面的<a href="#1-%E5%8F%91%E9%80%81%E6%96%87%E6%9C%AC%E6%B6%88%E6%81%AF">发送文本消息</a></p>
+</blockquote>
+<ul>
+<li>方法定义:</li>
+</ul>
+<pre><code>public async Task SendEmoji(string who, OneOf&lt;int, string&gt; emoji, OneOf&lt;string, string[]&gt; atUser = default, bool isOpenChat = false)
+</code></pre>
+<p>其中:</p>
+<ul>
+<li><p>who: 好友昵称，可以是好友或者群昵称</p>
+</li>
+<li><p>emoji: 可以是表情名称或者描述或者索引,具体索引或者描述等请参考下面的Emoji表</p>
+</li>
+<li><p>atUser: 被@的好友昵称，可以单个好友，也可以是一个好友数组，适用群聊中@好友</p>
+</li>
+<li><p>isOpenChat: 是否打开子聊天窗口,默认是True:打开,False:不打开</p>
+</li>
+<li><p>Emoji表参考</p>
+</li>
+</ul>
+<blockquote>
+<p>Emoji表按打开微信聊天窗口的“表情”从左到右，从上到下进行索引排序</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">索引 (index)</th>
+<th style="text-align: center;">描述 (desc)</th>
+<th style="text-align: center;">表情名 (value)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">微笑</td>
+<td style="text-align: center;">[微笑]</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">撇嘴</td>
+<td style="text-align: center;">[撇嘴]</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">色色表情</td>
+<td style="text-align: center;">[色]</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">发呆</td>
+<td style="text-align: center;">[发呆]</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">得意</td>
+<td style="text-align: center;">[得意]</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">流泪</td>
+<td style="text-align: center;">[流泪]</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">害羞</td>
+<td style="text-align: center;">[害羞]</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">闭嘴</td>
+<td style="text-align: center;">[闭嘴]</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">睡</td>
+<td style="text-align: center;">[睡]</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">大哭</td>
+<td style="text-align: center;">[大哭]</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">尴尬</td>
+<td style="text-align: center;">[尴尬]</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">发怒</td>
+<td style="text-align: center;">[发怒]</td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">调皮</td>
+<td style="text-align: center;">[调皮]</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">呲牙</td>
+<td style="text-align: center;">[呲牙]</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">惊讶</td>
+<td style="text-align: center;">[惊讶]</td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">难过</td>
+<td style="text-align: center;">[难过]</td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">囧</td>
+<td style="text-align: center;">[囧]</td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">抓狂</td>
+<td style="text-align: center;">[抓狂]</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">吐</td>
+<td style="text-align: center;">[吐]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">偷笑</td>
+<td style="text-align: center;">[偷笑]</td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">愉快</td>
+<td style="text-align: center;">[愉快]</td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">白眼</td>
+<td style="text-align: center;">[白眼]</td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">傲慢</td>
+<td style="text-align: center;">[傲慢]</td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">困</td>
+<td style="text-align: center;">[困]</td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">惊恐</td>
+<td style="text-align: center;">[惊恐]</td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">憨笑</td>
+<td style="text-align: center;">[憨笑]</td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">悠闲</td>
+<td style="text-align: center;">[悠闲]</td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">咒骂</td>
+<td style="text-align: center;">[咒骂]</td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">疑问</td>
+<td style="text-align: center;">[疑问]</td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">嘘</td>
+<td style="text-align: center;">[嘘]</td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">晕</td>
+<td style="text-align: center;">[晕]</td>
+</tr>
+<tr>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">衰</td>
+<td style="text-align: center;">[衰]</td>
+</tr>
+<tr>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">骷髅</td>
+<td style="text-align: center;">[骷髅]</td>
+</tr>
+<tr>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">敲打</td>
+<td style="text-align: center;">[敲打]</td>
+</tr>
+<tr>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">再见</td>
+<td style="text-align: center;">[再见]</td>
+</tr>
+<tr>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">擦汗</td>
+<td style="text-align: center;">[擦汗]</td>
+</tr>
+<tr>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">抠鼻</td>
+<td style="text-align: center;">[抠鼻]</td>
+</tr>
+<tr>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">鼓掌</td>
+<td style="text-align: center;">[鼓掌]</td>
+</tr>
+<tr>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">坏笑</td>
+<td style="text-align: center;">[坏笑]</td>
+</tr>
+<tr>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">右哼哼</td>
+<td style="text-align: center;">[右哼哼]</td>
+</tr>
+<tr>
+<td style="text-align: center;">41</td>
+<td style="text-align: center;">鄙视</td>
+<td style="text-align: center;">[鄙视]</td>
+</tr>
+<tr>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">委屈</td>
+<td style="text-align: center;">[委屈]</td>
+</tr>
+<tr>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">快哭了</td>
+<td style="text-align: center;">[快哭了]</td>
+</tr>
+<tr>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">阴险</td>
+<td style="text-align: center;">[阴险]</td>
+</tr>
+<tr>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">亲亲</td>
+<td style="text-align: center;">[亲亲]</td>
+</tr>
+<tr>
+<td style="text-align: center;">46</td>
+<td style="text-align: center;">可怜</td>
+<td style="text-align: center;">[可怜]</td>
+</tr>
+<tr>
+<td style="text-align: center;">47</td>
+<td style="text-align: center;">笑脸</td>
+<td style="text-align: center;">[笑脸]</td>
+</tr>
+<tr>
+<td style="text-align: center;">48</td>
+<td style="text-align: center;">生病</td>
+<td style="text-align: center;">[生病]</td>
+</tr>
+<tr>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">脸红</td>
+<td style="text-align: center;">[脸红]</td>
+</tr>
+<tr>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">破涕为笑</td>
+<td style="text-align: center;">[破涕为笑]</td>
+</tr>
+<tr>
+<td style="text-align: center;">51</td>
+<td style="text-align: center;">恐惧</td>
+<td style="text-align: center;">[恐惧]</td>
+</tr>
+<tr>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">失望</td>
+<td style="text-align: center;">[失望]</td>
+</tr>
+<tr>
+<td style="text-align: center;">53</td>
+<td style="text-align: center;">无语</td>
+<td style="text-align: center;">[无语]</td>
+</tr>
+<tr>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">嘿哈</td>
+<td style="text-align: center;">[嘿哈]</td>
+</tr>
+<tr>
+<td style="text-align: center;">55</td>
+<td style="text-align: center;">捂脸</td>
+<td style="text-align: center;">[捂脸]</td>
+</tr>
+<tr>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">奸笑</td>
+<td style="text-align: center;">[奸笑]</td>
+</tr>
+<tr>
+<td style="text-align: center;">57</td>
+<td style="text-align: center;">机智</td>
+<td style="text-align: center;">[机智]</td>
+</tr>
+<tr>
+<td style="text-align: center;">58</td>
+<td style="text-align: center;">皱眉</td>
+<td style="text-align: center;">[皱眉]</td>
+</tr>
+<tr>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">耶</td>
+<td style="text-align: center;">[耶]</td>
+</tr>
+<tr>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">吃瓜</td>
+<td style="text-align: center;">[吃瓜]</td>
+</tr>
+<tr>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">加油</td>
+<td style="text-align: center;">[加油]</td>
+</tr>
+<tr>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">汗</td>
+<td style="text-align: center;">[汗]</td>
+</tr>
+<tr>
+<td style="text-align: center;">63</td>
+<td style="text-align: center;">天啊</td>
+<td style="text-align: center;">[天啊]</td>
+</tr>
+<tr>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">嗯嗯嗯</td>
+<td style="text-align: center;">[Emm]</td>
+</tr>
+<tr>
+<td style="text-align: center;">65</td>
+<td style="text-align: center;">社会社会</td>
+<td style="text-align: center;">[社会社会]</td>
+</tr>
+<tr>
+<td style="text-align: center;">66</td>
+<td style="text-align: center;">旺柴</td>
+<td style="text-align: center;">[旺柴]</td>
+</tr>
+<tr>
+<td style="text-align: center;">67</td>
+<td style="text-align: center;">好的</td>
+<td style="text-align: center;">[好的]</td>
+</tr>
+<tr>
+<td style="text-align: center;">68</td>
+<td style="text-align: center;">打脸</td>
+<td style="text-align: center;">[打脸]</td>
+</tr>
+<tr>
+<td style="text-align: center;">69</td>
+<td style="text-align: center;">哇</td>
+<td style="text-align: center;">[哇]</td>
+</tr>
+<tr>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">翻白眼</td>
+<td style="text-align: center;">[翻白眼]</td>
+</tr>
+<tr>
+<td style="text-align: center;">71</td>
+<td style="text-align: center;">666</td>
+<td style="text-align: center;">[666]</td>
+</tr>
+<tr>
+<td style="text-align: center;">72</td>
+<td style="text-align: center;">让我看看</td>
+<td style="text-align: center;">[让我看看]</td>
+</tr>
+<tr>
+<td style="text-align: center;">73</td>
+<td style="text-align: center;">叹气</td>
+<td style="text-align: center;">[叹气]</td>
+</tr>
+<tr>
+<td style="text-align: center;">74</td>
+<td style="text-align: center;">苦涩</td>
+<td style="text-align: center;">[苦涩]</td>
+</tr>
+<tr>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">裂开</td>
+<td style="text-align: center;">[裂开]</td>
+</tr>
+<tr>
+<td style="text-align: center;">76</td>
+<td style="text-align: center;">嘴唇</td>
+<td style="text-align: center;">[嘴唇]</td>
+</tr>
+<tr>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">爱心</td>
+<td style="text-align: center;">[爱心]</td>
+</tr>
+<tr>
+<td style="text-align: center;">78</td>
+<td style="text-align: center;">心碎</td>
+<td style="text-align: center;">[心碎]</td>
+</tr>
+<tr>
+<td style="text-align: center;">79</td>
+<td style="text-align: center;">拥抱</td>
+<td style="text-align: center;">[拥抱]</td>
+</tr>
+<tr>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">强</td>
+<td style="text-align: center;">[强]</td>
+</tr>
+<tr>
+<td style="text-align: center;">81</td>
+<td style="text-align: center;">弱</td>
+<td style="text-align: center;">[弱]</td>
+</tr>
+<tr>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">握手</td>
+<td style="text-align: center;">[握手]</td>
+</tr>
+<tr>
+<td style="text-align: center;">83</td>
+<td style="text-align: center;">胜利</td>
+<td style="text-align: center;">[胜利]</td>
+</tr>
+<tr>
+<td style="text-align: center;">84</td>
+<td style="text-align: center;">抱拳</td>
+<td style="text-align: center;">[抱拳]</td>
+</tr>
+<tr>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">勾引</td>
+<td style="text-align: center;">[勾引]</td>
+</tr>
+<tr>
+<td style="text-align: center;">86</td>
+<td style="text-align: center;">拳头</td>
+<td style="text-align: center;">[拳头]</td>
+</tr>
+<tr>
+<td style="text-align: center;">87</td>
+<td style="text-align: center;">OK</td>
+<td style="text-align: center;">[OK]</td>
+</tr>
+<tr>
+<td style="text-align: center;">88</td>
+<td style="text-align: center;">合十</td>
+<td style="text-align: center;">[合十]</td>
+</tr>
+<tr>
+<td style="text-align: center;">89</td>
+<td style="text-align: center;">啤酒</td>
+<td style="text-align: center;">[啤酒]</td>
+</tr>
+<tr>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">咖啡</td>
+<td style="text-align: center;">[咖啡]</td>
+</tr>
+<tr>
+<td style="text-align: center;">91</td>
+<td style="text-align: center;">蛋糕</td>
+<td style="text-align: center;">[蛋糕]</td>
+</tr>
+<tr>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">玫瑰</td>
+<td style="text-align: center;">[玫瑰]</td>
+</tr>
+<tr>
+<td style="text-align: center;">93</td>
+<td style="text-align: center;">凋谢</td>
+<td style="text-align: center;">[凋谢]</td>
+</tr>
+<tr>
+<td style="text-align: center;">94</td>
+<td style="text-align: center;">菜刀</td>
+<td style="text-align: center;">[菜刀]</td>
+</tr>
+<tr>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">炸弹</td>
+<td style="text-align: center;">[炸弹]</td>
+</tr>
+<tr>
+<td style="text-align: center;">96</td>
+<td style="text-align: center;">便便</td>
+<td style="text-align: center;">[便便]</td>
+</tr>
+<tr>
+<td style="text-align: center;">97</td>
+<td style="text-align: center;">月亮</td>
+<td style="text-align: center;">[月亮]</td>
+</tr>
+<tr>
+<td style="text-align: center;">98</td>
+<td style="text-align: center;">太阳</td>
+<td style="text-align: center;">[太阳]</td>
+</tr>
+<tr>
+<td style="text-align: center;">99</td>
+<td style="text-align: center;">庆祝</td>
+<td style="text-align: center;">[庆祝]</td>
+</tr>
+<tr>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">礼物</td>
+<td style="text-align: center;">[礼物]</td>
+</tr>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">红包</td>
+<td style="text-align: center;">[红包]</td>
+</tr>
+<tr>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">發</td>
+<td style="text-align: center;">[發]</td>
+</tr>
+<tr>
+<td style="text-align: center;">103</td>
+<td style="text-align: center;">福</td>
+<td style="text-align: center;">[福]</td>
+</tr>
+<tr>
+<td style="text-align: center;">104</td>
+<td style="text-align: center;">烟花</td>
+<td style="text-align: center;">[烟花]</td>
+</tr>
+<tr>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">爆竹</td>
+<td style="text-align: center;">[爆竹]</td>
+</tr>
+<tr>
+<td style="text-align: center;">106</td>
+<td style="text-align: center;">猪头</td>
+<td style="text-align: center;">[猪头]</td>
+</tr>
+<tr>
+<td style="text-align: center;">107</td>
+<td style="text-align: center;">跳跳</td>
+<td style="text-align: center;">[跳跳]</td>
+</tr>
+<tr>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">发抖</td>
+<td style="text-align: center;">[发抖]</td>
+</tr>
+<tr>
+<td style="text-align: center;">109</td>
+<td style="text-align: center;">转圈</td>
+<td style="text-align: center;">[转圈]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-发起语音聊天适用于单个好友">3. 发起语音聊天,适用于单个好友</h3>
+<p>给<strong>单个</strong>好友发起语音聊天，如果是群聊，请使用下面的<code>SendVoiceChats</code>方法,参考<a href="#4-%E7%BE%A4%E8%81%8A%E4%B8%AD%E5%8F%91%E8%B5%B7%E8%AF%AD%E9%9F%B3%E8%81%8A%E5%A4%A9">群聊中发起语音聊天</a></p>
+<ul>
+<li>方法定义</li>
+</ul>
+<pre><code>public void SendVoiceChat(string who, bool isOpenChat = true)
+</code></pre>
+<p>其中:</p>
+<ul>
+<li>who: 好友昵称，非群聊昵称</li>
+<li>isOpenChat: 是否打开子聊天窗口,默认是True:打开,False:不打开</li>
+</ul>
+<h3 id="4-群聊中发起语音聊天">4. 群聊中发起语音聊天</h3>
+<p>在聊天室中发起语音聊天，需要指定<strong>聊天人</strong></p>
+<ul>
+<li>方法定义</li>
+</ul>
+<pre><code>public void SendVoiceChats(string groupName, string[] whos, bool isOpenChat = true) =&gt; WxMainWindow.SendVoiceChats(groupName, whos, isOpenChat);
+</code></pre>
+<p>其中:</p>
+<ul>
+<li>groupName: 群聊名称</li>
+<li>whos: 好友昵称列表,<strong>好友昵称</strong>必须在群聊中</li>
+<li>isOpenChat: 是否打开子聊天窗口,默认是True:打开,False:不打开</li>
+</ul>
+<h3 id="5-发起直播">5. 发起直播</h3>
+<p>群聊中发起直播，单个好友<strong>没有</strong>直播功能</p>
+<ul>
+<li>方法定义</li>
+</ul>
+<pre><code>public void SendLiveStreaming(string groupName, bool isOpenChat = false)
+</code></pre>
+<p>其中:</p>
+<ul>
+<li>groupName: 群聊名称</li>
+<li>isOpenChat: 是否打开子聊天窗口,默认是True:打开,False:不打开</li>
+</ul>
+<h3 id="6-获取当前聊天窗口的标题">6. 获取当前聊天窗口的标题</h3>
+<p>获取主窗口当前聊天的窗口</p>
+<ul>
+<li>方法定义:</li>
+</ul>
+<pre><code>public string GetCurrentChatTitle()
+</code></pre>
+<h3 id="7-给指定好友发送多个文件">7. 给指定好友发送(多个)文件</h3>
+<ul>
+<li>方法定义</li>
+</ul>
+<pre><code>public async Task SendFile(string who, OneOf&lt;string, string[]&gt; files, bool isOpenChat = false)
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>who: 好友昵称</li>
+<li>files: 文件路径,可以是单个文件路径，也可以是多个文件路径，要求文件实际在磁盘中存在</li>
+<li>isOpenChat: 是否打开子聊天窗口,默认是True:打开,False:不打开</li>
+</ul>
+<h3 id="8-发送消息给多个好友批量发送">8. 发送消息给多个好友(批量发送)</h3>
+<p>给多个好友（包括群聊）批量发送同样的消息</p>
+<ul>
+<li>方法定义:</li>
+</ul>
+<pre><code>public async Task SendWhos(string[] whos, string message, OneOf&lt;string, string[]&gt; atUser = default, bool isOpenChat = true)
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>whos: 好友昵称列表</li>
+<li>message: 消息内容</li>
+<li>atUser: 被@的用户,最主要用于群聊中@人,可以是一个用户，也可以是多个用户，如果是自有群，可以@所有人，也可以@单个用户，微信不支持他人群@所有人</li>
+<li>isOpenChat: 是否打开子聊天窗口,默认是True:打开,False:不打开</li>
+</ul>
+<h3 id="9-给多个好友发送文件">9. 给多个好友发送文件</h3>
+<ul>
+<li>方法定义:</li>
+</ul>
+<pre><code>public async Task SendFiles(string[] whos, OneOf&lt;string, string[]&gt; files, bool isOpenChat = false)
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>whos: 好友昵称列表</li>
+<li>files: 文件路径,可以是单个文件路径，也可以是多个文件路径，要求文件实际在磁盘中存在</li>
+<li>isOpenChat: 是否打开子聊天窗口,默认是True:打开,False:不打开</li>
+</ul>
+<h3 id="10-获取用户所有消息列表">10. 获取用户所有消息列表</h3>
+<p>由于聊天内容比较长，需要指定聊天页数,如果指定为-1，则获取所有气泡,有可能被卡死</p>
+<ul>
+<li>方法定义:</li>
+</ul>
+<pre><code>public List&lt;ChatSimpleMessage&gt; GetChatAllHistory(string who,int pageCount = 10)
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>who: 好友昵称，可以是好友，也可以是群聊名称</li>
+<li>pageCount: 获取的气泡数量，默认是10页,可以指定获取的页数，如果指定为-1，则获取所有气泡</li>
+</ul>
+<h3 id="11-转发消息给好友">11. 转发消息给好友</h3>
+<p>转发指定的消息数量给好友</p>
+<ul>
+<li>方法定义:</li>
+</ul>
+<pre><code>public async Task&lt;bool&gt; ForwardMessage(string fromWho, string toWho, int rowCount = 5)
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>fromWho: 转发消息的来源,可以是好友昵称，也可以是群聊名称</li>
+<li>toWho: 转发消息的接收者,可以是好友昵称，也可以是群聊名称</li>
+<li>rowCount: 转发消息的行数</li>
+</ul>
+<h2 id="-聊天过程消息回复">😁 聊天过程消息回复</h2>
+<p>聊天过程回复最主要使用在<strong>监听</strong>中，一些使用场景如下：</p>
+<ul>
+<li>监听与好友（或者群聊）聊天过程，如果有好友发来消息，自动化回复;</li>
+<li>监听有新好友加你，WeChatAuto.SDK自动化加上好友后，自动给新好友发送一些消息，自动回复消息等。</li>
+</ul>
+<p>考虑如下模板代码:</p>
+<pre><code>var builder = Host.CreateApplicationBuilder(args);
+
+WeAutomation.Initialize(builder.Services, options =&gt;
+{
+});
+
+var serviceProvider = builder.Services.BuildServiceProvider();
+var clientFactory = serviceProvider.GetRequiredService&lt;WeChatClientFactory&gt;();
+var client = clientFactory.GetWeChatClient(&quot;Alex&quot;);
+//监听群 &quot;测试11&quot; 聊天，并做自动回复.
+await client.AddMessageListener(&quot;测试11&quot;, (messageContext) =&gt;
+{
+  //在这里messageContext使用回复、转发消息
+});
+
+
+var app = builder.Build();
+await app.RunAsync();
+</code></pre>
+<p>从上面代码可以看出：监听提供注入<code>messageContext</code>进行消息操作，而<code>messageContext</code>是一个<a href="../api/WeChatAuto.Models.MessageContext.html">MessageContext</a>类</p>
+<h3 id="1-获取我的微信昵称">1. 获取我的微信昵称</h3>
+<pre><code>messageContext.OwnerNickName
+</code></pre>
+<h3 id="2-获取新消息列表">2. 获取新消息列表</h3>
+<pre><code>messageContext.NewMessages
+</code></pre>
+<p>返回<code>List&lt;MessageBubble&gt;</code>列表,具体<code>MessageBubble</code>消息类请参考<a href="../api/WeChatAuto.Components.MessageBubble.html">MessageBubble</a></p>
+<h3 id="3-获取所有消息列表">3. 获取所有消息列表</h3>
+<pre><code>messageContext.AllMessages
+</code></pre>
+<p>返回<code>List&lt;MessageBubble&gt;</code>列表,具体<code>MessageBubble</code>消息类请参考<a href="../api/WeChatAuto.Components.MessageBubble.html">MessageBubble</a></p>
+<h3 id="4-获取sender发送对象">4. 获取<code>Sender</code>发送对象</h3>
+<pre><code>messageContext.Sender
+</code></pre>
+<p>返回<code>Sender</code>对象，可以用此Sender对象发送消息等，具体Sender类请参考<a href="../api/WeChatAuto.Components.Sender.html">Sender类</a></p>
+<h3 id="5-获取wechatclient对象">5. 获取<code>WeChatClient</code>对象</h3>
+<pre><code>messageContext.OwnerClient
+</code></pre>
+<p>获取到<code>WeChatClient</code>对象后，可以参照前面的<a href="#-%E5%8D%95%E7%8B%AC%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF">单独发送消息</a>的各个方法进行消息操作,具体WeChatClient类请参照:<a href="../api/WeChatAuto.Components.WeChatClient.html">WeChatClient类</a></p>
+<blockquote>
+<p>所以： 虽然是消息上下文，也获得了<a href="#-%E5%8D%95%E7%8B%AC%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF">单独发送消息</a>各个能力</p>
+</blockquote>
+<h3 id="6-获取wechatclientfactory客户端工厂对象">6. 获取<code>WeChatClientFactory</code>客户端工厂对象</h3>
+<pre><code>messageContext.SystemClientFactory
+</code></pre>
+<p><code>SystemClientFactory</code>属性最主要用于多微信客户端场合，获取到<code>WeChatClientFactory</code>对象后，可以通过<code>WeChatClientFactory</code>对象向本机任意微信客户端发送消息,是不是很Cool!😊</p>
+<p>具体WeChatClientFactory类请参照：<a href="../api/WeChatAuto.Components.WeChatClientFactory.html">WeChatClientFactory类</a></p>
+<h3 id="7-获取iserviceprovider依赖注入提供者">7. 获取<code>IServiceProvider</code>依赖注入提供者</h3>
+<pre><code>messageContext.ServiceProvider
+</code></pre>
+<p>这是一个非常实用的功能。通过<code>IServiceProvider</code>，你可以灵活获取到在依赖注入容器中注册的任何服务类对象，以便在消息处理过程中调用，例如大模型自动回复服务、数据库上下文等。<code>messageContext.ServiceProvider</code> 相当于连接你的自定义业务逻辑和框架的桥梁，大大提升扩展性和可维护性。</p>
+<h3 id="8-获取新消息方法">8. 获取新消息方法</h3>
+<pre><code>messageContext.GetNewMessages()
+</code></pre>
+<p>返回<code>List&lt;MessageBubble&gt;</code>列表,具体<code>MessageBubble</code>消息类请参考<a href="../api/WeChatAuto.Components.MessageBubble.html">MessageBubble</a></p>
+<h3 id="9-获取最近所有消息方法">9. 获取最近所有消息方法</h3>
+<pre><code>messageContext.GetAllMessages()
+</code></pre>
+<p>返回<code>List&lt;MessageBubble&gt;</code>列表,具体<code>MessageBubble</code>消息类请参考<a href="../api/WeChatAuto.Components.MessageBubble.html">MessageBubble</a></p>
+<h3 id="10-获取最后几条消息">10. 获取最后几条消息</h3>
+<pre><code>messageContext.GetLastMessages(int count)
+</code></pre>
+<p>返回<code>List&lt;MessageBubble&gt;</code>列表,具体<code>MessageBubble</code>消息类请参考<a href="../api/WeChatAuto.Components.MessageBubble.html">MessageBubble</a></p>
+<h3 id="11-获取llm上下文消息">11. 获取LLM上下文消息</h3>
+<pre><code>messageContext.GetLLMContextMessages
+</code></pre>
+<p>返回List<string>对象，以作为发给LLM的历史上下文列表</string></p>
+<h3 id="12-获取llm上下文消息重载">12. 获取LLM上下文消息(重载)</h3>
+<pre><code>messageContext.GetLLMContextMessagesTuple
+</code></pre>
+<p>返回<code>List&lt;(string who, string message)&gt;</code>元组列表,可以通过<code>List&lt;(string who, string message)&gt;</code>元组列表自己组建LLM的历史上下文</p>
+<h3 id="13-是否被人拍一拍">13. 是否被人拍一拍</h3>
+<pre><code>messageContext.IsBeTap()
+</code></pre>
+<p>返回<code>True</code>或者<code>False</code>,确定自己是否被人拍一拍</p>
+<h3 id="14-是否被其他人我">14. 是否被其他人@我</h3>
+<pre><code>messageContext.IsBeAt()
+</code></pre>
+<p>确定是否被其他人@我</p>
+<h3 id="15-获取被的消息列表">15. 获取被@的消息列表</h3>
+<pre><code>messageContext.MessageBubbleIsBeAt()
+</code></pre>
+<p>获取被@的消息气泡列表,可以通过消息列表获取谁@了我，内容是什么</p>
+<h3 id="16-我的消息是否被引用">16. 我的消息是否被引用</h3>
+<pre><code>messageContext.IsBeReferenced
+</code></pre>
+<p>返回<code>True</code>或者<code>False</code>,确定自己消息被人引用</p>
+<h3 id="17-获取我的被引用的消息列表">17. 获取我的被引用的消息列表</h3>
+<pre><code>messageContext.MessageBubbleIsReferenced()
+</code></pre>
+<p>返回<code>List&lt;MessageBubble&gt;</code>列表,具体<code>MessageBubble</code>消息类请参考<a href="../api/WeChatAuto.Components.MessageBubble.html">MessageBubble</a></p>
+<h3 id="18-获取引用中我自己的消息列表">18. 获取引用中我自己的消息列表</h3>
+<pre><code>messageContext.MessageBubbleIsReferencing()
+</code></pre>
+<p>返回<code>List&lt;MessageBubble&gt;</code>列表,具体<code>MessageBubble</code>消息类请参考<a href="../api/WeChatAuto.Components.MessageBubble.html">MessageBubble</a></p>
+<h3 id="19-发送文字消息">19. 发送文字消息</h3>
+<pre><code>messageContext.SendMessage(string message, List&lt;string&gt; atUserList = null)
+</code></pre>
+<p>其中:</p>
+<ul>
+<li>message: 消息内容</li>
+<li>atUserList: 被@的用户列表</li>
+</ul>
+<blockquote>
+<p>其他更多操作请参见<code>MessageContext</code>类： <a href="../api/WeChatAuto.Models.MessageContext.html">MessageContext类</a></p>
+</blockquote>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://github.com/scottfly189/SKSimulator.git">SKSimulator</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

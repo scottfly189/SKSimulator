@@ -88,263 +88,135 @@
 <h1 id="-快速开始">👉 快速开始</h1>
 
 <hr>
-<br>
-<h2 id="-前置条件">🎈 前置条件</h2>
-<ul>
-<li>本SDK基于Windows的UI Automation开发，所以仅支持Windows 操作系统，并且需要将项目的<code>TargetFramework</code>修改成:目标框架-windows,如你在.net8下使用，请将<code>TargetFramework</code>修改成<code>net8.0-windows</code>;</li>
-<li>.NET Framework 4.8+ 或 .NET 6.0+ (Windows)，支持.NET的框架有:net48;net481;net6.0-windows; net7.0-windows;net8.0-windows;net9.0-windows;net10.0-windows;</li>
-<li>微信 PC 客户端已安装并运行,本 SDK 基于微信 PC 客户端(版本号:3.9.12.55)的 UI 结构开发，不同版本可能存在兼容性问题。</li>
-</ul>
-<h2 id="-安装">🎉 安装</h2>
-<p>通过 NuGet 安装：</p>
-<pre><code class="lang-bash">dotnet add package WeChatAuto.SDK
+<h2 id="1-克隆项目">1. 克隆项目</h2>
+<pre><code class="lang-bash">git clone https://github.com/scottfly189/SKSimulator.git
+cd src
 </code></pre>
-<h2 id="-wechatautosdk的初始化">🎉 WeChatAuto.SDK的初始化</h2>
-<p>WeChatAuto.SDK的初始化的通用格式为:</p>
-<pre><code>WeAutomation.Initialize(...,Action&lt;WeChatConfig&gt; options)
+<h2 id="2-配置设备参数">2. 配置设备参数</h2>
+<p>在 <code>Config.cs</code> 中配置您的设备参数：</p>
+<pre><code class="lang-csharp">public static int KMDeiviceVID { get; set; } = 0x2612;  // 设备 VID
+public static int KMDeivicePID { get; set; } = 0x1701;  // 设备 PID
+public static string KMVerifyUserData { get; set; } = &quot;您的校验数据&quot;;
 </code></pre>
-<p>但根据应用依赖注入引入的情况分两种情况：</p>
-<ul>
-<li>应用没有启用依赖注入</li>
-</ul>
-<p>此种情况需要自行引入<code>dotnet add package Microsoft.Extensions.DependencyInjection</code>包,这样应用也有了依赖注入容器,并且根据情况初始化WeChatConfig配置对象，如下所示:</p>
-<pre><code class="lang-csharp">// 初始化WeAutomation服务
-var serviceProvider = WeAutomation.Initialize(options =&gt;
-{
-    options.DebugMode = true;   //开启调试模式，调试模式会在获得焦点时边框高亮，生产环境建议关闭
-    //options.EnableRecordVideo = true;  //开启录制视频功能，录制的视频会保存在项目的运行目录下的Videos文件夹中
-});
-
-using var clientFactory = serviceProvider.GetRequiredService&lt;WeChatClientFactory&gt;();
-...下面是更多代码
-
+<h2 id="3-准备-dll-文件">3. 准备 DLL 文件</h2>
+<p>确保 <code>x64/skm.dll</code> 和 <code>x86/skm.dll</code> 文件存在于项目中。项目会自动根据运行环境复制对应的 DLL。</p>
+<p>如下所示将 DLL 文件包含在项目中：</p>
+<pre><code>  &lt;!-- 复制DLL到输出目录 --&gt;
+  &lt;ItemGroup&gt;
+    &lt;None Include=&quot;x64\skm.dll&quot;&gt;
+      &lt;CopyToOutputDirectory&gt;PreserveNewest&lt;/CopyToOutputDirectory&gt;
+       &lt;TargetPath&gt;x64\skm.dll&lt;/TargetPath&gt;
+    &lt;/None&gt;
+    &lt;None Include=&quot;x86\skm.dll&quot;&gt;
+      &lt;CopyToOutputDirectory&gt;PreserveNewest&lt;/CopyToOutputDirectory&gt;
+      &lt;TargetPath&gt;x86\skm.dll&lt;/TargetPath&gt;
+    &lt;/None&gt;
+  &lt;/ItemGroup&gt;
 </code></pre>
-<blockquote>
-<p>注意：如果应用没有启用依赖注入，clientFactory的生命周期需要自行负责，或者应用退出的时候显式<code>clientFactory.Dispose()</code>,或者将clientFactory放入<code>using {}</code>代码块中自动释放</p>
-</blockquote>
-<ul>
-<li>应用启用了依赖注入框架</li>
-</ul>
-<p>此种情况，需要在应用Services.BuildServiceProvider()前进行初始化,并将应用的Services做为初始化的第一个参数，这样本SDK就集成在应用的依赖注入框架中，如下所示:</p>
-<pre><code class="lang-csharp">using Microsoft.Extensions.Hosting;
-using WeChatAuto.Services;
-using WeChatAuto.Components;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-
-var builder = Host.CreateApplicationBuilder(args);
-
-WeAutomation.Initialize(builder.Services, options =&gt;
-{
-    //开启调试模式，调试模式会在获得焦点时边框高亮，生产环境建议关闭
-    options.DebugMode = true;
-    //开启录制视频功能，录制的视频会保存在项目的运行目录下的Videos文件夹中
-    //options.EnableRecordVideo = true;  
-});
-
-//这里注入自已的服务（或者对象），如LLM服务等
-builder.Services.AddSingleton&lt;LLMService&gt;();
-
-var serviceProvider = builder.Services.BuildServiceProvider();
-var clientFactory = serviceProvider.GetRequiredService&lt;WeChatClientFactory&gt;();
-...更多代码
-await builder.Build().RunAsync();
-...
+<h2 id="4-编译运行">4. 编译运行</h2>
+<pre><code class="lang-bash">dotnet build
+dotnet run
 </code></pre>
-<blockquote>
-<p>此种方式的初始化无须管理clientFactory的生命周期</p>
-</blockquote>
-<h2 id="-基本使用">😊 基本使用</h2>
-<h3 id="示例一-给好友或群聊昵称发送消息">示例一: 给好友（或群聊昵称）发送消息：</h3>
-<blockquote>
-<p>源码请参见: <code>项目根目录\Examples\demo01</code></p>
-</blockquote>
-<ul>
-<li>步骤一：新建项目，如下所示:</li>
-</ul>
-<pre><code>dotnet new console -n demo01
+<h2 id="5--使用示例">5. 📖 使用示例</h2>
+<h3 id="基本使用">基本使用</h3>
+<pre><code class="lang-csharp">using SKM;
+
+// 初始化设备
+KMSimulatorService.Init(Config.KMDeiviceVID, Config.KMDeivicePID, Config.KMVerifyUserData);
+IntPtr HKMData = KMSimulatorService.DeviceData;
+
+// 设置模式（输出字符串编码、鼠标移动模式）
+SkmCore.HKMSetMode(HKMData, 4, 4);
+
+// 键盘操作示例
+SkmCore.HKMKeyPress(HKMData, &quot;WIN+E&quot;);  // 组合键
+SkmCore.HKMKeyDown(HKMData, &quot;Ctrl&quot;);
+SkmCore.HKMKeyPress(HKMData, &quot;A&quot;);
+SkmCore.HKMKeyUp(HKMData, &quot;Ctrl&quot;);
+
+// 输出字符串（支持中文）
+SkmCore.HKMOutputString(HKMData, &quot;ABC中文，可以打成全部是中文吗？&quot;);
+SkmCore.HKMOutputString(HKMData, &quot;\r\n换行测试，Hello World!&quot;);
+
+// 鼠标操作示例
+SkmCore.HKMMoveR(HKMData, 100, 50);     // 相对移动
+SkmCore.HKMMoveTo(HKMData, 200, 100);   // 绝对移动
+SkmCore.HKMLeftClick(HKMData);          // 左键单击
+SkmCore.HKMRightClick(HKMData);         // 右键单击
+SkmCore.HKMLeftDoubleClick(HKMData);    // 左键双击
+
+// 随机延时
+SkmCore.HKMDelayRnd(HKMData, 100, 150);
+
+// 关闭设备
+KMSimulatorService.CloseDevice();
 </code></pre>
+<h3 id="完整示例">完整示例</h3>
+<p>参考 <code>Program.cs</code> 中的完整示例代码。</p>
+<h2 id="-配置说明">🔧 配置说明</h2>
+<h3 id="config-类配置项">Config 类配置项</h3>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KMDeiviceVID</code></td>
+<td>int</td>
+<td>0x2612</td>
+<td>键鼠模拟器设备 VID</td>
+</tr>
+<tr>
+<td><code>KMDeivicePID</code></td>
+<td>int</td>
+<td>0x1701</td>
+<td>键鼠模拟器设备 PID</td>
+</tr>
+<tr>
+<td><code>KMVerifyUserData</code></td>
+<td>string</td>
+<td>-</td>
+<td>键鼠模拟器校验数据</td>
+</tr>
+<tr>
+<td><code>KMOffsetOfClick</code></td>
+<td>int</td>
+<td>5</td>
+<td>点击偏移量（像素）</td>
+</tr>
+<tr>
+<td><code>KMOutputStringType</code></td>
+<td>int</td>
+<td>4</td>
+<td>输出字符串编码类型</td>
+</tr>
+<tr>
+<td><code>KMMouseMoveMode</code></td>
+<td>int</td>
+<td>0</td>
+<td>鼠标移动模式</td>
+</tr>
+<tr>
+<td><code>ProcessDpiAwareness</code></td>
+<td>int</td>
+<td>1</td>
+<td>进程 DPI 感知值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dpi-感知配置">DPI 感知配置</h3>
 <ul>
-<li>步骤二：将demo01.csproj项目文件的net10.0<strong>修改</strong>成net10.0-windows,如下所示:</li>
+<li><code>0</code>: 不设置 DPI 感知</li>
+<li><code>1</code>: <code>PROCESS_SYSTEM_DPI_AWARE</code> - 根据主显示器 DPI（默认）</li>
+<li><code>2</code>: <code>PROCESS_PER_MONITOR_DPI_AWARE</code> - 根据每个显示器 DPI</li>
 </ul>
-<pre><code>  &lt;PropertyGroup&gt;
-    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
-    &lt;TargetFramework&gt;net10.0-windows&lt;/TargetFramework&gt;
-    &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
-    &lt;Nullable&gt;enable&lt;/Nullable&gt;
-  &lt;/PropertyGroup&gt;
-</code></pre>
-<ul>
-<li>步骤三：安装依赖</li>
-</ul>
-<pre><code>dotnet add package WeChatAuto.SDK
-dotnet add package Microsoft.Extensions.DependencyInjection
-</code></pre>
-<ul>
-<li>步骤四：项目demo01的Program.cs修改成如下：</li>
-</ul>
-<pre><code class="lang-csharp">using Microsoft.Extensions.DependencyInjection;
-using WeChatAuto.Components;
-using WeChatAuto.Services;
-
-// 初始化WeAutomation服务
-var serviceProvider = WeAutomation.Initialize(options =&gt;
-{
-    options.DebugMode = true;   //开启调试模式，调试模式会在获得焦点时边框高亮，生产环境建议关闭
-    //options.EnableRecordVideo = true;  //开启录制视频功能，录制的视频会保存在项目的运行目录下的Videos文件夹中
-});
-
-using var clientFactory = serviceProvider.GetRequiredService&lt;WeChatClientFactory&gt;();
-Console.WriteLine($&quot;当前客户端打开的微信客户端为：{string.Join(&quot;,&quot;, clientFactory.GetWeChatClientNames())}，共计{clientFactory.GetWeChatClientNames().Count}个微信客户端。&quot;);
-//获取当前打开的微信客户端名称列表
-var clientNames = clientFactory.GetWeChatClientNames();    
-//获取第一个微信客户端
-var wxClient = clientFactory.GetWeChatClient(clientNames.First());  
- //通过微信客户端发送消息给好友昵称AI.Net，测试时请把AI.Net修改成自己的好友昵称
-wxClient?.SendWho(&quot;AI.Net&quot;,&quot;你好，欢迎使用AI.Net微信自动化框架！&quot;); 
-</code></pre>
-<blockquote>
-<p><strong>注意</strong>：</p>
-<ol>
-<li>本项目仅支持 Windows 系统，请务必将项目文件的 TargetFramework 设置为 netxx.0-windows（如 net10.0-windows），否则编译时会出现警告。后续不再赘述。</li>
-<li>如果是手动管理WeChatClientFactory,请在应用结束时运行clientFactory.Dispose(),或者像示例代码一样将代码放入using块自动释放,如果把WeChatAuto.SDK加入您的依赖注入容器，则不存在此问题。</li>
-<li>WeAutomation.Initialize()方法有两个重载，分别适用于：加入外部依赖注入与使用内部依赖注入。</li>
-</ol>
-</blockquote>
-<h3 id="示例二---演示监听好友或者群聊昵称的消息使用消息上下文获取消息并回复并且还演示了如何通过依赖注入获取消息上下文的注入对象执行自己的业务逻辑">示例二 - 演示监听好友（或者群聊昵称）的消息,使用消息上下文获取消息并回复,并且还演示了如何通过依赖注入获取消息上下文的注入对象,执行自己的业务逻辑：</h3>
-<blockquote>
-<p>源码请参见: <code>项目根目录\Examples\demo02</code></p>
-</blockquote>
-<ul>
-<li>前置步骤：安装依赖</li>
-</ul>
-<pre><code>dotnet add package WeChatAuto.SDK
-dotnet add package Microsoft.Extensions.Hosting
-</code></pre>
-<ul>
-<li>将项目demo02的Program.cs修改成如下</li>
-</ul>
-<pre><code class="lang-csharp">using Microsoft.Extensions.Hosting;
-using WeChatAuto.Services;
-using WeChatAuto.Components;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-
-var builder = Host.CreateApplicationBuilder(args);
-
-WeAutomation.Initialize(builder.Services, options =&gt;
-{
-    //开启调试模式，调试模式会在获得焦点时边框高亮，生产环境建议关闭
-    options.DebugMode = true;
-    //开启录制视频功能，录制的视频会保存在项目的运行目录下的Videos文件夹中
-    //options.EnableRecordVideo = true;  
-});
-
-//这里注入自已的服务（或者对象），如LLM服务等
-builder.Services.AddSingleton&lt;LLMService&gt;();
-
-var serviceProvider = builder.Services.BuildServiceProvider();
-var clientFactory = serviceProvider.GetRequiredService&lt;WeChatClientFactory&gt;();
-// 得到名称为&quot;Alex&quot;的微信客户端实例，测试时请将AI.net替换为你自己的微信昵称
-var client = clientFactory.GetWeChatClient(&quot;Alex&quot;);
-// 监听微信群测试11
-await client.AddMessageListener(&quot;测试11&quot;, (messageContext) =&gt;
-{
-    var index = 0;
-    //打印收到最新消息
-    foreach (var message in messageContext.NewMessages)
-    {
-        index++;
-        Console.WriteLine($&quot;收到消息：{index}：{message.ToString()}&quot;);
-        Console.WriteLine($&quot;收到消息：{index}：{message.Who}：{message.MessageContent}&quot;);
-    }
-    //打印收到所有消息的后十条
-    var allMessages = messageContext.AllMessages.Skip(messageContext.AllMessages.Count - 10).ToList();
-    index = 0;
-    foreach (var message in allMessages)
-    {
-        index++;
-        Console.WriteLine($&quot;...收到所有消息的后10条之第{index}条：{message.Who}：{message.MessageContent}&quot;);
-        Console.WriteLine($&quot;.................详细之第{index}条：{message.ToString()}&quot;);
-    }
-    //是否有人@我
-    if (messageContext.IsBeAt())
-    {
-        var messageBubble = messageContext.MessageBubbleIsBeAt().FirstOrDefault();
-        if (messageBubble != null)
-        {
-            messageContext.SendMessage(&quot;我被@了！！！！我马上就回复你！！！！&quot;, new List&lt;string&gt; { messageBubble.Who });
-        }
-        else
-        {
-            messageContext.SendMessage(&quot;我被@了！！！！我马上就回复你！！！！&quot;);
-        }
-    }
-    //是否有人引用了我的消息
-    if (messageContext.IsBeReferenced())
-    {
-        messageContext.SendMessage(&quot;我被引用了！！！！&quot;);
-    }
-    //是否有人拍了拍我
-    if (messageContext.IsBeTap())
-    {
-        messageContext.SendMessage(&quot;我被拍一拍了[微笑]！！！！&quot;);
-    }
-    if (!messageContext.IsBeAt() &amp;&amp; !messageContext.IsBeReferenced() &amp;&amp; !messageContext.IsBeTap())
-    {
-        //回复消息，这里可以引入大模型自动回复
-        messageContext.SendMessage($&quot;我收到了{messageContext.NewMessages.FirstOrDefault()?.Who}的消息：{messageContext.NewMessages.FirstOrDefault()?.MessageContent}&quot;);
-    }
-    //可以通过注入的服务容器获取你注入的服务实例，然后调用你的业务逻辑,一般都是LLM的自动回复逻辑
-    var llmService = messageContext.ServiceProvider.GetRequiredService&lt;LLMService&gt;();
-    llmService.DoSomething();
-});
-
-
-var app = builder.Build();
-await app.RunAsync();
-
-/// &lt;summary&gt;
-/// 一个包含LLM服务的Service类，用于注入到MessageContext中
-/// &lt;/summary&gt;
-public class LLMService
-{
-    private ILogger&lt;LLMService&gt; _logger;
-    public LLMService(ILogger&lt;LLMService&gt; logger)
-    {
-        _logger = logger;
-    }
-    public void DoSomething()
-    {
-        _logger.LogInformation(&quot;这里是你注入的服务实例，可以在这里编写你的业务逻辑  &quot;);
-    }
-}
-</code></pre>
-<blockquote>
-<p>前置步骤跟Demo01一致,可以通过messageContext对象执行各种操作,也可以通过messageContext对象获得依赖注入容器，获取自己的对象，执行自己的业务逻辑;</p>
-</blockquote>
-<h3 id="示例三---mcp-server的使用---以vscode为例讲解">示例三 - MCP Server的使用 - 以vscode为例讲解</h3>
-<ul>
-<li>进入源码的.vscode\mcp.json,修改配置如下:</li>
-</ul>
-<pre><code>{
-	&quot;servers&quot;: {
-		&quot;wechat_mcp_server&quot;: {
-			&quot;type&quot;: &quot;stdio&quot;,
-			&quot;command&quot;: &quot;dotnet&quot;,
-			&quot;args&quot;: [
-				&quot;run&quot;,
-                &quot;--project&quot;,
-                &quot;改成你的WeChatAuto.MCP.csproj的路径&quot;
-			]
-		}
-	}
-}
-</code></pre>
-<ul>
-<li>在mcp.json页面点击&quot;Start&quot;按钮启动mcp server</li>
-<li>启动GitHub Copilot Chat,在Chat页提问: 请帮我给微信好友:AI.Net发送消息：Hello world!</li>
-</ul>
+<p><strong>注意</strong>:
+键鼠模拟器受 DPI 感知影响，请正确设置 DPI。本 SDK 中也提供了 <code>DpiAwareness</code> 类供设置 DPI。</p>
 
 </article>
 

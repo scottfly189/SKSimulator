@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>监听管理 | SKSimulator键鼠模拟器 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="监听管理 | SKSimulator键鼠模拟器 ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="SKSimulator键鼠模拟器">
+            SKSimulator键鼠模拟器
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="监听管理">监听管理</h1>
+
+<hr>
+<h2 id="-消息监听">🚀 消息监听</h2>
+<h3 id="添加消息监听">添加消息监听</h3>
+<blockquote>
+<p>适用于聊天（与好友或者在群聊中)时监听用户发来的消息,需要提供一个回调函数，当消息到达时，会自动调用这个回调函数</p>
+</blockquote>
+<p>可以通过<a href="../api/WeChatAuto.Components.WeChatClient.html">WeChatClinet对象</a>调用<code>AddMessageListener</code>方法,当然也可以通过<a href="../api/WeChatAuto.Components.WeChatMainWindow.html">WeChatMainWindow</a>类来调用此方法</p>
+<p>方法定义:</p>
+<pre><code>public async Task AddMessageListener(string nickName, Action&lt;MessageContext&gt; callBack)
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>nickName: 好友昵称</li>
+<li>callBack: 回调函数,由用户提供,参数请参考<a href="../api/WeChatAuto.Models.MessageContext.html">MessageContext类</a></li>
+</ul>
+<h3 id="移除消息听听">移除消息听听</h3>
+<blockquote>
+<p>添加消息监听会启动一个<code>System.Threading.Timer</code>来监听消息，所以如果不需要这个监听的时候，请移除监听</p>
+</blockquote>
+<p>方法定义:</p>
+<pre><code> public void StopMessageListener(string nickName)
+</code></pre>
+<p>其中:</p>
+<ul>
+<li>nickName: 好友昵称</li>
+</ul>
+<h2 id="-新好友申请监听">🚀 新好友申请监听</h2>
+<p>如果添加了新好友申请监听，当有新好友添加你的微信时，会自动监听到好友申请，并且执行你定义的逻辑</p>
+<blockquote>
+<p>可以通过<a href="../api/WeChatAuto.Components.WeChatClient.html">WeChatClinet对象</a>调用方法,当然也可以通过<a href="../api/WeChatAuto.Components.WeChatMainWindow.html">WeChatMainWindow</a>类来调用。</p>
+</blockquote>
+<h3 id="自动通过新好友申请">自动通过新好友申请</h3>
+<p>用户只需提供一个回调函数，当检测到有新好友申请时，系统会自动通过申请，并在通过后调用用户的回调函数。</p>
+<blockquote>
+<p>可通过<a href="../api/WeChatAuto.Components.WeChatClient.html">WeChatClient对象</a>调用<code>AddNewFriendAutoPassedListener</code>方法。</p>
+</blockquote>
+<p>方法定义:</p>
+<pre><code>public void AddNewFriendAutoPassedListener(Action&lt;List&lt;string&gt;&gt; callBack, string keyWord = null, string suffix = null, string label = null)
+</code></pre>
+<p>参数说明：</p>
+<ul>
+<li>callBack：自定义回调函数，当有新好友添加成功时被调用</li>
+<li>keyWord：可选, 设定关键词；仅当好友申请内容包含此关键词时才自动通过。若为<code>null</code>，则所有好友申请均会被自动通过</li>
+<li>suffix：可选，自动通过时在新好友昵称后添加的后缀，便于管理分类</li>
+<li>label：可选，自动通过时为新好友打上的微信标签，方便分类管理</li>
+</ul>
+<h3 id="移转新用户申请监听">移转新用户申请监听</h3>
+<p>方法定义:</p>
+<pre><code>StopNewUserListener()
+</code></pre>
+<h2 id="-添加朋友圈监听">🚀 添加朋友圈监听</h2>
+<blockquote>
+<p>开启朋友圈监听后，可以自动获取到好友在朋友圈发布的动态，适合实现自动点赞、自动评论等功能。</p>
+</blockquote>
+<p>可以通过<a href="../api/WeChatAuto.Components.WeChatClient.html">WeChatClinet对象</a>调用方法,当然也可以通过<a href="../api/WeChatAuto.Components.WeChatMainWindow.html">WeChatMainWindow</a>类来调用。</p>
+<p>方法签名：</p>
+<pre><code>public void AddMomentsListener(OneOf&lt;string, List&lt;string&gt;&gt; nickNameOrNickNames, bool autoLike = true, Action&lt;MomentsContext, IServiceProvider&gt; action = null)
+</code></pre>
+<p>参数说明：</p>
+<ul>
+<li>nickNameOrNickNames：单个好友昵称或昵称列表，表示需要监听哪些好友的朋友圈动态。</li>
+<li>autoLike：是否自动点赞，默认为 true。如需关闭自动点赞可设置为 false。</li>
+<li>action：当监听到朋友圈新动态时自动调用的回调函数，用户可自定义处理逻辑。回调参数包括：
+<ul>
+<li><a href="../api/WeChatAuto.Utils.MomentsContext.html">MomentsContext</a>：包含点赞、评论等操作方法。</li>
+<li>IServiceProvider：依赖注入服务提供器，可用于获取自定义 Service，方便扩展自己的业务逻辑。</li>
+</ul>
+</li>
+</ul>
+<h3 id="momentscontext详解">MomentsContext详解</h3>
+<blockquote>
+<p>MomentsContext为处理朋友圈动态提供的上下文对象,方便与LLM集成</p>
+</blockquote>
+<p>属性与方法如下：</p>
+<ul>
+<li>获取历史回复列表</li>
+</ul>
+<p>方法签名:</p>
+<pre><code>public List&lt;ReplyItem&gt; GetHistoryReplyItems()
+</code></pre>
+<p>返回<code>List&lt;ReplyItem&gt;</code>列表，具体<code>ReplyItem</code>类请参考：<a href="../api/WeAutoCommon.Models.ReplyItem.html">ReplyItem</a></p>
+<ul>
+<li>获取朋友圈动态内容项</li>
+</ul>
+<p>方法鉴名：</p>
+<pre><code>public MomentItem GetMomentItem() 
+</code></pre>
+<p>返回<code>MomentItem</code>对象，可以通过此对象获取发送朋友圈动态的好友昵称、内容、时间、评论列表、我是否点赞等信息,具体请参考:<a href="../api/WxAutoCommon.Models.MomentItem.html">MomentItem</a></p>
+<ul>
+<li>获取朋友圈动态内容</li>
+</ul>
+<p>方法鉴名:</p>
+<pre><code>public string GetMomentContent()
+</code></pre>
+<blockquote>
+<p>此内容可以做为大模型提供上下文信息。</p>
+</blockquote>
+<ul>
+<li>获取朋友圈动态列表项唯一标识
+方法定义：</li>
+</ul>
+<pre><code>public string GetMomentKey()
+</code></pre>
+<p>返回朋友圈动态列表的唯一标识,此标识可以做为大模型提供上下文信息,如：朋友圈动态记录唯一标识。</p>
+<ul>
+<li>是否我是最后一个回复的人
+方法定义：</li>
+</ul>
+<pre><code>public bool IsMyEndReply()
+</code></pre>
+<p>确认我是否是最后的回复人，供大模型自动回复朋友圈动态时参考</p>
+<ul>
+<li>是否朋友动态的回复列表中包含我的回复
+方法定义:</li>
+</ul>
+<pre><code>public bool IsIncludeMyReply()
+</code></pre>
+<p>回复列表中是否包含我的回复，供大模型自动回复时参考。</p>
+<ul>
+<li>是否我点赞过朋友圈动态
+方法定义:</li>
+</ul>
+<pre><code>public bool IsMyLiked()
+</code></pre>
+<p>此朋友圈动态是否我点赞过，供模型自动回复时参考</p>
+<ul>
+<li>执行回复朋友圈动态</li>
+</ul>
+<p>方法定义:</p>
+<pre><code>public void DoReply(string replyContent)
+</code></pre>
+<blockquote>
+<p>为此条朋友圈动态进行回复</p>
+</blockquote>
+<p>其中:</p>
+<ul>
+<li><p>replyContent: 回复内容</p>
+</li>
+<li><p>执行朋友圈动态点赞</p>
+</li>
+</ul>
+<p>方法定义：</p>
+<pre><code>public void DoLike()
+</code></pre>
+<blockquote>
+<p>为此条朋友圈动态进行点赞，如果已经点赞，则不作操作.</p>
+</blockquote>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://github.com/scottfly189/SKSimulator.git">SKSimulator</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
