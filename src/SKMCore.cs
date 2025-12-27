@@ -78,10 +78,42 @@ namespace SKM
         /// <returns>设备对象：无类型指针。创建的设备句柄。失败返回NULL。不再使用它时用<c>HKMClose</c>可以关闭它以释放资源。</returns>
         [DllImport("skm.dll")]
         public static extern IntPtr HKMOpen(UInt32 DeviceId, UInt32 DpiMode);//打开设备
+        /// <summary>
+        /// 打开两个键鼠模拟器（一个键盘模式、一个鼠标模式），以便对它们进行操作。
+        /// </summary>
+        /// <param name="DeviceId1">第一个设备ID：无符号32位整型数。使用<c>HKMSearchDevice</c>或者<c>HKMSearchDevice2</c>可以获得它。</param>
+        /// <param name="DeviceId2">第二个设备ID：无符号32位整型数。使用<c>HKMSearchDevice</c>或者<c>HKMSearchDevice2</c>可以获得它。</param>
+        /// <param name="DpiMode">DPI模式：无符号32位整型数。用于设置鼠标移动(<c>HKMMoveTo</c>和<c>HKMMoveR2</c>)和获得鼠标坐标(<c>HKMGetCursorPos</c>和<c>HKMGetCursorPos2</c>)时使用的坐标的DPI模式,可取值如下：
+        /// <list type="bullet">
+        /// <item>0 每个显示器DPI感知</item>
+        /// <item>1 主显示器DPI感知</item>
+        /// <item>2 无DPI感知</item>
+        /// <item>3 DPI不可</item>
+        /// <item>4 当前上下文的DPI感知</item>
+        /// </list>
+        /// </param>
+        /// <returns>设备对象：无类型指针。创建的设备句柄。失败返回NULL。不再使用它时用<c>HKMClose</c>可以关闭它以释放资源。</returns>
         [DllImport("skm.dll")]
         public static extern IntPtr HKMOpen2(UInt32 DeviceId1, UInt32 DeviceId2, UInt32 DpiMode);//打开设备
+        /// <summary>
+        /// 判断设备是否打开
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="Flags">无符号32位整型数,取值可以是下面的一个或多个,如果要同时使用多个值，可将多个值做或运算,可取值如下：
+        /// <list type="bullet">
+        /// <item>0 判断设备是否被打开（键鼠、键盘或鼠标模式的设备都可以，不可与其它值同时使用）</item>
+        /// <item>1 判断键盘是否被打开（键鼠或者键盘模式的设备）</item>
+        /// <item>2 判断鼠标是否被打开（键鼠或者鼠标模式的设备）</item>
+        /// </list>
+        /// </param>
+        /// <returns>布尔值。True: 设备已打开。False: 设备没有打开。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMIsOpen(IntPtr HKMData, UInt32 Flags);//判断设备是否打开
+        /// <summary>
+        /// 关闭设备
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <returns>布尔值。True: 设备已关闭。False: 设备没有关闭。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMClose(IntPtr HKMData);//关闭设备
         [DllImport("skm.dll")]
