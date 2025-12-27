@@ -24,19 +24,19 @@ IntPtr lpDev;
 dwDevId = SkmCore.HKMSearchDevice(0x1234, 0xABCD, 0);
 if (dwDevId == 0xFFFFFFFF)
 {
-    Console.WriteLine("未找到无涯键鼠盒子");
+    Console.WriteLine("未找到键鼠模拟器");
     return;
 }
 lpDev = SkmCore.HKMOpen(dwDevId, 0);
 if (lpDev == IntPtr.Zero)
 {
-    Console.WriteLine("打开无涯键鼠盒子失败");
+    Console.WriteLine("打开键鼠模拟器失败");
     return;
 }
 if (SkmCore.HKMIsOpen(lpDev, 0))
-    Console.WriteLine("无涯键鼠盒子已打开");
+    Console.WriteLine("键鼠模拟器已打开");
 else
-    Console.WriteLine("无涯键鼠盒子未打开");
+    Console.WriteLine("键鼠模拟器未打开");
 SkmCore.HKMClose(lpDev);
 ```
 
@@ -47,19 +47,19 @@ LPVOID lpDev;
 dwDevId=HKMSearchDevice(0x1234,0xABCD,0);
 if(dwDevId==0xFFFFFFFF)
 {
-    printf("未找到无涯键鼠盒子\n");
+    printf("未找到键鼠模拟器\n");
     return 0;
 }
 lpDev=HKMOpen(dwDevId,0);
 if(lpDev==NULL)
 {
-    printf("打开无涯键鼠盒子失败\n");
+    printf("打开键鼠模拟器失败\n");
     return 0;
 }
 if(HKMIsOpen(lpDev,0))
-    printf("无涯键鼠盒子已打开");
+    printf("键鼠模拟器已打开");
 else
-    printf("无涯键鼠盒子未打开");
+    printf("键鼠模拟器未打开");
 HKMClose(lpDev);
 ```
 

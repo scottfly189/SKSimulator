@@ -110,19 +110,19 @@ IntPtr lpDev;
 dwDevId = SkmCore.HKMSearchDevice(0x1234, 0xABCD, 0);
 if (dwDevId == 0xFFFFFFFF)
 {
-    Console.WriteLine(&quot;未找到无涯键鼠盒子&quot;);
+    Console.WriteLine(&quot;未找到键鼠模拟器&quot;);
     return;
 }
 lpDev = SkmCore.HKMOpen(dwDevId, 0);
 if (lpDev == IntPtr.Zero)
 {
-    Console.WriteLine(&quot;打开无涯键鼠盒子失败&quot;);
+    Console.WriteLine(&quot;打开键鼠模拟器失败&quot;);
     return;
 }
 if (SkmCore.HKMIsOpen(lpDev, 0))
-    Console.WriteLine(&quot;无涯键鼠盒子已打开&quot;);
+    Console.WriteLine(&quot;键鼠模拟器已打开&quot;);
 else
-    Console.WriteLine(&quot;无涯键鼠盒子未打开&quot;);
+    Console.WriteLine(&quot;键鼠模拟器未打开&quot;);
 SkmCore.HKMClose(lpDev);
 </code></pre>
 <h2 id="c语言例子">C语言例子</h2>
@@ -131,19 +131,19 @@ LPVOID lpDev;
 dwDevId=HKMSearchDevice(0x1234,0xABCD,0);
 if(dwDevId==0xFFFFFFFF)
 {
-    printf(&quot;未找到无涯键鼠盒子\n&quot;);
+    printf(&quot;未找到键鼠模拟器\n&quot;);
     return 0;
 }
 lpDev=HKMOpen(dwDevId,0);
 if(lpDev==NULL)
 {
-    printf(&quot;打开无涯键鼠盒子失败\n&quot;);
+    printf(&quot;打开键鼠模拟器失败\n&quot;);
     return 0;
 }
 if(HKMIsOpen(lpDev,0))
-    printf(&quot;无涯键鼠盒子已打开&quot;);
+    printf(&quot;键鼠模拟器已打开&quot;);
 else
-    printf(&quot;无涯键鼠盒子未打开&quot;);
+    printf(&quot;键鼠模拟器未打开&quot;);
 HKMClose(lpDev);
 </code></pre>
 

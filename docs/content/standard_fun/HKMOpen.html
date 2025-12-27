@@ -89,7 +89,7 @@
 
 <hr>
 <h2 id="功能">功能</h2>
-<p>打开键鼠盒子，以便对它进行操作</p>
+<p>打开键鼠模拟器，以便对它进行操作</p>
 <h2 id="参数">参数</h2>
 <ul>
 <li>参数1  设备ID：无符号32位整型数。使用<a href="HKMSearchDevice">HKMSearchDevice</a>或者<a href="HKMSearchDevice2">HKMSearchDevice2</a>可以获得它。</li>
@@ -117,7 +117,7 @@ IntPtr lpDev;
 dwDevId = SKM.SkmCore.HKMSearchDevice(0x1234, 0xABCD, 0);
 if (dwDevId == 0xFFFFFFFF)
 {
-    Console.WriteLine(&quot;未找到键鼠盒子&quot;);
+    Console.WriteLine(&quot;未找到键鼠模拟器&quot;);
     return;
 }
 
@@ -125,7 +125,7 @@ if (dwDevId == 0xFFFFFFFF)
 lpDev = SKM.SkmCore.HKMOpen(dwDevId, 0);
 if (lpDev == IntPtr.Zero)
 {
-    Console.WriteLine(&quot;打开键鼠盒子失败&quot;);
+    Console.WriteLine(&quot;打开键鼠模拟器失败&quot;);
     return;
 }
 
@@ -141,13 +141,13 @@ LPVOID lpDev;
 dwDevId=HKMSearchDevice(0x1234,0xABCD,0);
 if(dwDevId==0xFFFFFFFF)
 {
-    printf(&quot;未找到键鼠盒子\n&quot;);
+    printf(&quot;未找到键鼠模拟器\n&quot;);
     return 0;
 }
 lpDev=HKMOpen(dwDevId,0);
 if(lpDev==NULL)
 {
-    printf(&quot;打开键鼠盒子失败\n&quot;);
+    printf(&quot;打开键鼠模拟器失败\n&quot;);
     return 0;
 }
 //执行操作

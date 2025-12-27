@@ -4,7 +4,7 @@
 
 ## 功能
 
-打开键鼠盒子，以便对它进行操作
+打开键鼠模拟器，以便对它进行操作
 
 ## 参数
 - 参数1  设备ID：无符号32位整型数。使用[HKMSearchDevice](HKMSearchDevice)或者[HKMSearchDevice2](HKMSearchDevice2)可以获得它。
@@ -32,7 +32,7 @@ IntPtr lpDev;
 dwDevId = SKM.SkmCore.HKMSearchDevice(0x1234, 0xABCD, 0);
 if (dwDevId == 0xFFFFFFFF)
 {
-    Console.WriteLine("未找到键鼠盒子");
+    Console.WriteLine("未找到键鼠模拟器");
     return;
 }
 
@@ -40,7 +40,7 @@ if (dwDevId == 0xFFFFFFFF)
 lpDev = SKM.SkmCore.HKMOpen(dwDevId, 0);
 if (lpDev == IntPtr.Zero)
 {
-    Console.WriteLine("打开键鼠盒子失败");
+    Console.WriteLine("打开键鼠模拟器失败");
     return;
 }
 
@@ -58,13 +58,13 @@ LPVOID lpDev;
 dwDevId=HKMSearchDevice(0x1234,0xABCD,0);
 if(dwDevId==0xFFFFFFFF)
 {
-    printf("未找到键鼠盒子\n");
+    printf("未找到键鼠模拟器\n");
     return 0;
 }
 lpDev=HKMOpen(dwDevId,0);
 if(lpDev==NULL)
 {
-    printf("打开键鼠盒子失败\n");
+    printf("打开键鼠模拟器失败\n");
     return 0;
 }
 //执行操作
