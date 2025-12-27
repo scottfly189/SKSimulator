@@ -95,100 +95,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/architecture-overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/architecture-overview.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/contact-operation.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/contact-operation.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/conversation-operation.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/conversation-operation.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "content/faq.md",
       "output": {
         ".html": {
           "relative_path": "content/faq.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/friend-circle-operation.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/friend-circle-operation.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/glossary.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/glossary.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/group-operation.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/group-operation.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/listen-message.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/listen-message.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/mcp-server-client.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/mcp-server-client.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/message-operation.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/message-operation.html"
         }
       },
       "version": ""
@@ -204,6 +114,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard-dll-interface-function.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard-dll-interface-function.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "content/toc.yml",
       "output": {
@@ -212,6 +132,16 @@
         },
         ".json": {
           "relative_path": "content/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/virtual-code-table.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/virtual-code-table.html"
         }
       },
       "version": ""
