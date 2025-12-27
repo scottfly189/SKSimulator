@@ -124,19 +124,6 @@
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "content/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "content/toc.html"
-        },
-        ".json": {
-          "relative_path": "content/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "content/virtual-code-table.md",
       "output": {

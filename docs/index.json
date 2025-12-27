@@ -52,6 +52,6 @@
   "index.html": {
     "href": "index.html",
     "title": "| SKSimulator键鼠模拟器",
-    "summary": "\uD83D\uDC46请点击右上角\"指南\" 与 \"API参考\"阅读，重点阅读: \"指南\" --> \"DLL接口函数目录\""
+    "summary": "\uD83D\uDC46请点击顶端\"指南\" 与 \"API参考\"阅读，重点阅读: \"指南\" --> \"DLL接口函数目录\""
   }
 }
