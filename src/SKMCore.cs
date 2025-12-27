@@ -70,7 +70,7 @@ namespace SKM
         /// <list type="bullet">
         /// <item>0 每个显示器DPI感知</item>
         /// <item>1 主显示器DPI感知</item>
-        /// <item>2 无DPI感知</item>
+        /// <item>2 键鼠模拟器DPI感知</item>
         /// <item>3 DPI不可</item>
         /// <item>4 当前上下文的DPI感知</item>
         /// </list>
@@ -116,6 +116,31 @@ namespace SKM
         /// <returns>布尔值。True: 设备已关闭。False: 设备没有关闭。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMClose(IntPtr HKMData);//关闭设备
+        /// <summary>
+        /// 获得键鼠模拟器的设备信息
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="Index">序号,可取值如下:
+        /// <list type="bullet">
+        /// <item>1: 设备类型，最新版返回2</item>
+        /// <item>2: 固件版本,返回值中，0-15位是修订号，16-23位是副版本号，24-31位是主版本号。</item>
+        /// <item>3: 运行时间,返回值是从通电或者复位开始运行的毫秒数，断电和复位都会归零。系统休眠时不计时。这个时间精度不高，有误差。</item>
+        /// <item>4: 通电时间。返回值是从通电开始运行的毫秒数，断电会归零，复位不会归零。系统休眠时不计时。这个时间精度不高，有误差。</item>
+        /// <item>6: 复位次数。</item>
+        /// <item>7: 运行状态。设备未连接返回0xFFFFFFFF，设备准备中返回0，正常工作状态返回1，编辑状态返回2，禁止操作状态返回3。</item>
+        /// <item>8: USB设备接口的VID值</item>
+        /// <item>9: USB设备接口的PID值</item>
+        /// <item>10: USB设备接口的设备版本值</item>
+        /// </list>
+        /// </param>
+        /// <param name="Mouse">是否鼠标：布尔值
+        /// <list type="bullet">
+        /// <item>True: 获得鼠标模式的设备信息</item>
+        /// <item>False: 获得键盘模式的设备信息</item>
+        /// </list>
+        /// </param>
+        /// <returns>无符号32位整型数,返回值由参数2决定。
+        /// 没找到或者失败返回0xFFFFFFFF。</returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMGetDevInfo(IntPtr HKMData, UInt32 Index, Boolean Mouse);//获得设备信息
         [DllImport("skm.dll")]

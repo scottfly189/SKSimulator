@@ -160,7 +160,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 
   <h3 id="SKM_SkmCore_HKMCheckPressedKeysCS_System_UInt32_" data-uid="SKM.SkmCore.HKMCheckPressedKeysCS(System.UInt32)">
   HKMCheckPressedKeysCS(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -502,7 +502,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>获得键鼠模拟器的设备信息</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -512,17 +513,24 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
+    <dd><p>设备对象：无类型指针。使用<code>HKMOpen</code>或者<code>HKMOpen2</code>可以创建它。</p>
+</dd>
     <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>序号,可取值如下:
+<ul><li>1: 设备类型，最新版返回2</li><li>2: 固件版本,返回值中，0-15位是修订号，16-23位是副版本号，24-31位是主版本号。</li><li>3: 运行时间,返回值是从通电或者复位开始运行的毫秒数，断电和复位都会归零。系统休眠时不计时。这个时间精度不高，有误差。</li><li>4: 通电时间。返回值是从通电开始运行的毫秒数，断电会归零，复位不会归零。系统休眠时不计时。这个时间精度不高，有误差。</li><li>6: 复位次数。</li><li>7: 运行状态。设备未连接返回0xFFFFFFFF，设备准备中返回0，正常工作状态返回1，编辑状态返回2，禁止操作状态返回3。</li><li>8: USB设备接口的VID值</li><li>9: USB设备接口的PID值</li><li>10: USB设备接口的设备版本值</li></ul>
+</dd>
     <dt><code>Mouse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>是否鼠标：布尔值
+<ul><li>True: 获得鼠标模式的设备信息</li><li>False: 获得键盘模式的设备信息</li></ul>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>无符号32位整型数,返回值由参数2决定。
+没找到或者失败返回0xFFFFFFFF。</p>
+</dd>
   </dl>
 
 
@@ -581,7 +589,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 
   <h3 id="SKM_SkmCore_HKMGetDevStringCS_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)">
   HKMGetDevStringCS(nint, uint, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L291"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1678,7 +1686,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 </dd>
     <dt><code>DpiMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd><p>DPI模式：无符号32位整型数。用于设置鼠标移动(<code>HKMMoveTo</code>和<code>HKMMoveR2</code>)和获得鼠标坐标(<code>HKMGetCursorPos</code>和<code>HKMGetCursorPos2</code>)时使用的坐标的DPI模式,可取值如下：
-<ul><li>0 每个显示器DPI感知</li><li>1 主显示器DPI感知</li><li>2 无DPI感知</li><li>3 DPI不可</li><li>4 当前上下文的DPI感知</li></ul>
+<ul><li>0 每个显示器DPI感知</li><li>1 主显示器DPI感知</li><li>2 键鼠模拟器DPI感知</li><li>3 DPI不可</li><li>4 当前上下文的DPI感知</li></ul>
 </dd>
   </dl>
 

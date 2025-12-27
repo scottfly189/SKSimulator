@@ -145,6 +145,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetDevInfo.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetDevInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/HKMIsOpen.md",
       "output": {
         ".html": {
