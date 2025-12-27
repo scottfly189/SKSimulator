@@ -250,7 +250,7 @@ KMSimulatorService.CloseDevice();
 
 更多 API 请参考 `SKMCore.cs` 文件。
 
-**更多的使用注意事宜与全部的标准API接口** 请参考 <a href="https://scottfly189.github.io/SKSimulator/" target="_blank">SKSimulator 官方文档</a>
+**更多的使用注意事宜与全部的标准API接口** 请参考 <a href="https://scottfly189.github.io/SKSimulator/" target="_blank" rel="noopener noreferrer" onclick="window.open('https://scottfly189.github.io/SKSimulator/', '_blank'); return false;">SKSimulator 官方文档</a>
 
 ## ⚠️ 注意事项
 
