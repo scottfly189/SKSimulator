@@ -14,7 +14,7 @@
 
 ## 📸 键鼠模拟器实拍照片
 
-<img src="./images/device-buy.png" alt="键鼠模拟器" width="550"/>
+<img src="https://raw.githubusercontent.com/scottfly189/SKSimulator/main/images/device-buy.png" alt="键鼠模拟器" width="550"/>
 
 ## 💳 购买流程
 
@@ -24,7 +24,7 @@
 
 如需购买键鼠模拟器硬件设备，请通过以下方式联系：
 
-<img src="./images/buy.jpg" alt="购买" width="400"/>
+<img src="https://raw.githubusercontent.com/scottfly189/SKSimulator/main/images/buy.jpg" alt="购买" width="400"/>
 
 > 温馨提示：添加好友时请备注“键鼠”，否则可能无法通过好友申请。
 
