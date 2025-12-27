@@ -46,8 +46,36 @@ namespace SKM
         /// 没找到或者失败返回0xFFFFFFFF。</returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMSearchDevice2(UInt32 Vid, UInt32 Pid, UInt32 SN, UInt32 DeviceType);//查找设备
+        /// <summary>
+        /// 查找全部设备
+        /// </summary>
+        /// <param name="Vid">VID：无符号32位整型数。值为65536时忽略此搜索条件</param>
+        /// <param name="Pid">设备PID</param>
+        /// <param name="DeviceType">设备模式：无符号32位整型数。用于设置查找的键鼠模拟器的模式。可取值如下：
+        /// <list type="bullet">
+        /// <item>0 所有模式</item>
+        /// <item>1 键鼠模式</item>
+        /// <item>2 键盘模式</item>
+        /// <item>3 鼠标模式</item>
+        /// </list>
+        /// </param>
+        /// <returns>设备ID的数组，可用<c>HKMGetDataCount</c>函数获取数组元素数量。失败返回NULL。当不再使用这个字符串时，使用<c>HKMFreeData</c>释放数组所占用的资源。</returns>
         [DllImport("skm.dll")]
         public static extern IntPtr HKMSearchDeviceAll(UInt32 Vid, UInt32 Pid, UInt32 DeviceType);//查找全部设备
+        /// <summary>
+        /// 打开设备
+        /// </summary>
+        /// <param name="DeviceId">设备ID：无符号32位整型数。使用<c>HKMSearchDevice</c>或者<c>HKMSearchDevice2</c>可以获得它。</param>
+        /// <param name="DpiMode">DPI模式：无符号32位整型数。用于设置鼠标移动(<c>HKMMoveTo</c>和<c>HKMMoveR2</c>)和获得鼠标坐标(<c>HKMGetCursorPos</c>和<c>HKMGetCursorPos2</c>)时使用的坐标的DPI模式,可取值如下：
+        /// <list type="bullet">
+        /// <item>0 每个显示器DPI感知</item>
+        /// <item>1 主显示器DPI感知</item>
+        /// <item>2 无DPI感知</item>
+        /// <item>3 DPI不可</item>
+        /// <item>4 当前上下文的DPI感知</item>
+        /// </list>
+        /// </param>
+        /// <returns>设备对象：无类型指针。创建的设备句柄。失败返回NULL。不再使用它时用<c>HKMClose</c>可以关闭它以释放资源。</returns>
         [DllImport("skm.dll")]
         public static extern IntPtr HKMOpen(UInt32 DeviceId, UInt32 DpiMode);//打开设备
         [DllImport("skm.dll")]

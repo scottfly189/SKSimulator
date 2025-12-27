@@ -160,7 +160,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 
   <h3 id="SKM_SkmCore_HKMCheckPressedKeysCS_System_UInt32_" data-uid="SKM.SkmCore.HKMCheckPressedKeysCS(System.UInt32)">
   HKMCheckPressedKeysCS(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -578,7 +578,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 
   <h3 id="SKM_SkmCore_HKMGetDevStringCS_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)">
   HKMGetDevStringCS(nint, uint, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1655,7 +1655,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>打开设备</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -1665,15 +1666,19 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>DeviceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>设备ID：无符号32位整型数。使用<code>HKMSearchDevice</code>或者<code>HKMSearchDevice2</code>可以获得它。</p>
+</dd>
     <dt><code>DpiMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>DPI模式：无符号32位整型数。用于设置鼠标移动(<code>HKMMoveTo</code>和<code>HKMMoveR2</code>)和获得鼠标坐标(<code>HKMGetCursorPos</code>和<code>HKMGetCursorPos2</code>)时使用的坐标的DPI模式,可取值如下：
+<ul><li>0 每个显示器DPI感知</li><li>1 主显示器DPI感知</li><li>2 无DPI感知</li><li>3 DPI不可</li><li>4 当前上下文的DPI感知</li></ul>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
+    <dd><p>设备对象：无类型指针。创建的设备句柄。失败返回NULL。不再使用它时用<code>HKMClose</code>可以关闭它以释放资源。</p>
+</dd>
   </dl>
 
 
@@ -2084,7 +2089,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>查找全部设备</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -2094,17 +2100,22 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>Vid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>VID：无符号32位整型数。值为65536时忽略此搜索条件</p>
+</dd>
     <dt><code>Pid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>设备PID</p>
+</dd>
     <dt><code>DeviceType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>设备模式：无符号32位整型数。用于设置查找的键鼠模拟器的模式。可取值如下：
+<ul><li>0 所有模式</li><li>1 键鼠模式</li><li>2 键盘模式</li><li>3 鼠标模式</li></ul>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
+    <dd><p>设备ID的数组，可用<code>HKMGetDataCount</code>函数获取数组元素数量。失败返回NULL。当不再使用这个字符串时，使用<code>HKMFreeData</code>释放数组所占用的资源。</p>
+</dd>
   </dl>
 
 
