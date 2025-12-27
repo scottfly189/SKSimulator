@@ -64,7 +64,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "SKM.SkmCore",
-      "Summary": "<p sourcefile=\"api/SKM.SkmCore.yml\" sourcestartlinenumber=\"1\">skm.dll 的封装<br>\n注意: x86 和 x64 的 dll 是不同的，需要根据实际情况选择<br>\nx86 的 dll 是 x86\\skm.dll，x64 的 dll 是 x64\\skm.dll<br>\n使用 <code>KMSimulatorService</code> 服务类可以无感知使用，会自动根据当前环境复制 DLL 到当前目录<br>\n具体 <code>KMSimulatorService</code> 类使用请参考 <xref href=\"SKM.KMSimulatorService\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+      "Summary": "<p sourcefile=\"api/SKM.SkmCore.yml\" sourcestartlinenumber=\"1\">注意: x86 和 x64 的 dll 是不同的，需要根据实际情况选择<br>\nx86 的 dll 是 x86\\skm.dll，x64 的 dll 是 x64\\skm.dll<br>\n使用 <code>KMSimulatorService</code> 服务类可以无感知使用，会自动根据当前环境复制 DLL 到当前目录<br>\n具体 <code>KMSimulatorService</code> 类使用请参考 <xref href=\"SKM.KMSimulatorService\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -89,6 +89,129 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/architecture-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/architecture-overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/contact-operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/contact-operation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/conversation-operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/conversation-operation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/faq.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/friend-circle-operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/friend-circle-operation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/glossary.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/glossary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/group-operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/group-operation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/listen-message.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/listen-message.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/mcp-server-client.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/mcp-server-client.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/message-operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/message-operation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/quick-start.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/quick-start.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "content/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "content/toc.html"
+        },
+        ".json": {
+          "relative_path": "content/toc.json"
         }
       },
       "version": ""

@@ -4,7 +4,6 @@ using System.Runtime.InteropServices;
 namespace SKM
 {
     /// <summary>
-    /// skm.dll 的封装  
     /// 注意: x86 和 x64 的 dll 是不同的，需要根据实际情况选择  
     /// x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll  
     /// 使用 <c>KMSimulatorService</c> 服务类可以无感知使用，会自动根据当前环境复制 DLL 到当前目录  
