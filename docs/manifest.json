@@ -105,6 +105,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/hkmopen.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/hkmopen.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/quick-start.md",
       "output": {
         ".html": {

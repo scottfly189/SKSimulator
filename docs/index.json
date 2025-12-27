@@ -29,6 +29,11 @@
     "title": "FAQ | SKSimulator键鼠模拟器",
     "summary": "FAQ 你提，我来回答\uD83D\uDE0A"
   },
+  "content/hkmopen.html": {
+    "href": "content/hkmopen.html",
+    "title": "打开设备 | SKSimulator键鼠模拟器",
+    "summary": "打开设备"
+  },
   "content/quick-start.html": {
     "href": "content/quick-start.html",
     "title": "\uD83D\uDC49 快速开始 | SKSimulator键鼠模拟器",
