@@ -250,6 +250,8 @@ KMSimulatorService.CloseDevice();
 
 更多 API 请参考 `SKMCore.cs` 文件。
 
+**更多的使用注意事宜与全部的标准API接口** 请阅读 [SKSimulator 官方文档](https://scottfly189.github.io/SKSimulator/) 
+
 ## ⚠️ 注意事项
 
 1. **DLL 文件**: 
@@ -275,7 +277,7 @@ KMSimulatorService.CloseDevice();
 
 ## 🔗 相关链接
 
-- [SKSimulator 官方文档](https://scottfly189.github.io/SKSimulator/)
+- [SKSimulator 官方文档](https://scottfly189.github.io/SKSimulator/) 请认真阅读官网的指南 与 API参考
 - [使用SKSimulator的开发框架 - WeChatAuto.SDK](https://github.com/scottfly189/WeChatAuto.SDK.git)
 ---
 
