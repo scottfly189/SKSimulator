@@ -93,3 +93,33 @@
 | [HKMMoveTo](standard_fun/HKMMoveTo.html) | 鼠标移动 |
 | [HKMMoveR](standard_fun/HKMMoveR.html) | 鼠标相对移动 |
 
+---
+
+## 数据处理
+
+| 函数名(标准dll接口)                   | 说明                 |
+| -------------------------------------- | -------------------- |
+| [HKMFreeData](standard_fun/HKMFreeData.html) | 释放数据         |
+| [HKMGetDataCount](standard_fun/HKMGetDataCount.html) | 获得数据数量 |
+| [HKMGetDataUnitInt](standard_fun/HKMGetDataUnitInt.html) | 获得数据单元整数值 |
+
+---
+
+## 其他
+
+| 函数名(标准dll接口)                   | 说明                 |
+| -------------------------------------- | -------------------- |
+| [HKMDelayRnd](standard_fun/HKMDelayRnd.html) | 随机延时         |
+| [HKMCheckPressedKeys](standard_fun/HKMCheckPressedKeys.html) | 检查按键 |
+| [HKMVerifyUserData](standard_fun/HKMVerifyUserData.html) | 验证用户数据 |
+| [HKMVerifyUserData2](standard_fun/HKMVerifyUserData2.html) | 验证用户数据2 |
+| [HKMSetResetMode](standard_fun/HKMSetResetMode.html) | 设置复位模式 |
+| [HKMSetResetTime](standard_fun/HKMSetResetTime.html) | 设置复位时间 |
+| [HKMSetLightMode](standard_fun/HKMSetLightMode.html) | 设置指示灯模式 |
+| [HKMIsOSMouseAccelerateEnabled](standard_fun/HKMIsOSMouseAccelerateEnabled.html) | 判断是否开启系统鼠标加速 |
+| [HKMEnableOSMouseAccelerate](standard_fun/HKMEnableOSMouseAccelerate.html) | 启停系统鼠标加速 |
+| [HKMGetOSMouseSpeed](standard_fun/HKMGetOSMouseSpeed.html) | 获得系统鼠标速度 |
+| [HKMSetOSMouseSpeed](standard_fun/HKMSetOSMouseSpeed.html) | 设置系统鼠标速度 |
+| [HKMSetDevDescInfo](standard_fun/HKMSetDevDescInfo.html) | 设置设备描述信息 |
+| [HKMGetError](standard_fun/HKMGetError.html) | 获得错误代码 |
+
