@@ -160,7 +160,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 
   <h3 id="SKM_SkmCore_HKMCheckPressedKeysCS_System_UInt32_" data-uid="SKM.SkmCore.HKMCheckPressedKeysCS(System.UInt32)">
   HKMCheckPressedKeysCS(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L405"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -602,7 +602,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 
   <h3 id="SKM_SkmCore_HKMGetDevStringCS_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)">
   HKMGetDevStringCS(nint, uint, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L392"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L419"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -2203,7 +2203,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>设置绝对鼠标屏幕分辨率</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -2213,17 +2214,21 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
+    <dd><p>设备对象：无类型指针。使用<code>HKMOpen</code>或者<code>HKMOpen2</code>可以创建它。</p>
+</dd>
     <dt><code>Width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>宽度：整型数。</p>
+</dd>
     <dt><code>Height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>高度：整型数。</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>布尔值。True: 成功。False: 失败。</p>
+</dd>
   </dl>
 
 
@@ -2243,7 +2248,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>设置按键时间间隔</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -2253,17 +2259,21 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
+    <dd><p>设备对象：无类型指针。使用<code>HKMOpen</code>或者<code>HKMOpen2</code>可以创建它。</p>
+</dd>
     <dt><code>MinTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>最短时间：无符号32位整型数，单位毫秒。</p>
+</dd>
     <dt><code>MaxTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>最长时间：无符号32位整型数，单位毫秒。</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>布尔值。True: 成功。False: 失败。</p>
+</dd>
   </dl>
 
 
@@ -2363,7 +2373,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>设置鼠标时间间隔</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -2373,17 +2384,21 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
+    <dd><p>设备对象：无类型指针。使用<code>HKMOpen</code>或者<code>HKMOpen2</code>可以创建它。</p>
+</dd>
     <dt><code>MinTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>最短时间：无符号32位整型数，单位毫秒。</p>
+</dd>
     <dt><code>MaxTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>最长时间：无符号32位整型数，单位毫秒。</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>布尔值。True: 成功。False: 失败。</p>
+</dd>
   </dl>
 
 
@@ -2403,7 +2418,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>设置鼠标移动超时时间</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -2413,15 +2429,18 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>HKMData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
+    <dd><p>设备对象：无类型指针。使用<code>HKMOpen</code>或者<code>HKMOpen2</code>可以创建它。</p>
+</dd>
     <dt><code>Timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>超时时间：无符号32位整型数，单位毫秒。</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>布尔值。True: 成功。False: 失败。</p>
+</dd>
   </dl>
 
 

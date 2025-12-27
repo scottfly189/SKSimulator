@@ -43,6 +43,20 @@
       href: standard_fun/HKMGetCursorPos.md
     - name: HKMGetCursorPos2-获得鼠标坐标
       href: standard_fun/HKMGetCursorPos2.md
+    - name: HKMSetMode-设置模式
+      href: standard_fun/HKMSetMode.md
+    - name: HKMSetKeyInterval-设置按键时间间隔
+      href: standard_fun/HKMSetKeyInterval.md
+    - name: HKMSetMouseInterval-设置鼠标时间间隔
+      href: standard_fun/HKMSetMouseInterval.md
+    - name: HKMSetAbsMouseScrnRes-设置绝对鼠标屏幕分辨率
+      href: standard_fun/HKMSetAbsMouseScrnRes.md
+    - name: HKMSetMousePosPrecision-设置鼠标坐标精度
+      href: standard_fun/HKMSetMousePosPrecision.md
+    - name: HKMSetMousePosMaxOffset-设置鼠标坐标最大偏移
+      href: standard_fun/HKMSetMousePosMaxOffset.md
+    - name: HKMSetMouseSpeed-设置鼠标速度
+      href: standard_fun/HKMSetMouseSpeed.md
     - name: 🚩 虚拟码键表参考
       href: standard_fun/VirtualKeyTable.md
 - name: 📚 API参考

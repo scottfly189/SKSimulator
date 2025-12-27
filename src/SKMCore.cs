@@ -268,16 +268,43 @@ namespace SKM
         public static extern UInt32 HKMGetCursorPos2(IntPtr HKMData);//获得鼠标坐标
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetMode(IntPtr HKMData, UInt32 Index, UInt32 Mode);//设置模式
+        /// <summary>
+        /// 设置按键时间间隔
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="MinTime">最短时间：无符号32位整型数，单位毫秒。</param>
+        /// <param name="MaxTime">最长时间：无符号32位整型数，单位毫秒。</param>
+        /// <returns>布尔值。True: 成功。False: 失败。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetKeyInterval(IntPtr HKMData, UInt32 MinTime, UInt32 MaxTime);//设置按键时间间隔
+        /// <summary>
+        /// 设置鼠标时间间隔
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="MinTime">最短时间：无符号32位整型数，单位毫秒。</param>
+        /// <param name="MaxTime">最长时间：无符号32位整型数，单位毫秒。</param>
+        /// <returns>布尔值。True: 成功。False: 失败。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetMouseInterval(IntPtr HKMData, UInt32 MinTime, UInt32 MaxTime);//设置鼠标时间间隔
+        /// <summary>
+        /// 设置绝对鼠标屏幕分辨率
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="Width">宽度：整型数。</param>
+        /// <param name="Height">高度：整型数。</param>
+        /// <returns>布尔值。True: 成功。False: 失败。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetAbsMouseScrnRes(IntPtr HKMData, Int32 Width, Int32 Height);//设置绝对鼠标屏幕分辨率
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetMousePosPrecision(IntPtr HKMData, UInt32 Precision);//设置鼠标坐标精度
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetMouseSpeed(IntPtr HKMData, UInt32 MouseSpeed);//设置鼠标速度
+        /// <summary>
+        /// 设置鼠标移动超时时间
+        /// </summary>
+        /// <param name="HKMData">设备对象：无类型指针。使用<c>HKMOpen</c>或者<c>HKMOpen2</c>可以创建它。</param>
+        /// <param name="Timeout">超时时间：无符号32位整型数，单位毫秒。</param>
+        /// <returns>布尔值。True: 成功。False: 失败。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetMouseMoveTimeout(IntPtr HKMData, UInt32 Timeout);//设置鼠标移动超时时间
         [DllImport("skm.dll")]

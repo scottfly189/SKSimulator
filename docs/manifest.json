@@ -325,6 +325,86 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetAbsMouseScrnRes.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetAbsMouseScrnRes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetKeyInterval.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetKeyInterval.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetMouseInterval.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetMouseInterval.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetMouseMoveTimeout.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetMouseMoveTimeout.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetMousePosMaxOffset.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetMousePosMaxOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetMousePosPrecision.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetMousePosPrecision.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetMouseSpeed.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetMouseSpeed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/VirtualKeyTable.md",
       "output": {
         ".html": {

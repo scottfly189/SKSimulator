@@ -107,7 +107,7 @@
 <li>参数4: 字符串长度：无符号32位整型数指针。用于接收返回值为非NULL时的字符串长度（字符串长度包含'\0'）。需要时可将取值设为NULL。</li>
 </ul>
 <h2 id="返回值">返回值</h2>
-<p>字符串(Unicode/Ansi)。失败返回NULL。成功返回字符串指针，字符串默认为Unicode字符串，也可以通过<a href="HKMSetMode.md">HKMSetMode</a>修改为Ansi字符串。字符串指针在设备关闭时会被释放，不需要单独释放，但需要注意数据可能会被后续调用此函数的数据覆盖。</p>
+<p>字符串(Unicode/Ansi)。失败返回NULL。成功返回字符串指针，字符串默认为Unicode字符串，也可以通过<a href="HKMSetMode.html">HKMSetMode</a>修改为Ansi字符串。字符串指针在设备关闭时会被释放，不需要单独释放，但需要注意数据可能会被后续调用此函数的数据覆盖。</p>
 <h2 id="c例子">C#例子</h2>
 <pre><code class="lang-csharp">uint dwDevId;
 IntPtr lpDev;

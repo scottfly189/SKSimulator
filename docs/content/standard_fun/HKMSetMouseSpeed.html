@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>HKMIsKeyDown 判断键盘是否按下 | SKSimulator键鼠模拟器 </title>
+      <title>HKMSetMouseSpeed 设置鼠标速度 | SKSimulator键鼠模拟器 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="HKMIsKeyDown 判断键盘是否按下 | SKSimulator键鼠模拟器 ">
+      <meta name="title" content="HKMSetMouseSpeed 设置鼠标速度 | SKSimulator键鼠模拟器 ">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -85,17 +85,17 @@
         </div>
 
         <article data-uid="">
-<h1 id="hkmiskeydown-判断键盘是否按下">HKMIsKeyDown 判断键盘是否按下</h1>
+<h1 id="hkmsetmousespeed-设置鼠标速度">HKMSetMouseSpeed 设置鼠标速度</h1>
 
 <h2 id="功能">功能</h2>
-<p>判断键鼠模拟器连接的键盘的键是否按下</p>
+<p>设置鼠标移动速度。它设置的是键鼠盒子鼠标移动速度的最大值。快速移动模式和HKMMoveRP不受它影响。有关函数：<a href="HKMMoveR.md">HKMMoveR</a>、<a href="HKMMoveR2.md">HKMMoveR2</a>、<a href="HKMMoveTo.md">HKMMoveTo</a></p>
 <h2 id="参数">参数</h2>
 <ul>
 <li>参数1: 设备对象：无类型指针。使用<a href="HKMOpen.html">HKMOpen</a>可以创建它。</li>
-<li>参数2: 键名：字符串(Unicode/Ansi)，或者无符号32/64位整数(32位模式使用32位整数，64位模式使用64位整数)。可以使用字符串(默认为Unicode字符串，也可以通过<a href="HKMSetMode.html">HKMSetMode</a>修改为Ansi字符串)，也可以使用无符号32/64位整数。键名和整数对应关系可以查看<a href="VirtualKeyTable.html">虚拟键表</a>。</li>
+<li>参数2: 鼠标速度：布尔值。无符号32位整型数。取值范围是5-100，值越大速度越快，默认值是45。使用了这个函数不代表速度最大值就完全固定了，移动函数的最大速度有小范围的随机波动（快递移动模式和HKMMoveRP除外）。</li>
 </ul>
 <h2 id="返回值">返回值</h2>
-<p>布尔值。按下返回True，没按下或失败返回False</p>
+<p>布尔值。成功返回True，失败返回False</p>
 <h2 id="c例子">C#例子</h2>
 <pre><code class="lang-csharp">uint dwDevId;
 IntPtr lpDev;
@@ -111,13 +111,7 @@ if (lpDev == IntPtr.Zero)
     Console.WriteLine(&quot;打开键鼠模拟器失败&quot;);
     return;
 }
-SkmCore.HKMKeyDown(lpDev, &quot;Alt&quot;);
-bool isAltDown = SkmCore.HKMIsKeyDown(lpDev, &quot;Alt&quot;);
-Console.WriteLine($&quot;Alt键状态：{isAltDown}&quot;);
-SkmCore.HKMDelayRnd(lpDev, 90, 120);
-SkmCore.HKMKeyUp(lpDev, &quot;Alt&quot;);
-isAltDown = SkmCore.HKMIsKeyDown(lpDev, &quot;Alt&quot;);
-Console.WriteLine($&quot;Alt键状态：{isAltDown}&quot;);
+SkmCore.HKMSetMouseSpeed(lpDev, 20);
 SkmCore.HKMClose(lpDev);
 </code></pre>
 <h2 id="c语言例子">C语言例子</h2>
@@ -135,11 +129,7 @@ if(lpDev==NULL)
     printf(&quot;打开键鼠模拟器失败\n&quot;);
     return 0;
 }
-HKMKeyDown(lpDev,L&quot;Alt&quot;);
-printf(&quot;Alt键状态:%d\n&quot;,HKMIsKeyDown(lpDev,L&quot;Alt&quot;));
-HKMDelayRnd(lpDev,90,120);
-HKMKeyUp(lpDev,L&quot;Alt&quot;);
-printf(&quot;Alt键状态:%d\n&quot;,HKMIsKeyDown(lpDev,L&quot;Alt&quot;));
+HKMSetMouseSpeed(lpDev,20);
 HKMClose(lpDev);
 </code></pre>
 

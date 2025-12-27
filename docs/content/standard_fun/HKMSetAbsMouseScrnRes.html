@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>HKMIsKeyDown 判断键盘是否按下 | SKSimulator键鼠模拟器 </title>
+      <title>HKMSetAbsMouseScrnRes 设置绝对鼠标屏幕分辨率 | SKSimulator键鼠模拟器 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="HKMIsKeyDown 判断键盘是否按下 | SKSimulator键鼠模拟器 ">
+      <meta name="title" content="HKMSetAbsMouseScrnRes 设置绝对鼠标屏幕分辨率 | SKSimulator键鼠模拟器 ">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -85,17 +85,18 @@
         </div>
 
         <article data-uid="">
-<h1 id="hkmiskeydown-判断键盘是否按下">HKMIsKeyDown 判断键盘是否按下</h1>
+<h1 id="hkmsetabsmousescrnres-设置绝对鼠标屏幕分辨率">HKMSetAbsMouseScrnRes 设置绝对鼠标屏幕分辨率</h1>
 
 <h2 id="功能">功能</h2>
-<p>判断键鼠模拟器连接的键盘的键是否按下</p>
+<p>设置绝对坐标移动时使用的主显示器屏幕分辨率。相关函数：<a href="HKMMoveTo.md">HKMMoveTo</a>、<a href="HKMMoveR2.md">HKMMoveR2</a></p>
 <h2 id="参数">参数</h2>
 <ul>
 <li>参数1: 设备对象：无类型指针。使用<a href="HKMOpen.html">HKMOpen</a>可以创建它。</li>
-<li>参数2: 键名：字符串(Unicode/Ansi)，或者无符号32/64位整数(32位模式使用32位整数，64位模式使用64位整数)。可以使用字符串(默认为Unicode字符串，也可以通过<a href="HKMSetMode.html">HKMSetMode</a>修改为Ansi字符串)，也可以使用无符号32/64位整数。键名和整数对应关系可以查看<a href="VirtualKeyTable.html">虚拟键表</a>。</li>
+<li>参数2: 宽度：32位整数。参数2和参数3取0时，屏幕分辨率设为当前系统主显示器的屏幕分辨率</li>
+<li>参数3: 高度：32位整数</li>
 </ul>
 <h2 id="返回值">返回值</h2>
-<p>布尔值。按下返回True，没按下或失败返回False</p>
+<p>布尔值。成功返回True，失败返回False</p>
 <h2 id="c例子">C#例子</h2>
 <pre><code class="lang-csharp">uint dwDevId;
 IntPtr lpDev;
@@ -111,13 +112,7 @@ if (lpDev == IntPtr.Zero)
     Console.WriteLine(&quot;打开键鼠模拟器失败&quot;);
     return;
 }
-SkmCore.HKMKeyDown(lpDev, &quot;Alt&quot;);
-bool isAltDown = SkmCore.HKMIsKeyDown(lpDev, &quot;Alt&quot;);
-Console.WriteLine($&quot;Alt键状态：{isAltDown}&quot;);
-SkmCore.HKMDelayRnd(lpDev, 90, 120);
-SkmCore.HKMKeyUp(lpDev, &quot;Alt&quot;);
-isAltDown = SkmCore.HKMIsKeyDown(lpDev, &quot;Alt&quot;);
-Console.WriteLine($&quot;Alt键状态：{isAltDown}&quot;);
+SkmCore.HKMSetAbsMouseScrnRes(lpDev, 800, 600);
 SkmCore.HKMClose(lpDev);
 </code></pre>
 <h2 id="c语言例子">C语言例子</h2>
@@ -135,11 +130,7 @@ if(lpDev==NULL)
     printf(&quot;打开键鼠模拟器失败\n&quot;);
     return 0;
 }
-HKMKeyDown(lpDev,L&quot;Alt&quot;);
-printf(&quot;Alt键状态:%d\n&quot;,HKMIsKeyDown(lpDev,L&quot;Alt&quot;));
-HKMDelayRnd(lpDev,90,120);
-HKMKeyUp(lpDev,L&quot;Alt&quot;);
-printf(&quot;Alt键状态:%d\n&quot;,HKMIsKeyDown(lpDev,L&quot;Alt&quot;));
+HKMSetAbsMouseScrnRes(lpDev,800,600);
 HKMClose(lpDev);
 </code></pre>
 
