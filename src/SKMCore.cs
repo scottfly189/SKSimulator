@@ -11,8 +11,39 @@ namespace SKM
     /// </summary>
     public class SkmCore
     {
+        /// <summary>
+        /// 查找设备
+        /// </summary>
+        /// <param name="Vid">VID：无符号32位整型数。值为65536时忽略此搜索条件</param>
+        /// <param name="Pid">设备PID</param>
+        /// <param name="DeviceType">设备模式：无符号32位整型数。用于设置查找的键鼠模拟器的模式。可取值如下：
+        /// <list type="bullet">
+        /// <item>0 所有模式</item>
+        /// <item>1 键鼠模式</item>
+        /// <item>2 键盘模式</item>
+        /// <item>3 鼠标模式</item>
+        /// </list>
+        /// </param>
+        /// <returns>一个临时的设备ID号，只对当前应用有效,设备ID号会被打开设备函数<c>HKMOpen</c>使用到。
+        /// 没找到或者失败返回0xFFFFFFFF。</returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMSearchDevice(UInt32 Vid, UInt32 Pid, UInt32 DeviceType);//查找设备
+        /// <summary>
+        /// 查找设备
+        /// </summary>
+        /// <param name="Vid">VID：无符号32位整型数。值为65536时忽略此搜索条件</param>
+        /// <param name="Pid">设备PID</param>
+        /// <param name="SN">序列号：无符号32位整型数。每个键鼠模拟器的值都不一样，购买盒子时会提供</param>
+        /// <param name="DeviceType">设备模式：无符号32位整型数。用于设置查找的键鼠模拟器的模式。可取值如下：
+        /// <list type="bullet">
+        /// <item>0 所有模式</item>
+        /// <item>1 键鼠模式</item>
+        /// <item>2 键盘模式</item>
+        /// <item>3 鼠标模式</item>
+        /// </list>
+        /// </param>
+        /// <returns>一个临时的设备ID号，只对当前应用有效,设备ID号会被打开设备函数<c>HKMOpen</c>使用到。
+        /// 没找到或者失败返回0xFFFFFFFF。</returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMSearchDevice2(UInt32 Vid, UInt32 Pid, UInt32 SN, UInt32 DeviceType);//查找设备
         [DllImport("skm.dll")]

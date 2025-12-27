@@ -160,7 +160,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 
   <h3 id="SKM_SkmCore_HKMCheckPressedKeysCS_System_UInt32_" data-uid="SKM.SkmCore.HKMCheckPressedKeysCS(System.UInt32)">
   HKMCheckPressedKeysCS(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -578,7 +578,7 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
 
   <h3 id="SKM_SkmCore_HKMGetDevStringCS_System_IntPtr_System_UInt32_System_Boolean_" data-uid="SKM.SkmCore.HKMGetDevStringCS(System.IntPtr,System.UInt32,System.Boolean)">
   HKMGetDevStringCS(nint, uint, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/scottfly189/SKSimulator/blob/main/src/SKMCore.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1987,7 +1987,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>查找设备</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -1997,17 +1998,23 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>Vid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>VID：无符号32位整型数。值为65536时忽略此搜索条件</p>
+</dd>
     <dt><code>Pid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>设备PID</p>
+</dd>
     <dt><code>DeviceType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>设备模式：无符号32位整型数。用于设置查找的键鼠模拟器的模式。可取值如下：
+<ul><li>0 所有模式</li><li>1 键鼠模式</li><li>2 键盘模式</li><li>3 鼠标模式</li></ul>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>一个临时的设备ID号，只对当前应用有效,设备ID号会被打开设备函数<code>HKMOpen</code>使用到。
+没找到或者失败返回0xFFFFFFFF。</p>
+</dd>
   </dl>
 
 
@@ -2027,7 +2034,8 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>查找设备</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -2037,19 +2045,26 @@ x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll<br>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>Vid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>VID：无符号32位整型数。值为65536时忽略此搜索条件</p>
+</dd>
     <dt><code>Pid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>设备PID</p>
+</dd>
     <dt><code>SN</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>序列号：无符号32位整型数。每个键鼠模拟器的值都不一样，购买盒子时会提供</p>
+</dd>
     <dt><code>DeviceType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>设备模式：无符号32位整型数。用于设置查找的键鼠模拟器的模式。可取值如下：
+<ul><li>0 所有模式</li><li>1 键鼠模式</li><li>2 键盘模式</li><li>3 鼠标模式</li></ul>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>一个临时的设备ID号，只对当前应用有效,设备ID号会被打开设备函数<code>HKMOpen</code>使用到。
+没找到或者失败返回0xFFFFFFFF。</p>
+</dd>
   </dl>
 
 
