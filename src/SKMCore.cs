@@ -4,16 +4,14 @@ using System.Runtime.InteropServices;
 namespace SKM
 {
     /// <summary>
-    /// skm.dll 的封装
-    /// 注意: x86 和 x64 的 dll 是不同的, 需要根据实际情况选择
-    /// x86 的 dll 是 x86\skm.dll, x64 的 dll 是 x64\skm.dll
-    /// 使用KMSimulatorService服务类可以无感知使用，会自动根据当前环境复制DLL到当前目录
-    /// 具体KMSimulatorService类使用请参考<see cref="KMSimulatorService"/>
+    /// skm.dll 的封装  
+    /// 注意: x86 和 x64 的 dll 是不同的，需要根据实际情况选择  
+    /// x86 的 dll 是 x86\skm.dll，x64 的 dll 是 x64\skm.dll  
+    /// 使用 <c>KMSimulatorService</c> 服务类可以无感知使用，会自动根据当前环境复制 DLL 到当前目录  
+    /// 具体 <c>KMSimulatorService</c> 类使用请参考 <see cref="KMSimulatorService"/>
     /// </summary>
     public class SkmCore
     {
-        [DllImport("skm.dll")]
-        public static extern UInt32 HKMGetVersion();//获得当前模块版本
         [DllImport("skm.dll")]
         public static extern UInt32 HKMSearchDevice(UInt32 Vid, UInt32 Pid, UInt32 DeviceType);//查找设备
         [DllImport("skm.dll")]

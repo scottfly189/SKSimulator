@@ -461,18 +461,6 @@ references:
   commentId: Overload:SKM.SkmCore.HKMGetSerialNumber
   fullName: SKM.SkmCore.HKMGetSerialNumber
   nameWithType: SkmCore.HKMGetSerialNumber
-- uid: SKM.SkmCore.HKMGetVersion
-  name: HKMGetVersion()
-  href: api/SKM.SkmCore.html#SKM_SkmCore_HKMGetVersion
-  commentId: M:SKM.SkmCore.HKMGetVersion
-  fullName: SKM.SkmCore.HKMGetVersion()
-  nameWithType: SkmCore.HKMGetVersion()
-- uid: SKM.SkmCore.HKMGetVersion*
-  name: HKMGetVersion
-  href: api/SKM.SkmCore.html#SKM_SkmCore_HKMGetVersion_
-  commentId: Overload:SKM.SkmCore.HKMGetVersion
-  fullName: SKM.SkmCore.HKMGetVersion
-  nameWithType: SkmCore.HKMGetVersion
 - uid: SKM.SkmCore.HKMIsKeyBusy(System.IntPtr)
   name: HKMIsKeyBusy(nint)
   href: api/SKM.SkmCore.html#SKM_SkmCore_HKMIsKeyBusy_System_IntPtr_

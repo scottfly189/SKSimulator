@@ -64,7 +64,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "SKM.SkmCore",
-      "Summary": "<p sourcefile=\"api/SKM.SkmCore.yml\" sourcestartlinenumber=\"1\">skm.dll 的封装\n注意: x86 和 x64 的 dll 是不同的, 需要根据实际情况选择\nx86 的 dll 是 x86\\skm.dll, x64 的 dll 是 x64\\skm.dll\n使用KMSimulatorService服务类可以无感知使用，会自动根据当前环境复制DLL到当前目录\n具体KMSimulatorService类使用请参考<xref href=\"SKM.KMSimulatorService\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+      "Summary": "<p sourcefile=\"api/SKM.SkmCore.yml\" sourcestartlinenumber=\"1\">skm.dll 的封装<br>\n注意: x86 和 x64 的 dll 是不同的，需要根据实际情况选择<br>\nx86 的 dll 是 x86\\skm.dll，x64 的 dll 是 x64\\skm.dll<br>\n使用 <code>KMSimulatorService</code> 服务类可以无感知使用，会自动根据当前环境复制 DLL 到当前目录<br>\n具体 <code>KMSimulatorService</code> 类使用请参考 <xref href=\"SKM.KMSimulatorService\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
