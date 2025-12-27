@@ -134,6 +134,36 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSearchDevice.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSearchDevice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSearchDevice2.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSearchDevice2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSearchDeviceAll.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSearchDeviceAll.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "content/toc.yml",
       "output": {

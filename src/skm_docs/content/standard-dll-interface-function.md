@@ -12,9 +12,9 @@
 
 | 函数名(标准dll接口)                  | 说明     |
 | ------------------------------------- | -------- |
-| [HKMSearchDevice](standard_fun/HKMSearchDevice.html) | 查找设备 |
-| [HKMSearchDevice2](standard_fun/HKMSearchDevice2.html) | 查找设备 |
-| [HKMSearchDeviceAll](standard_fun/HKMSearchDeviceAll.html) | 查找全部设备 |
+| [HKMSearchDevice](standard_fun/HKMSearchDevice.md) | 查找设备 |
+| [HKMSearchDevice2](standard_fun/HKMSearchDevice2.md) | 查找设备 |
+| [HKMSearchDeviceAll](standard_fun/HKMSearchDeviceAll.md) | 查找全部设备 |
 
 ---
 
