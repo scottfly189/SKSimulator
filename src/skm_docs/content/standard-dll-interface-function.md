@@ -22,10 +22,10 @@
 
 | 函数名(标准dll接口)         | 说明         |
 | --------------------------- | ------------ |
-| [HKMOpen](standard_fun/HKMOpen.html) | 打开设备     |
-| [HKMOpen2](standard_fun/HKMOpen2.html) | 打开设备   |
-| [HKMIsOpen](standard_fun/HKMIsOpen.html) | 判断设备是否打开 |
-| [HKMClose](standard_fun/HKMClose.html) | 关闭设备   |
+| [HKMOpen](standard_fun/HKMOpen.md) | 打开设备     |
+| [HKMOpen2](standard_fun/HKMOpen2.md) | 打开设备   |
+| [HKMIsOpen](standard_fun/HKMIsOpen.md) | 判断设备是否打开 |
+| [HKMClose](standard_fun/HKMClose.md) | 关闭设备   |
 
 ---
 

@@ -7,7 +7,19 @@
 - name: 📚 DLL接口函数目录
   href: standard-dll-interface-function.md
   items:
-    - name: HKMOpen 打开设备
-      href: hkmopen.md
+    - name: HKMSearchDevice-查找设备
+      href: standard_fun/HKMSearchDevice.md
+    - name: HKMSearchDevice2-查找设备
+      href: standard_fun/HKMSearchDevice2.md
+    - name: HKMSearchDeviceAll-查找全部设备
+      href: standard_fun/HKMSearchDeviceAll.md
+    - name: HKMOpen-打开设备
+      href: standard_fun/HKMOpen.md
+    - name: HKMOpen2-打开设备
+      href: standard_fun/HKMOpen2.md
+    - name: HKMIsOpen-判断设备是否打开
+      href: standard_fun/HKMIsOpen.md
+    - name: HKMClose-关闭设备
+      href: standard_fun/HKMClose.md
 - name: 📚 API参考
   href: ../api/

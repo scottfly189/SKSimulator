@@ -313,6 +313,21 @@ references:
   commentId: Overload:SKM.SkmCore.HKMEnableOSMouseAccelerate
   fullName: SKM.SkmCore.HKMEnableOSMouseAccelerate
   nameWithType: SkmCore.HKMEnableOSMouseAccelerate
+- uid: SKM.SkmCore.HKMFreeData(System.IntPtr)
+  name: HKMFreeData(nint)
+  href: api/SKM.SkmCore.html#SKM_SkmCore_HKMFreeData_System_IntPtr_
+  commentId: M:SKM.SkmCore.HKMFreeData(System.IntPtr)
+  name.vb: HKMFreeData(IntPtr)
+  fullName: SKM.SkmCore.HKMFreeData(nint)
+  fullName.vb: SKM.SkmCore.HKMFreeData(System.IntPtr)
+  nameWithType: SkmCore.HKMFreeData(nint)
+  nameWithType.vb: SkmCore.HKMFreeData(IntPtr)
+- uid: SKM.SkmCore.HKMFreeData*
+  name: HKMFreeData
+  href: api/SKM.SkmCore.html#SKM_SkmCore_HKMFreeData_
+  commentId: Overload:SKM.SkmCore.HKMFreeData
+  fullName: SKM.SkmCore.HKMFreeData
+  nameWithType: SkmCore.HKMFreeData
 - uid: SKM.SkmCore.HKMGetCursorPos(System.IntPtr,System.Int32@,System.Int32@)
   name: HKMGetCursorPos(nint, ref int, ref int)
   href: api/SKM.SkmCore.html#SKM_SkmCore_HKMGetCursorPos_System_IntPtr_System_Int32__System_Int32__
@@ -343,6 +358,36 @@ references:
   commentId: Overload:SKM.SkmCore.HKMGetCursorPos2
   fullName: SKM.SkmCore.HKMGetCursorPos2
   nameWithType: SkmCore.HKMGetCursorPos2
+- uid: SKM.SkmCore.HKMGetDataCount(System.IntPtr)
+  name: HKMGetDataCount(nint)
+  href: api/SKM.SkmCore.html#SKM_SkmCore_HKMGetDataCount_System_IntPtr_
+  commentId: M:SKM.SkmCore.HKMGetDataCount(System.IntPtr)
+  name.vb: HKMGetDataCount(IntPtr)
+  fullName: SKM.SkmCore.HKMGetDataCount(nint)
+  fullName.vb: SKM.SkmCore.HKMGetDataCount(System.IntPtr)
+  nameWithType: SkmCore.HKMGetDataCount(nint)
+  nameWithType.vb: SkmCore.HKMGetDataCount(IntPtr)
+- uid: SKM.SkmCore.HKMGetDataCount*
+  name: HKMGetDataCount
+  href: api/SKM.SkmCore.html#SKM_SkmCore_HKMGetDataCount_
+  commentId: Overload:SKM.SkmCore.HKMGetDataCount
+  fullName: SKM.SkmCore.HKMGetDataCount
+  nameWithType: SkmCore.HKMGetDataCount
+- uid: SKM.SkmCore.HKMGetDataUnitInt(System.IntPtr,System.UInt32)
+  name: HKMGetDataUnitInt(nint, uint)
+  href: api/SKM.SkmCore.html#SKM_SkmCore_HKMGetDataUnitInt_System_IntPtr_System_UInt32_
+  commentId: M:SKM.SkmCore.HKMGetDataUnitInt(System.IntPtr,System.UInt32)
+  name.vb: HKMGetDataUnitInt(IntPtr, UInteger)
+  fullName: SKM.SkmCore.HKMGetDataUnitInt(nint, uint)
+  fullName.vb: SKM.SkmCore.HKMGetDataUnitInt(System.IntPtr, UInteger)
+  nameWithType: SkmCore.HKMGetDataUnitInt(nint, uint)
+  nameWithType.vb: SkmCore.HKMGetDataUnitInt(IntPtr, UInteger)
+- uid: SKM.SkmCore.HKMGetDataUnitInt*
+  name: HKMGetDataUnitInt
+  href: api/SKM.SkmCore.html#SKM_SkmCore_HKMGetDataUnitInt_
+  commentId: Overload:SKM.SkmCore.HKMGetDataUnitInt
+  fullName: SKM.SkmCore.HKMGetDataUnitInt
+  nameWithType: SkmCore.HKMGetDataUnitInt
 - uid: SKM.SkmCore.HKMGetDevInfo(System.IntPtr,System.UInt32,System.Boolean)
   name: HKMGetDevInfo(nint, uint, bool)
   href: api/SKM.SkmCore.html#SKM_SkmCore_HKMGetDevInfo_System_IntPtr_System_UInt32_System_Boolean_

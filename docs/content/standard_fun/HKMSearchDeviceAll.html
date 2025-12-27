@@ -87,6 +87,56 @@
         <article data-uid="">
 <h1 id="查找全部设备-hkmsearchdeviceall">查找全部设备 HKMSearchDeviceAll</h1>
 
+<h2 id="功能">功能:</h2>
+<p>找符合条件的全部键鼠盒子</p>
+<h2 id="参数">参数:</h2>
+<ul>
+<li>参数1　VID：无符号32位整型数。值为65536时忽略此搜索条件。</li>
+<li>参数2　PID：无符号32位整型数。值为65536时忽略此搜索条件。</li>
+<li>参数3　设备模式：无符号32位整型数。用于设置查找的键鼠盒子的模式。可取值如下：
+<ul>
+<li>0 所有模式</li>
+<li>1 键鼠模式</li>
+<li>2 键盘模式</li>
+<li>3 鼠标模式</li>
+</ul>
+</li>
+</ul>
+<h2 id="返回值">返回值:</h2>
+<p>无符号32位整型数地址。成功返回设备ID的数组，可用HKMGetDataCount函数获取数组元素数量。失败返回NULL。当不再使用这个字符串时，使用HKMFreeData释放数组所占用的资源。</p>
+<h2 id="c例子">C#例子</h2>
+<pre><code class="lang-csharp">IntPtr pDevId = SkmCore.HKMSearchDeviceAll(0x1234, 0xABCD, 0);
+if (pDevId == IntPtr.Zero)
+{
+    Console.WriteLine(&quot;查找设备失败&quot;);
+    return;
+}
+uint dwCount = SkmCore.HKMGetDataCount(pDevId);
+Console.WriteLine($&quot;找到的设备数量:{dwCount}&quot;);
+for (uint i = 0; i &lt; dwCount; i++)
+{
+    uint deviceId = SkmCore.HKMGetDataUnitInt(pDevId, i);
+    Console.WriteLine($&quot;{deviceId:X8}&quot;);
+}
+SkmCore.HKMFreeData(pDevId);
+</code></pre>
+<h2 id="c语言例子">C语言例子</h2>
+<pre><code>LPDWORD pDevId;
+DWORD dwCount,i;
+pDevId=HKMSearchDeviceAll(0x1234,0xABCD,0);
+if(pDevId==NULL)
+{
+    printf(&quot;查找设备失败\n&quot;);
+    return 0;
+}
+dwCount=HKMGetDataCount(pDevId);
+printf(&quot;找到的设备数量:%u\n&quot;,dwCount);
+for(i=0;i&lt;dwCount;i++)
+{
+    printf(&quot;%08X\n&quot;,pDevId[i]);
+}
+HKMFreeData(pDevId);
+</code></pre>
 
 </article>
 

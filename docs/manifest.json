@@ -135,6 +135,46 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMClose.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMClose.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMIsOpen.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMIsOpen.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMOpen.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMOpen.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMOpen2.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMOpen2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/HKMSearchDevice.md",
       "output": {
         ".html": {

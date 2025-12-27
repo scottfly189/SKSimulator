@@ -152,11 +152,11 @@ namespace SKM
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetOSMouseSpeed(Int32 Speed, Boolean Save);//设置系统鼠标速度
         [DllImport("skm.dll")]
-        private static extern Boolean HKMFreeData(IntPtr Data);//释放数据
+        public static extern Boolean HKMFreeData(IntPtr Data);//释放数据
         [DllImport("skm.dll")]
-        private static extern UInt32 HKMGetDataCount(IntPtr Data);//获得数据数量
+        public static extern UInt32 HKMGetDataCount(IntPtr Data);//获得数据数量
         [DllImport("skm.dll")]
-        private static extern UInt32 HKMGetDataUnitInt(IntPtr Data, UInt32 Index);//获得数据单元整数值
+        public static extern UInt32 HKMGetDataUnitInt(IntPtr Data, UInt32 Index);//获得数据单元整数值
 
         public static String HKMCheckPressedKeysCS(UInt32 Flags)//检查按键
         {

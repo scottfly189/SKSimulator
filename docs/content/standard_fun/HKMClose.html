@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>查找设备 HKMSearchDevice2 | SKSimulator键鼠模拟器 </title>
+      <title>HKMClose 关闭设备 | SKSimulator键鼠模拟器 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="查找设备 HKMSearchDevice2 | SKSimulator键鼠模拟器 ">
+      <meta name="title" content="HKMClose 关闭设备 | SKSimulator键鼠模拟器 ">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -85,34 +85,20 @@
         </div>
 
         <article data-uid="">
-<h1 id="查找设备-hkmsearchdevice2">查找设备 HKMSearchDevice2</h1>
+<h1 id="hkmclose-关闭设备">HKMClose 关闭设备</h1>
 
-<h2 id="功能">功能:</h2>
-<p>查找设备</p>
-<h2 id="参数">参数:</h2>
+<h2 id="功能">功能</h2>
+<p>关闭无涯键鼠盒子，不对它进行操作时，使用此函数关闭设备对象，用来释放它占用的资源。</p>
+<h2 id="参数">参数</h2>
 <ul>
-<li>参数1　VID：无符号32位整型数。值为65536时忽略此搜索条件。</li>
-<li>参数2　PID：无符号32位整型数。值为65536时忽略此搜索条件。</li>
-<li>参数3  序列号：无符号32位整型数。每个键鼠盒子的值都不一样，购买盒子时会提供</li>
-<li>参数4　设备模式：无符号32位整型数。用于设置查找的键鼠盒子的模式。可取值如下：
+<li>参数1　设备对象(指针)：无类型指针。使用<a href="HKMOpen.html">HKMOpen</a>可以创建它。</li>
+</ul>
+<h2 id="返回值">返回值</h2>
+<p>布尔值</p>
 <ul>
-<li>0 所有模式</li>
-<li>1 键鼠模式</li>
-<li>2 键盘模式</li>
-<li>3 鼠标模式</li>
+<li>true: 成功</li>
+<li>false: 失败</li>
 </ul>
-</li>
-</ul>
-<h2 id="返回值">返回值:</h2>
-<p>无符号32位整型数。一个临时的设备ID号，只对当前应用有效,设备ID号会被打开设备函数<code>HKMOpen</code>使用到。</p>
-<p>没找到或者失败返回0xFFFFFFFF。</p>
-<h2 id="c例子">C#例子</h2>
-<pre><code class="lang-csharp">uint deviceId = SkmCore.HKMSearchDevice2(0x1234,0xABCD,0x12345678,1);
-Console.WriteLine($&quot;设备ID号:{deviceId:X8}&quot;);
-</code></pre>
-<h2 id="c语言例子">C语言例子</h2>
-<pre><code>printf(&quot;设备ID号:%08X\n&quot;,HKMSearchDevice2(0x1234,0xABCD,0x12345678,1));
-</code></pre>
 
 </article>
 
