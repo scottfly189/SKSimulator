@@ -355,6 +355,176 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMKeyDown.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMKeyDown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMKeyPress.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMKeyPress.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMKeyUp.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMKeyUp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMLeftClick.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMLeftClick.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMLeftDoubleClick.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMLeftDoubleClick.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMLeftDown.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMLeftDown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMLeftUp.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMLeftUp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMiddleClick.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMiddleClick.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMiddleDoubleClick.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMiddleDoubleClick.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMiddleDown.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMiddleDown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMiddleUp.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMiddleUp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMouseWheel.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMouseWheel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMouseWheelP.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMouseWheelP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMoveR.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMoveR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMoveR2.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMoveR2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMoveRP.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMoveRP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMMoveTo.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMMoveTo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/HKMOpen.md",
       "output": {
         ".html": {
@@ -369,6 +539,76 @@
       "output": {
         ".html": {
           "relative_path": "content/standard_fun/HKMOpen2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMOutputString.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMOutputString.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMReleaseKeyboard.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMReleaseKeyboard.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMReleaseMouse.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMReleaseMouse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMRightClick.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMRightClick.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMRightDoubleClick.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMRightDoubleClick.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMRightDown.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMRightDown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMRightUp.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMRightUp.html"
         }
       },
       "version": ""
@@ -529,6 +769,86 @@
       "output": {
         ".html": {
           "relative_path": "content/standard_fun/HKMVerifyUserData2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMXBtn1Click.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMXBtn1Click.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMXBtn1DoubleClick.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMXBtn1DoubleClick.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMXBtn1Down.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMXBtn1Down.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMXBtn1Up.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMXBtn1Up.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMXBtn2Click.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMXBtn2Click.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMXBtn2DoubleClick.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMXBtn2DoubleClick.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMXBtn2Down.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMXBtn2Down.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMXBtn2Up.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMXBtn2Up.html"
         }
       },
       "version": ""

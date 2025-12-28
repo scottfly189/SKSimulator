@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>HKMSetMouseInterval 设置鼠标时间间隔 | SKSimulator键鼠模拟器 </title>
+      <title>HKMMoveR 鼠标相对移动 | SKSimulator键鼠模拟器 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="HKMSetMouseInterval 设置鼠标时间间隔 | SKSimulator键鼠模拟器 ">
+      <meta name="title" content="HKMMoveR 鼠标相对移动 | SKSimulator键鼠模拟器 ">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -85,18 +85,18 @@
         </div>
 
         <article data-uid="">
-<h1 id="hkmsetmouseinterval-设置鼠标时间间隔">HKMSetMouseInterval 设置鼠标时间间隔</h1>
+<h1 id="hkmmover-鼠标相对移动">HKMMoveR 鼠标相对移动</h1>
 
 <h2 id="功能">功能</h2>
-<p>设置鼠标按键和弹起之间的时间间隔，只对当前打开的设备有效。这个时间间隔是一个范围内的随机值，也可以设置成固定值。默认鼠标时间间隔是一个100毫秒附近的随机值。相关函数：<a href="HKMLeftClick.html">HKMLeftClick</a>、<a href="HKMRightClick.html">HKMRightClick</a>、<a href="HKMMiddleClick.html">HKMMiddleClick</a>、<a href="HKMLeftDoubleClick.html">HKMLeftDoubleClick</a>、<a href="HKMRightDoubleClick.html">HKMRightDoubleClick</a>、<a href="HKMMiddleDoubleClick.html">HKMMiddleDoubleClick</a></p>
+<p>鼠标相对移动。此移动距离是鼠标的物理相对移动，操作系统中默认使用了鼠标加速，所以实际移动距离和屏幕坐标的移动距离不同。而且受系统鼠标加速算法影响，相对移动坐标相同时，鼠标移动的距离也不是固定的。可关闭系统鼠标加速(提高指针精确度)解决鼠标相对移动不准的问题。相关的设置函数有：<a href="HKMSetMode.html">HKMSetMode</a>。</p>
 <h2 id="参数">参数</h2>
 <ul>
 <li>参数1: 设备对象：无类型指针。使用<a href="HKMOpen.html">HKMOpen</a>可以创建它。</li>
-<li>参数2: 最短时间：无符号32位整型数，单位毫秒</li>
-<li>参数3: 最长时间：无符号32位整型数，单位毫秒。如果最长时间等于最短时间时，那么时间间隔是固定值</li>
+<li>参数2: X坐标：32位整数，表示相对移动的横坐标。</li>
+<li>参数3: Y坐标：32位整数，表示相对移动的纵坐标。</li>
 </ul>
 <h2 id="返回值">返回值</h2>
-<p>布尔值。成功返回True，失败返回False</p>
+<p>布尔值。成功返回True，失败返回False。</p>
 <h2 id="c例子">C#例子</h2>
 <pre><code class="lang-csharp">uint dwDevId;
 IntPtr lpDev;
@@ -112,7 +112,7 @@ if (lpDev == IntPtr.Zero)
     Console.WriteLine(&quot;打开键鼠模拟器失败&quot;);
     return;
 }
-SkmCore.HKMSetMouseInterval(lpDev, 100, 150);
+SkmCore.HKMMoveR(lpDev, 100, 50);
 SkmCore.HKMClose(lpDev);
 </code></pre>
 <h2 id="c语言例子">C语言例子</h2>
@@ -130,7 +130,7 @@ if(lpDev==NULL)
     printf(&quot;打开键鼠模拟器失败\n&quot;);
     return 0;
 }
-HKMSetMouseInterval(lpDev,100,150);
+HKMMoveR(lpDev,100,50);
 HKMClose(lpDev);
 </code></pre>
 

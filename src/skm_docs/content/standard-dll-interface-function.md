@@ -94,6 +94,11 @@
 | [HKMReleaseMouse](standard_fun/HKMReleaseMouse.html) | 释放鼠标按键 |
 | [HKMMoveTo](standard_fun/HKMMoveTo.html) | 鼠标移动 |
 | [HKMMoveR](standard_fun/HKMMoveR.html) | 鼠标相对移动 |
+| [HKMMoveR2](standard_fun/HKMMoveR2.html) | 鼠标相对移动 |
+| [HKMMoveRP](standard_fun/HKMMoveRP.html) | 鼠标相对移动 |
+| [HKMMouseWheel](standard_fun/HKMMouseWheel.html) | 鼠标滚轮 |
+| [HKMMouseWheelP](standard_fun/HKMMouseWheelP.html) | 鼠标滚轮 |
+| [HKMOutputString](standard_fun/HKMOutputString.html) | 输出字符串 |
 
 ---
 
