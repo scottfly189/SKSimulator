@@ -126,7 +126,7 @@ if (dwDevId2 == 0xFFFFFFFF)
 lpDev = SkmCore.HKMOpen2(dwDevId1, dwDevId2, 0);
 if (lpDev == IntPtr.Zero)
 {
-    Console.WriteLine(&quot;打开无涯键鼠模拟器失败&quot;);
+    Console.WriteLine(&quot;打开键鼠模拟器失败&quot;);
     return;
 }
 //执行操作
@@ -150,7 +150,7 @@ if(dwDevId2==0xFFFFFFFF)
 lpDev=HKMOpen2(dwDevId1,dwDevId2,0);
 if(lpDev==NULL)
 {
-    printf(&quot;打开无涯键鼠模拟器失败\n&quot;);
+    printf(&quot;打开键鼠模拟器失败\n&quot;);
     return 0;
 }
 //执行操作

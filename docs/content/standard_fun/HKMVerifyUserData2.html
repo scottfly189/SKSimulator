@@ -103,13 +103,13 @@ IntPtr lpDev;
 dwDevId = SkmCore.HKMSearchDevice(0x1234, 0xABCD, 0);
 if (dwDevId == 0xFFFFFFFF)
 {
-    Console.WriteLine(&quot;未找到无涯键鼠盒子&quot;);
+    Console.WriteLine(&quot;未找到键鼠模拟器&quot;);
     return;
 }
 lpDev = SkmCore.HKMOpen(dwDevId, 0);
 if (lpDev == IntPtr.Zero)
 {
-    Console.WriteLine(&quot;打开无涯键鼠盒子失败&quot;);
+    Console.WriteLine(&quot;打开键鼠模拟器失败&quot;);
     return;
 }
 Console.WriteLine($&quot;验证用户数据：{(SkmCore.HKMVerifyUserData2(lpDev, \&quot;1234567890ABCDEF1234567890ABCDEF\&quot;, false) == SkmCore.HKMGetSerialNumber(lpDev, false))}&quot;);
@@ -121,13 +121,13 @@ LPVOID lpDev;
 dwDevId=HKMSearchDevice(0x1234,0xABCD,0);
 if(dwDevId==0xFFFFFFFF)
 {
-    printf(&quot;未找到无涯键鼠盒子\n&quot;);
+    printf(&quot;未找到键鼠模拟器\n&quot;);
     return 0;
 }
 lpDev=HKMOpen(dwDevId,0);
 if(lpDev==NULL)
 {
-    printf(&quot;打开无涯键鼠盒子失败\n&quot;);
+    printf(&quot;打开键鼠模拟器失败\n&quot;);
     return 0;
 }
 printf(&quot;验证用户数据：%d\n&quot;,HKMVerifyUserData2(lpDev,L&quot;1234567890ABCDEF1234567890ABCDEF&quot;,FALSE)==HKMGetSerialNumber(lpDev,FALSE));
