@@ -145,6 +145,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMDelayRnd.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMDelayRnd.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMEnableOSMouseAccelerate.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMEnableOSMouseAccelerate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/HKMFreeData.md",
       "output": {
         ".html": {
@@ -175,6 +195,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetDataCount.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetDataCount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetDataUnitInt.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetDataUnitInt.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/HKMGetDevInfo.md",
       "output": {
         ".html": {
@@ -189,6 +229,16 @@
       "output": {
         ".html": {
           "relative_path": "content/standard_fun/HKMGetDevString.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetError.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetError.html"
         }
       },
       "version": ""
@@ -219,6 +269,16 @@
       "output": {
         ".html": {
           "relative_path": "content/standard_fun/HKMGetMouseMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMGetOSMouseSpeed.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMGetOSMouseSpeed.html"
         }
       },
       "version": ""
@@ -269,6 +329,16 @@
       "output": {
         ".html": {
           "relative_path": "content/standard_fun/HKMIsMouseButtonDown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMIsOSMouseAccelerateEnabled.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMIsOSMouseAccelerateEnabled.html"
         }
       },
       "version": ""
@@ -355,6 +425,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetLightMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetLightMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/HKMSetMode.md",
       "output": {
         ".html": {
@@ -409,6 +489,46 @@
       "output": {
         ".html": {
           "relative_path": "content/standard_fun/HKMSetMouseSpeed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetOSMouseSpeed.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetOSMouseSpeed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetResetMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetResetMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMSetResetTime.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMSetResetTime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMVerifyUserData2.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMVerifyUserData2.html"
         }
       },
       "version": ""

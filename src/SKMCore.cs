@@ -402,6 +402,12 @@ namespace SKM
         /// <returns>布尔值。True: 成功。False: 失败。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMFreeData(IntPtr Data);//释放数据
+        /// <summary>
+        /// 获得数据数量
+        /// </summary>
+        /// <param name="Data">数据地址：无类型指针。使用<c>HKMSearchDeviceAll</c>或者<c>HKMCheckPressedKeys</c>可以获得此参数。</param>
+        /// <returns>无符号32位整型数。成功返回数据数量。失败返回0。</returns>
+        /// <returns></returns>
         [DllImport("skm.dll")]
         public static extern UInt32 HKMGetDataCount(IntPtr Data);//获得数据数量
         [DllImport("skm.dll")]
