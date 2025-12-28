@@ -395,6 +395,11 @@ namespace SKM
         public static extern Int32 HKMGetOSMouseSpeed();//获得系统鼠标速度
         [DllImport("skm.dll")]
         public static extern Boolean HKMSetOSMouseSpeed(Int32 Speed, Boolean Save);//设置系统鼠标速度
+        /// <summary>
+        /// 释放数据
+        /// </summary>
+        /// <param name="Data">数据地址：无类型指针。使用<c>HKMSearchDeviceAll</c>或者<c>HKMCheckPressedKeys</c>可以获得此参数。</param>
+        /// <returns>布尔值。True: 成功。False: 失败。</returns>
         [DllImport("skm.dll")]
         public static extern Boolean HKMFreeData(IntPtr Data);//释放数据
         [DllImport("skm.dll")]

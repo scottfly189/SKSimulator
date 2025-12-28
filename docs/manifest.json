@@ -145,6 +145,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/standard_fun/HKMFreeData.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/standard_fun/HKMFreeData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/standard_fun/HKMGetCursorPos.md",
       "output": {
         ".html": {
