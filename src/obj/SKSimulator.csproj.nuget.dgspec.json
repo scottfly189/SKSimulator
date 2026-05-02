@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj": {}
+    "D:\\repo\\WeChatAuto.SDK\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj": {}
   },
   "projects": {
-    "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj": {
+    "D:\\repo\\WeChatAuto.SDK\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj",
+        "projectUniqueName": "D:\\repo\\WeChatAuto.SDK\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj",
         "projectName": "SKSimulator",
-        "projectPath": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj",
+        "projectPath": "D:\\repo\\WeChatAuto.SDK\\WeChatAuto.SDK\\SKSimulator\\src\\SKSimulator.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\repo\\wxauto.net\\WeChatAuto.SDK\\SKSimulator\\src\\obj\\",
+        "outputPath": "D:\\repo\\WeChatAuto.SDK\\WeChatAuto.SDK\\SKSimulator\\src\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -59,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

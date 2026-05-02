@@ -278,7 +278,8 @@ KMSimulatorService.CloseDevice();
 ## 🔗 相关链接
 
 - [SKSimulator 官方文档](https://scottfly189.github.io/SKSimulator/) 请认真阅读官网的指南 与 API参考
-- [使用SKSimulator的开发框架 - WeChatAuto.SDK](https://github.com/scottfly189/WeChatAuto.SDK.git)
+- [使用SKSimulator的开发框架 - 微信自动化.net框架 - WeChatAuto.SDK](https://github.com/scottfly189/WeChatAuto.SDK.git)
+
 ---
 
 **注意**: 本项目仅用于学习和合法用途，请勿用于任何非法活动。
