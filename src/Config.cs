@@ -15,11 +15,11 @@ namespace SKM
         /// <summary>
         /// 键鼠模拟器设备VID
         /// </summary>
-        public static int KMDeiviceVID { get; set; } = 0x2612;
+        public static int KMDeiviceVID { get; set; } = 0x048D;
         /// <summary>
         /// 键鼠模拟器设备PID
         /// </summary>
-        public static int KMDeivicePID { get; set; } = 0x1701;
+        public static int KMDeivicePID { get; set; } = 0x1234;
         /// <summary>
         /// 键鼠模拟器校验数据
         /// </summary>
